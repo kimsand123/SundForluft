@@ -16,6 +16,7 @@
 		E85304A7233CD3CD00105CA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85304A5233CD3CD00105CA7 /* LaunchScreen.storyboard */; };
 		E85304B2233CD3CD00105CA7 /* SundForluftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85304B1233CD3CD00105CA7 /* SundForluftTests.swift */; };
 		E85304BD233CD3CD00105CA7 /* SundForluftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85304BC233CD3CD00105CA7 /* SundForluftUITests.swift */; };
+		E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85304CC233CDC3B00105CA7 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E85304B8233CD3CD00105CA7 /* SundForluftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SundForluftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85304BC233CD3CD00105CA7 /* SundForluftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SundForluftUITests.swift; sourceTree = "<group>"; };
 		E85304BE233CD3CD00105CA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E85304CC233CDC3B00105CA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		E8530496233CD3CA00105CA7 /* SundForluft */ = {
 			isa = PBXGroup;
 			children = (
+				E85304CC233CDC3B00105CA7 /* LoginViewController.swift */,
 				E8530497233CD3CA00105CA7 /* AppDelegate.swift */,
 				E8530499233CD3CA00105CA7 /* SceneDelegate.swift */,
 				E853049B233CD3CA00105CA7 /* ViewController.swift */,
@@ -265,6 +268,7 @@
 				E85304A2233CD3CA00105CA7 /* SundForluft.xcdatamodeld in Sources */,
 				E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */,
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
+				E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */,
 				E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
