@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         ppmLabel.text = String(Int(screenHeight))
         var X_Position:CGFloat = 0.0 //use your X position here
         var Y_Position:CGFloat = 50.0 //use your Y position here
-        ChallengeButton.frame= CGRectMake(X_Position, Y_Position, screenWidth, CGFloat(Int(screenHeight) / 3))
+       
         ChallengeButton.frame.size = CGSize(width: Int(screenWidth), height: Int(Int(screenHeight) / 3))
         // Do any additional setup after loading the view.
     }
