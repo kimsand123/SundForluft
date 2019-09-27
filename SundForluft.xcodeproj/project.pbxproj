@@ -21,6 +21,8 @@
 		E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */; };
 		E86C7AC6233DF191003E3C28 /* TeacherDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC5233DF191003E3C28 /* TeacherDataTableViewController.swift */; };
 		E86C7AC8233DF1D9003E3C28 /* SchoolDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */; };
+		E86C7ACA233E05B7003E3C28 /* LOGO.tif in Resources */ = {isa = PBXBuildFile; fileRef = E86C7AC9233E05B7003E3C28 /* LOGO.tif */; };
+		E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7ACB233E0776003E3C28 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInFrontViewController.swift; sourceTree = "<group>"; };
 		E86C7AC5233DF191003E3C28 /* TeacherDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherDataTableViewController.swift; sourceTree = "<group>"; };
 		E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataTableViewController.swift; sourceTree = "<group>"; };
+		E86C7AC9233E05B7003E3C28 /* LOGO.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = LOGO.tif; sourceTree = "<group>"; };
+		E86C7ACB233E0776003E3C28 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 				E85304CC233CDC3B00105CA7 /* LoginViewController.swift */,
 				E8530497233CD3CA00105CA7 /* AppDelegate.swift */,
 				E8530499233CD3CA00105CA7 /* SceneDelegate.swift */,
+				E86C7ACB233E0776003E3C28 /* AppState.swift */,
 				E853049B233CD3CA00105CA7 /* ViewController.swift */,
 				E853049D233CD3CA00105CA7 /* Main.storyboard */,
 				E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */,
@@ -121,6 +126,7 @@
 				E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */,
 				E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */,
 				E85304A3233CD3CD00105CA7 /* Assets.xcassets */,
+				E86C7AC9233E05B7003E3C28 /* LOGO.tif */,
 				E85304A5233CD3CD00105CA7 /* LaunchScreen.storyboard */,
 				E85304A8233CD3CD00105CA7 /* Info.plist */,
 				E85304A0233CD3CA00105CA7 /* SundForluft.xcdatamodeld */,
@@ -252,6 +258,7 @@
 			files = (
 				E85304A7233CD3CD00105CA7 /* LaunchScreen.storyboard in Resources */,
 				E85304A4233CD3CD00105CA7 /* Assets.xcassets in Resources */,
+				E86C7ACA233E05B7003E3C28 /* LOGO.tif in Resources */,
 				E853049F233CD3CA00105CA7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E85304A2233CD3CA00105CA7 /* SundForluft.xcdatamodeld in Sources */,
+				E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */,
 				E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */,
 				E86C7AC8233DF1D9003E3C28 /* SchoolDataTableViewController.swift in Sources */,
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
