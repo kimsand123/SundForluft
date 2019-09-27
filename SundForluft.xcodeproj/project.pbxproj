@@ -17,6 +17,10 @@
 		E85304B2233CD3CD00105CA7 /* SundForluftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85304B1233CD3CD00105CA7 /* SundForluftTests.swift */; };
 		E85304BD233CD3CD00105CA7 /* SundForluftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85304BC233CD3CD00105CA7 /* SundForluftUITests.swift */; };
 		E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85304CC233CDC3B00105CA7 /* LoginViewController.swift */; };
+		E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */; };
+		E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */; };
+		E86C7AC6233DF191003E3C28 /* TeacherDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC5233DF191003E3C28 /* TeacherDataTableViewController.swift */; };
+		E86C7AC8233DF1D9003E3C28 /* SchoolDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		E85304BC233CD3CD00105CA7 /* SundForluftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SundForluftUITests.swift; sourceTree = "<group>"; };
 		E85304BE233CD3CD00105CA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E85304CC233CDC3B00105CA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInFrontViewController.swift; sourceTree = "<group>"; };
+		E86C7AC5233DF191003E3C28 /* TeacherDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherDataTableViewController.swift; sourceTree = "<group>"; };
+		E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,10 @@
 				E8530499233CD3CA00105CA7 /* SceneDelegate.swift */,
 				E853049B233CD3CA00105CA7 /* ViewController.swift */,
 				E853049D233CD3CA00105CA7 /* Main.storyboard */,
+				E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */,
+				E86C7AC5233DF191003E3C28 /* TeacherDataTableViewController.swift */,
+				E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */,
+				E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */,
 				E85304A3233CD3CD00105CA7 /* Assets.xcassets */,
 				E85304A5233CD3CD00105CA7 /* LaunchScreen.storyboard */,
 				E85304A8233CD3CD00105CA7 /* Info.plist */,
@@ -267,8 +279,12 @@
 			files = (
 				E85304A2233CD3CA00105CA7 /* SundForluft.xcdatamodeld in Sources */,
 				E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */,
+				E86C7AC8233DF1D9003E3C28 /* SchoolDataTableViewController.swift in Sources */,
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
 				E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */,
+				E86C7AC6233DF191003E3C28 /* TeacherDataTableViewController.swift in Sources */,
+				E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */,
+				E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */,
 				E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
