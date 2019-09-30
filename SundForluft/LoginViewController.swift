@@ -17,24 +17,34 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func Dismiss(sender: AnyObject) {
-        self.dismiss(animated: true, completion: {});//This is intended to dismiss the Info sceen.
+    @IBAction func loginButton(_ sender: Any) {
+    //print(AppState.getLoggedState())
     
-        func buttonClicked(){
-            AppState.setLoggedState(loggedstate: true)
-        }
+    //print(AppState.getLoggedState())
+
+        
+    }
     
+  
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "LoggedInFrontViewController {
-            let destinationVC = seque.destination as? LoggedInFrontViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        if sender as? UIButton == loginButton {
+            AppState.setLoggedState(loggedstate: true)
+            //self.dismiss(animated: true, completion: nil)
+            
+            
+
+            
         }
-        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+     
     }
-    
 
+
+    
+    
 }
