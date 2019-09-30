@@ -9,18 +9,17 @@
 import Foundation
 class AppState {
     
-    var loggedState = false
+    static var loggedState = false
     
     static let shared = AppState()
     private init(){
-        
     }
     
-    func getLoggedState()-> Bool{
+    static func getLoggedState()-> Bool{
         return loggedState
     }
     
-    func setLoggedState(loggedstate: Bool){
+    static func setLoggedState(loggedstate: Bool){
         self.loggedState = loggedstate
     }
     
