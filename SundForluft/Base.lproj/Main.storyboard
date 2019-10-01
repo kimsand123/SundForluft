@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Qt-iQ-DY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-wm-abF">
-                                <rect key="frame" x="0.0" y="148" width="375" height="207"/>
+                                <rect key="frame" x="0.0" y="60.000000000000014" width="375" height="217.33333333333337"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRG-Kb-unH">
                                 <rect key="frame" x="186" y="-21" width="42" height="21"/>
@@ -27,12 +27,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-aa-Jhq">
-                                <rect key="frame" x="0.0" y="605" width="375" height="207"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="540.66666666666663" width="375" height="217.33333333333337"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="Udfordring">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="uHn-UF-yjv" kind="show" id="4UZ-Kd-Fw1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -51,7 +54,7 @@
                     <navigationItem key="navigationItem" id="mYS-5s-Up2">
                         <barButtonItem key="rightBarButtonItem" title="Log Ind" id="RDL-3p-0HP">
                             <connections>
-                                <segue destination="9Rv-Ly-2gn" kind="presentation" id="gRX-7e-vCA"/>
+                                <segue destination="9Rv-Ly-2gn" kind="show" identifier="toLoggedInFrontViewController" id="gRX-7e-vCA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -106,11 +109,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsS-yk-KX3">
-                                <rect key="frame" x="304" y="371" width="51" height="30"/>
-                                <state key="normal" title="Log Ind"/>
+                                <rect key="frame" x="307" y="371" width="48" height="30"/>
+                                <state key="normal" title="Færdig"/>
                                 <connections>
                                     <action selector="loginButton:" destination="9Rv-Ly-2gn" eventType="touchUpInside" id="dGo-KK-LJx"/>
-                                    <segue destination="khc-Ye-oeu" kind="show" id="oiV-Ga-ueY"/>
+                                    <segue destination="2Ve-m5-znu" kind="show" id="bsw-g6-T6Y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -129,6 +132,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EuK-xe-cJs"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sIL-Tv-mFB"/>
                     <connections>
                         <outlet property="loginButton" destination="AsS-yk-KX3" id="2of-6V-Mpi"/>
                     </connections>
@@ -142,70 +146,77 @@
             <objects>
                 <viewController id="vvL-BZ-Nom" customClass="ChallengeViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qak-IM-v4t" customClass="chall">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="I05-B3-mbM"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Go4-Td-MV8">
+                        <barButtonItem key="rightBarButtonItem" title="Færdig" id="nlY-NS-Edb">
+                            <connections>
+                                <action selector="doneButton:" destination="vvL-BZ-Nom" id="3xV-E9-1Zf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6l-dv-bYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3274" y="110"/>
+            <point key="canvasLocation" x="3337" y="110"/>
         </scene>
         <!--Logged In Front View Controller-->
         <scene sceneID="0hT-cG-xEx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KYB-q3-JwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="2Ve-m5-znu" customClass="LoggedInFrontViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ald-Sf-MsQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="WzY-Ux-Opa">
-                                <rect key="frame" x="0.0" y="373" width="375" height="387.33333333333326"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6u-B0-lAL">
-                                        <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="387.33333333333331"/>
-                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                        <state key="normal" title="Udfordring">
-                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-Va-Q55">
-                                        <rect key="frame" x="188.66666666666663" y="0.0" width="186.33333333333337" height="387.33333333333331"/>
-                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                        <state key="normal" title="Statistik">
-                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="bWW-Va-Q55" firstAttribute="height" secondItem="E6u-B0-lAL" secondAttribute="height" id="p0o-y5-dzd"/>
-                                    <constraint firstItem="bWW-Va-Q55" firstAttribute="width" secondItem="E6u-B0-lAL" secondAttribute="width" id="uXD-dA-2Sn"/>
-                                </constraints>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os7-A8-Vg1">
-                                <rect key="frame" x="0.0" y="115.99999999999999" width="377.33333333333331" height="228.66666666666663"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="os7-A8-Vg1" secondAttribute="height" multiplier="1.65" id="Otq-ea-dJX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-Va-Q55">
+                                <rect key="frame" x="0.0" y="540.66666666666663" width="187.66666666666666" height="217.33333333333337"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Statistik">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="os7-A8-Vg1">
+                                <rect key="frame" x="0.0" y="119.99999999999999" width="375" height="224.66666666666663"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Tryk for kommentar" backgroundImage="LOGO">
-                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgO-b7-lwD">
+                                <rect key="frame" x="313" y="44" width="47" height="30"/>
+                                <state key="normal" title="Log ud"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6u-B0-lAL">
+                                <rect key="frame" x="187.66666666666663" y="540.66666666666663" width="187.33333333333337" height="217.33333333333337"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Udfordring">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="os7-A8-Vg1" firstAttribute="top" secondItem="Dpj-8s-sfs" secondAttribute="top" constant="60" id="DAI-O8-tQM"/>
-                            <constraint firstItem="Dpj-8s-sfs" firstAttribute="bottom" secondItem="os7-A8-Vg1" secondAttribute="bottom" multiplier="2.1" id="E7U-k6-esv"/>
-                            <constraint firstItem="WzY-Ux-Opa" firstAttribute="bottom" secondItem="Dpj-8s-sfs" secondAttribute="bottom" multiplier="1.05" id="GEm-0z-5dj"/>
-                            <constraint firstItem="WzY-Ux-Opa" firstAttribute="top" secondItem="Dpj-8s-sfs" secondAttribute="top" multiplier="6.66" id="bY6-HF-Hw4"/>
-                            <constraint firstItem="WzY-Ux-Opa" firstAttribute="leading" secondItem="Dpj-8s-sfs" secondAttribute="leading" id="oWx-YZ-ixz"/>
-                            <constraint firstItem="os7-A8-Vg1" firstAttribute="leading" secondItem="Dpj-8s-sfs" secondAttribute="leading" id="rXc-lD-yye"/>
-                            <constraint firstItem="Dpj-8s-sfs" firstAttribute="trailing" secondItem="WzY-Ux-Opa" secondAttribute="trailing" id="woZ-Q7-QR5"/>
+                            <constraint firstItem="os7-A8-Vg1" firstAttribute="top" secondItem="Dpj-8s-sfs" secondAttribute="top" constant="120" id="4td-Zz-5dR"/>
+                            <constraint firstItem="E6u-B0-lAL" firstAttribute="bottom" secondItem="Dpj-8s-sfs" secondAttribute="bottom" constant="34" id="60X-so-WDU"/>
+                            <constraint firstItem="os7-A8-Vg1" firstAttribute="leading" secondItem="Dpj-8s-sfs" secondAttribute="leading" id="9M0-xR-Gfr"/>
+                            <constraint firstItem="E6u-B0-lAL" firstAttribute="height" secondItem="Dpj-8s-sfs" secondAttribute="height" multiplier="0.3" id="KHU-Rk-bWK"/>
+                            <constraint firstItem="Dpj-8s-sfs" firstAttribute="trailing" secondItem="os7-A8-Vg1" secondAttribute="trailing" id="N9g-xY-o5e"/>
+                            <constraint firstItem="Dpj-8s-sfs" firstAttribute="bottom" secondItem="os7-A8-Vg1" secondAttribute="bottom" multiplier="2.1" id="P3x-TL-zWl"/>
+                            <constraint firstItem="bWW-Va-Q55" firstAttribute="bottom" secondItem="Dpj-8s-sfs" secondAttribute="bottom" constant="33.999999999999886" id="XWf-Qw-Y9Q"/>
+                            <constraint firstItem="cgO-b7-lwD" firstAttribute="top" secondItem="Dpj-8s-sfs" secondAttribute="top" constant="44" id="dDZ-t4-Xdl"/>
+                            <constraint firstItem="cgO-b7-lwD" firstAttribute="leading" secondItem="Dpj-8s-sfs" secondAttribute="leading" constant="313" id="h16-GQ-JzC"/>
+                            <constraint firstItem="E6u-B0-lAL" firstAttribute="leading" secondItem="bWW-Va-Q55" secondAttribute="trailing" id="lMH-XV-rcB"/>
+                            <constraint firstItem="Dpj-8s-sfs" firstAttribute="trailing" secondItem="E6u-B0-lAL" secondAttribute="trailing" id="sBQ-oo-YjA"/>
+                            <constraint firstItem="bWW-Va-Q55" firstAttribute="width" secondItem="Dpj-8s-sfs" secondAttribute="width" multiplier="0.5" id="tBJ-UA-pXb"/>
+                            <constraint firstItem="bWW-Va-Q55" firstAttribute="trailing" secondItem="E6u-B0-lAL" secondAttribute="leading" id="tbR-sA-5IO"/>
+                            <constraint firstItem="bWW-Va-Q55" firstAttribute="leading" secondItem="Dpj-8s-sfs" secondAttribute="leading" id="tos-Bh-W6y"/>
+                            <constraint firstItem="bWW-Va-Q55" firstAttribute="height" secondItem="Dpj-8s-sfs" secondAttribute="height" multiplier="0.3" id="wZ6-Su-Xj8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dpj-8s-sfs"/>
                     </view>
@@ -213,12 +224,14 @@
                         <barButtonItem key="rightBarButtonItem" title="Log Ud" id="TS0-AL-4nU">
                             <connections>
                                 <action selector="logOutBarButton:" destination="2Ve-m5-znu" id="6XY-lQ-wRk"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="6n9-LJ-ypg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYB-q3-JwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1338.4000000000001" y="-843.10344827586209"/>
+            <point key="canvasLocation" x="540" y="-843"/>
         </scene>
         <!--Teacher Data Table View Controller-->
         <scene sceneID="qNn-M9-qoE">
@@ -248,24 +261,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1x-LK-zcx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3305.7971014492755" y="-843.08035714285711"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="yfR-aN-sfc">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Qt-iQ-DY0" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LFD-2k-w0M">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NO8-fS-MZL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dTo-qu-HGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="428.98550724637687" y="109.82142857142857"/>
         </scene>
         <!--School Data Table View Controller-->
         <scene sceneID="DVH-Zp-7aY">
@@ -333,26 +328,29 @@
             <point key="canvasLocation" x="4279.7101449275369" y="-843.08035714285711"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="uoJ-Xd-tJj">
+        <scene sceneID="B3F-zM-j4z">
             <objects>
-                <navigationController storyboardIdentifier="navLoggedInFrontViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="khc-Ye-oeu" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uHn-UF-yjv" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Xi5-ZV-LFS"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aZG-lZ-DMK">
+                    <navigationItem key="navigationItem" id="mTB-66-ifd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qem-bi-bzz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2Ve-m5-znu" kind="relationship" relationship="rootViewController" id="6r2-pq-BX2"/>
+                        <segue destination="vvL-BZ-Nom" kind="relationship" relationship="rootViewController" id="vnl-ww-EQZ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixj-b4-wWv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbo-eN-iex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428.98550724637687" y="-843.08035714285711"/>
+            <point key="canvasLocation" x="2394" y="109"/>
         </scene>
     </scenes>
     <resources>
         <image name="LOGO" width="75" height="44"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6n9-LJ-ypg"/>
+    </inferredMetricsTieBreakers>
 </document>
