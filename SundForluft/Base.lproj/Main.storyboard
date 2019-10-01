@@ -106,10 +106,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsS-yk-KX3">
-                                <rect key="frame" x="317" y="371" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
+                                <rect key="frame" x="304" y="371" width="51" height="30"/>
+                                <state key="normal" title="Log Ind"/>
                                 <connections>
                                     <action selector="loginButton:" destination="9Rv-Ly-2gn" eventType="touchUpInside" id="dGo-KK-LJx"/>
+                                    <segue destination="khc-Ye-oeu" kind="show" id="oiV-Ga-ueY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -157,14 +158,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYB-q3-JwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="2Ve-m5-znu" customClass="LoggedInFrontViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ald-Sf-MsQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="WzY-Ux-Opa">
-                                <rect key="frame" x="0.0" y="586" width="375" height="231"/>
+                                <rect key="frame" x="0.0" y="373" width="375" height="387.33333333333326"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6u-B0-lAL">
-                                        <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="231"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="387.33333333333331"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <state key="normal" title="Udfordring">
@@ -172,7 +173,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-Va-Q55">
-                                        <rect key="frame" x="188.66666666666663" y="0.0" width="186.33333333333337" height="231"/>
+                                        <rect key="frame" x="188.66666666666663" y="0.0" width="186.33333333333337" height="387.33333333333331"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <state key="normal" title="Statistik">
@@ -186,7 +187,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os7-A8-Vg1">
-                                <rect key="frame" x="0.0" y="148" width="367" height="222.33333333333337"/>
+                                <rect key="frame" x="0.0" y="115.99999999999999" width="377.33333333333331" height="228.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="os7-A8-Vg1" secondAttribute="height" multiplier="1.65" id="Otq-ea-dJX"/>
                                 </constraints>
@@ -209,7 +210,11 @@
                         <viewLayoutGuide key="safeArea" id="Dpj-8s-sfs"/>
                     </view>
                     <navigationItem key="navigationItem" id="ST2-D9-VLP">
-                        <barButtonItem key="rightBarButtonItem" title="Log Ud" id="TS0-AL-4nU"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Ud" id="TS0-AL-4nU">
+                            <connections>
+                                <action selector="logOutBarButton:" destination="2Ve-m5-znu" id="6XY-lQ-wRk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
             </objects>
@@ -334,7 +339,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Xi5-ZV-LFS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aZG-lZ-DMK">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
