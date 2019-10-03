@@ -12,6 +12,10 @@ class LoggedInFrontViewController: UIViewController {
 
 
     
+    @IBAction func logOutButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated:true);
