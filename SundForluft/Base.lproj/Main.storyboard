@@ -28,7 +28,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-aa-Jhq">
                                 <rect key="frame" x="0.0" y="540.66666666666663" width="375" height="217.33333333333337"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="Udfordring">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -173,7 +173,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-Va-Q55">
                                 <rect key="frame" x="0.0" y="540.66666666666663" width="187.66666666666666" height="217.33333333333337"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Statistik">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -183,7 +183,7 @@
                                 <rect key="frame" x="0.0" y="119.99999999999999" width="375" height="224.66666666666663"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Tryk for kommentar" backgroundImage="LOGO">
-                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
@@ -193,7 +193,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6u-B0-lAL">
                                 <rect key="frame" x="187.66666666666663" y="540.66666666666663" width="187.33333333333337" height="217.33333333333337"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Udfordring">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -270,6 +270,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Td-TX-nhF">
+                            <rect key="frame" x="0.0" y="99.666667938232422" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IdI-CZ-AeT">
                                 <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
@@ -290,6 +297,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exJ-pG-bvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5189.8550724637689" y="-843.08035714285711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="t1R-Bu-Hr0">
+            <objects>
+                <viewController id="fzl-KT-42p" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Ln-qf-3UE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ke-cd-ZA3">
+                                <rect key="frame" x="0.0" y="104" width="375" height="216"/>
+                            </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="okE-hH-dtO">
+                                <rect key="frame" x="0.0" y="370" width="375" height="187"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0l-wf-Kh6">
+                                <rect key="frame" x="0.0" y="607" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3Ke-cd-ZA3" firstAttribute="top" secondItem="hBr-oV-kIP" secondAttribute="top" constant="60" id="2j4-8t-Vjd"/>
+                            <constraint firstItem="3Ke-cd-ZA3" firstAttribute="trailing" secondItem="hBr-oV-kIP" secondAttribute="trailing" id="5z4-Hp-6zy"/>
+                            <constraint firstItem="hBr-oV-kIP" firstAttribute="trailing" secondItem="C0l-wf-Kh6" secondAttribute="trailing" id="8Xe-LN-TFJ"/>
+                            <constraint firstItem="hBr-oV-kIP" firstAttribute="trailing" secondItem="okE-hH-dtO" secondAttribute="trailing" id="8Xy-YK-8A3"/>
+                            <constraint firstItem="C0l-wf-Kh6" firstAttribute="leading" secondItem="hBr-oV-kIP" secondAttribute="leading" id="B7q-up-fLI"/>
+                            <constraint firstItem="C0l-wf-Kh6" firstAttribute="top" secondItem="okE-hH-dtO" secondAttribute="bottom" constant="50" id="JRo-wl-hn1"/>
+                            <constraint firstItem="3Ke-cd-ZA3" firstAttribute="leading" secondItem="hBr-oV-kIP" secondAttribute="leading" id="Y7S-gl-gvk"/>
+                            <constraint firstItem="C0l-wf-Kh6" firstAttribute="top" secondItem="okE-hH-dtO" secondAttribute="bottom" constant="50" id="aKL-8Q-UMB"/>
+                            <constraint firstItem="okE-hH-dtO" firstAttribute="top" secondItem="3Ke-cd-ZA3" secondAttribute="bottom" constant="50" id="l08-CQ-EPH"/>
+                            <constraint firstItem="C0l-wf-Kh6" firstAttribute="leading" secondItem="hBr-oV-kIP" secondAttribute="leading" id="rka-fX-TzJ"/>
+                            <constraint firstItem="okE-hH-dtO" firstAttribute="leading" secondItem="hBr-oV-kIP" secondAttribute="leading" id="v46-pk-8GG"/>
+                            <constraint firstItem="C0l-wf-Kh6" firstAttribute="trailing" secondItem="hBr-oV-kIP" secondAttribute="trailing" id="vUW-zZ-Bc7"/>
+                            <constraint firstItem="hBr-oV-kIP" firstAttribute="bottom" secondItem="C0l-wf-Kh6" secondAttribute="bottom" constant="150" id="ynQ-GM-CNh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hBr-oV-kIP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VAB-Ly-Tsf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2356" y="-1564.2857142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="clT-ZF-n5S">
@@ -351,6 +402,6 @@
         <image name="LOGO" width="75" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6n9-LJ-ypg"/>
+        <segue reference="bsw-g6-T6Y"/>
     </inferredMetricsTieBreakers>
 </document>
