@@ -23,6 +23,7 @@
 		E86C7AC8233DF1D9003E3C28 /* SchoolDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */; };
 		E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7ACB233E0776003E3C28 /* AppState.swift */; };
 		F381F27D234615B500E4CFA7 /* PedalDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F381F27C234615B500E4CFA7 /* PedalDataTableViewController.swift */; };
+		F381F27F23462B9400E4CFA7 /* RoomsRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F381F27E23462B9400E4CFA7 /* RoomsRange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataTableViewController.swift; sourceTree = "<group>"; };
 		E86C7ACB233E0776003E3C28 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		F381F27C234615B500E4CFA7 /* PedalDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedalDataTableViewController.swift; sourceTree = "<group>"; };
+		F381F27E23462B9400E4CFA7 /* RoomsRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsRange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				E85304A8233CD3CD00105CA7 /* Info.plist */,
 				E85304A0233CD3CA00105CA7 /* SundForluft.xcdatamodeld */,
 				F381F27C234615B500E4CFA7 /* PedalDataTableViewController.swift */,
+				F381F27E23462B9400E4CFA7 /* RoomsRange.swift */,
 			);
 			path = SundForluft;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */,
 				E86C7AC6233DF191003E3C28 /* TeacherDataTableViewController.swift in Sources */,
 				E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */,
+				F381F27F23462B9400E4CFA7 /* RoomsRange.swift in Sources */,
 				E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */,
 				F381F27D234615B500E4CFA7 /* PedalDataTableViewController.swift in Sources */,
 				E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */,

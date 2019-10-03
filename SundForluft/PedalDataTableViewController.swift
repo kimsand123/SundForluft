@@ -10,9 +10,16 @@ import UIKit
 
 class PedalDataTableViewController: UIViewController {
 
+    @IBOutlet weak var PedalStatusLabel: UILabel!
+           
+    @IBOutlet weak var Pedalstatusimage: UIImage!
+          
+    @IBOutlet weak var PedalRoomPicker: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+       
         // Do any additional setup after loading the view.
     }
     
