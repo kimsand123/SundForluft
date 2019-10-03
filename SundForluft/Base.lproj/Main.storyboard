@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,17 +10,16 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-wm-abF">
-                                <rect key="frame" x="0.0" y="60.000000000000014" width="375" height="217.33333333333337"/>
+                                <rect key="frame" x="0.0" y="104.00000000000001" width="375" height="220.33333333333337"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-aa-Jhq">
-                                <rect key="frame" x="0.0" y="540.66666666666663" width="375" height="217.33333333333337"/>
+                                <rect key="frame" x="0.0" y="591.66666666666663" width="375" height="220.33333333333337"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="Udfordring">
@@ -32,14 +30,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1G-XI-fMp">
-                                <rect key="frame" x="313" y="44" width="51" height="30"/>
+                                <rect key="frame" x="313" y="88" width="51" height="30"/>
                                 <state key="normal" title="Log Ind"/>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9HL-Sf-sa3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRG-Kb-unH">
-                                <rect key="frame" x="166.66666666666666" y="352" width="41.666666666666657" height="20.333333333333314"/>
+                                <rect key="frame" x="166.66666666666666" y="401" width="41.666666666666657" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,79 +68,9 @@
                         <outlet property="messageLabel" destination="bRG-Kb-unH" id="X7v-zN-cSp"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="112.8" y="336.94581280788179"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="PCU-os-J0m">
-            <objects>
-                <viewController id="9Rv-Ly-2gn" customClass="LoginViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="suG-3m-urn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="7Bg-Nc-rT4">
-                                <rect key="frame" x="5" y="235" width="365" height="44"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Brugernavn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9A-zi-Ecy">
-                                        <rect key="frame" x="0.0" y="0.0" width="88.666666666666671" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g7M-Oe-m0b">
-                                        <rect key="frame" x="107.66666666666666" y="0.0" width="257.33333333333337" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="2HV-tk-Qdp">
-                                <rect key="frame" x="5" y="309" width="365" height="34"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmV-tQ-vaK">
-                                        <rect key="frame" x="0.0" y="0.0" width="73.666666666666671" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LrD-ot-TVq">
-                                        <rect key="frame" x="107.66666666666666" y="0.0" width="257.33333333333337" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsS-yk-KX3">
-                                <rect key="frame" x="307" y="425" width="48" height="30"/>
-                                <state key="normal" title="Færdig"/>
-                                <connections>
-                                    <action selector="doneButton:" destination="9Rv-Ly-2gn" eventType="touchUpInside" id="DB3-Ce-qpj"/>
-                                    <action selector="loginButton:" destination="9Rv-Ly-2gn" eventType="touchUpInside" id="dGo-KK-LJx"/>
-                                    <segue destination="2Ve-m5-znu" kind="show" id="bsw-g6-T6Y"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="F9A-zi-Ecy" firstAttribute="top" secondItem="EuK-xe-cJs" secondAttribute="top" constant="235" id="8Jq-sh-gaC"/>
-                            <constraint firstItem="EuK-xe-cJs" firstAttribute="trailing" secondItem="7Bg-Nc-rT4" secondAttribute="trailing" constant="5" id="Aal-SD-Tcf"/>
-                            <constraint firstItem="EuK-xe-cJs" firstAttribute="trailing" secondItem="2HV-tk-Qdp" secondAttribute="trailing" constant="5" id="LqX-nH-qQ7"/>
-                            <constraint firstItem="EuK-xe-cJs" firstAttribute="bottom" secondItem="bmV-tQ-vaK" secondAttribute="bottom" constant="381" id="XTs-3P-a4m"/>
-                            <constraint firstItem="2HV-tk-Qdp" firstAttribute="leading" secondItem="EuK-xe-cJs" secondAttribute="leading" constant="5" id="YRI-uy-XeM"/>
-                            <constraint firstItem="7Bg-Nc-rT4" firstAttribute="leading" secondItem="EuK-xe-cJs" secondAttribute="leading" constant="5" id="pKW-eh-gSS"/>
-                            <constraint firstItem="AsS-yk-KX3" firstAttribute="top" secondItem="LrD-ot-TVq" secondAttribute="bottom" constant="28" id="tzO-gS-kuz"/>
-                            <constraint firstItem="EuK-xe-cJs" firstAttribute="trailing" secondItem="AsS-yk-KX3" secondAttribute="trailing" constant="20" id="xSH-f2-Zra"/>
-                            <constraint firstItem="EuK-xe-cJs" firstAttribute="bottom" secondItem="AsS-yk-KX3" secondAttribute="bottom" constant="323" id="xuq-Rv-H4K"/>
-                            <constraint firstItem="bmV-tQ-vaK" firstAttribute="top" secondItem="F9A-zi-Ecy" secondAttribute="bottom" constant="40" id="ysk-s3-atm"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="EuK-xe-cJs"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="sIL-Tv-mFB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="chE-bD-Ae8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-406" y="-843"/>
         </scene>
         <!--Challenge View Controller-->
         <scene sceneID="Fp6-Es-KG0">
@@ -177,11 +105,11 @@
             <objects>
                 <viewController storyboardIdentifier="LoggedInFrontViewController" id="2Ve-m5-znu" customClass="LoggedInFrontViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ald-Sf-MsQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-Va-Q55">
-                                <rect key="frame" x="0.0" y="540.66666666666663" width="187.66666666666666" height="217.33333333333337"/>
+                                <rect key="frame" x="0.0" y="591.66666666666663" width="187.66666666666666" height="220.33333333333337"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Skole statistik">
@@ -192,7 +120,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="os7-A8-Vg1">
-                                <rect key="frame" x="0.0" y="119.99999999999999" width="375" height="224.66666666666663"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="206.33333333333337"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Tryk for kommentar" backgroundImage="LOGO">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -203,23 +131,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgO-b7-lwD">
-                                <rect key="frame" x="313" y="44" width="47" height="30"/>
+                                <rect key="frame" x="313" y="88" width="47" height="30"/>
                                 <state key="normal" title="Log ud"/>
                                 <connections>
                                     <action selector="logOutButton:" destination="2Ve-m5-znu" eventType="touchUpInside" id="yjK-wh-EBH"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="zgH-m9-CP6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6u-B0-lAL">
-                                <rect key="frame" x="187.66666666666663" y="540.66666666666663" width="187.33333333333337" height="217.33333333333337"/>
+                                <rect key="frame" x="187.66666666666663" y="591.66666666666663" width="187.33333333333337" height="220.33333333333337"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Lærer kommentarer">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="NYt-Jb-cOi" kind="show" id="P5L-S7-eme"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -284,7 +208,7 @@
             <objects>
                 <tableViewController id="ces-F3-9Tt" customClass="SchoolDataTableViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kSW-fj-a7h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Td-TX-nhF">
@@ -385,7 +309,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="kiz-oe-Xbq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LjA-Es-PSX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -401,7 +325,4 @@
     <resources>
         <image name="LOGO" width="75" height="44"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="bsw-g6-T6Y"/>
-    </inferredMetricsTieBreakers>
 </document>
