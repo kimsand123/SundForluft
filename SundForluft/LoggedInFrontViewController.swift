@@ -13,15 +13,11 @@ class LoggedInFrontViewController: UIViewController {
     @IBAction func commentaryButton(_ sender: Any) {
         
         //instantier og initialiser alert
-        let dateFormatter = DateFormatter()
-        dateFormatter.calendar = Calendar(identifier: .gregorian)
-        dateFormatter.dateFormat = "dd-MM-yyyy'T'hh:mm"
-        date: String = dateFormatter.Date
         
         
         
         
-        let alert = UIAlertController(title: "Kommentar" + date, message: "Indtast kommentar ", preferredStyle: UIAlertController.Style.alert )
+        let alert = UIAlertController(title: "Kommentar", message: "Indtast kommentar ", preferredStyle: UIAlertController.Style.alert )
         
         //Hvad skal der ske når man trykker færdig
         let save = UIAlertAction(title: "Færdig", style: .default) { (alertAction) in
