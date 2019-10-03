@@ -19,18 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
-        
-        let screenRect = UIScreen.main.bounds
-        let screenWidth = screenRect.size.width
-        let screenHeight = screenRect.size.height
-        let screenMinX =
-        ppmLabel.text = String(Int(screenHeight))
-        var X_Position:CGFloat = 0.0 //use your X position here
-        var Y_Position:CGFloat = 50.0 //use your Y position here
-        ChallengeButton.frame= CGRectMake(X_Position, Y_Position, screenWidth, CGFloat(Int(screenHeight) / 3))
-        ChallengeButton.frame.size = CGSize(width: Int(screenWidth), height: Int(Int(screenHeight) / 3))
+        self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.
     }
 

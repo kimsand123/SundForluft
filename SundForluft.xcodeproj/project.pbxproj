@@ -21,6 +21,9 @@
 		E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */; };
 		E86C7AC6233DF191003E3C28 /* TeacherDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC5233DF191003E3C28 /* TeacherDataTableViewController.swift */; };
 		E86C7AC8233DF1D9003E3C28 /* SchoolDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */; };
+		E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7ACB233E0776003E3C28 /* AppState.swift */; };
+		F381F27D234615B500E4CFA7 /* PedalDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F381F27C234615B500E4CFA7 /* PedalDataTableViewController.swift */; };
+		F381F27F23462B9400E4CFA7 /* RoomsRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F381F27E23462B9400E4CFA7 /* RoomsRange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInFrontViewController.swift; sourceTree = "<group>"; };
 		E86C7AC5233DF191003E3C28 /* TeacherDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherDataTableViewController.swift; sourceTree = "<group>"; };
 		E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataTableViewController.swift; sourceTree = "<group>"; };
+		E86C7ACB233E0776003E3C28 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		F381F27C234615B500E4CFA7 /* PedalDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedalDataTableViewController.swift; sourceTree = "<group>"; };
+		F381F27E23462B9400E4CFA7 /* RoomsRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsRange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 				E85304CC233CDC3B00105CA7 /* LoginViewController.swift */,
 				E8530497233CD3CA00105CA7 /* AppDelegate.swift */,
 				E8530499233CD3CA00105CA7 /* SceneDelegate.swift */,
+				E86C7ACB233E0776003E3C28 /* AppState.swift */,
 				E853049B233CD3CA00105CA7 /* ViewController.swift */,
 				E853049D233CD3CA00105CA7 /* Main.storyboard */,
 				E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */,
@@ -124,6 +131,8 @@
 				E85304A5233CD3CD00105CA7 /* LaunchScreen.storyboard */,
 				E85304A8233CD3CD00105CA7 /* Info.plist */,
 				E85304A0233CD3CA00105CA7 /* SundForluft.xcdatamodeld */,
+				F381F27C234615B500E4CFA7 /* PedalDataTableViewController.swift */,
+				F381F27E23462B9400E4CFA7 /* RoomsRange.swift */,
 			);
 			path = SundForluft;
 			sourceTree = "<group>";
@@ -278,13 +287,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E85304A2233CD3CA00105CA7 /* SundForluft.xcdatamodeld in Sources */,
+				E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */,
 				E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */,
 				E86C7AC8233DF1D9003E3C28 /* SchoolDataTableViewController.swift in Sources */,
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
 				E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */,
 				E86C7AC6233DF191003E3C28 /* TeacherDataTableViewController.swift in Sources */,
 				E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */,
+				F381F27F23462B9400E4CFA7 /* RoomsRange.swift in Sources */,
 				E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */,
+				F381F27D234615B500E4CFA7 /* PedalDataTableViewController.swift in Sources */,
 				E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,14 +472,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SundForluft/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KS.SundForluft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -478,14 +490,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SundForluft/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KS.SundForluft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

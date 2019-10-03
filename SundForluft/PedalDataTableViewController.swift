@@ -1,21 +1,25 @@
 //
-//  ChallengeViewController.swift
+//  PedalDataTableViewController.swift
 //  SundForluft
 //
-//  Created by Kim Sandberg on 27/09/2019.
+//  Created by Konstantin Orlov on 03/10/2019.
 //  Copyright © 2019 Kim Sandberg. All rights reserved.
 //
 
 import UIKit
 
-class ChallengeViewController: UIViewController {
+class PedalDataTableViewController: UIViewController {
 
-    @IBAction func doneButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+    @IBOutlet weak var PedalStatusLabel: UILabel!
+           
+    @IBOutlet weak var Pedalstatusimage: UIImage!
+          
+    @IBOutlet weak var PedalRoomPicker: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+       
         // Do any additional setup after loading the view.
     }
     
