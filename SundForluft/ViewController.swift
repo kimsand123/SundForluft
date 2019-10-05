@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         
+        var okToLogin : Bool
+        okToLogin = false
         
         //instantier og initialiser alert
         let alert = UIAlertController(title: "Log ind", message: "Indtast brugernavn og password", preferredStyle: UIAlertController.Style.alert )
@@ -26,26 +28,31 @@ class ViewController: UIViewController {
             let usernameTextField = alert.textFields![0] as UITextField
             let passwordTextField = alert.textFields![1] as UITextField
             
-            if usernameTextField.text != "" {
-                //Read TextFields text data
+            while okToLogin == false {
+                if usernameTextField.text != "" {
+                    okToLogin = true
+                } else {
+                    usernameTextField.placeholder = "Du har ikke indtaste Brugernavn"
+                    usernameTextField.textColor = .red
+                    okToLogin = false
+                }
                 
-                
-            } else {
-                print("Brugernavn er tomt")
+                if passwordTextField.text != "" {
+                    okToLogin = true
+                    
+                } else {
+                    okToLogin = false
+                }
             }
+            print("Ok to login = \(okToLogin)")
             
-            if passwordTextField.text != "" {
-                
-            } else {
-                print("Password er tomt")
+            if okToLogin == true {
+                //Skift til LoggedInFrontViewController
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let loggedInFrontViewController = storyBoard.instantiateViewController(withIdentifier: "LoggedInFrontViewController") as! LoggedInFrontViewController
+                loggedInFrontViewController.modalPresentationStyle = .fullScreen
+                self.present(loggedInFrontViewController, animated: true, completion: nil)
             }
-            
-            //Skift til LoggedInFrontViewController
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let loggedInFrontViewController = storyBoard.instantiateViewController(withIdentifier: "LoggedInFrontViewController") as! LoggedInFrontViewController
-            loggedInFrontViewController.modalPresentationStyle = .fullScreen
-            self.present(loggedInFrontViewController, animated: true, completion: nil)
-            
         }
         
         //brugernavn
@@ -69,6 +76,7 @@ class ViewController: UIViewController {
         
         
         self.present(alert, animated:true, completion: nil)
+        
         
         
         
