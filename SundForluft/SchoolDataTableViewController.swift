@@ -9,9 +9,12 @@
 import UIKit
 
 class SchoolDataTableViewController: UITableViewController {
-
+    
+    var comments = [Comment]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fillComments()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -19,19 +22,36 @@ class SchoolDataTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    func fillComments() {
+        let sampleComments = [
+            Comment(ppm: 600, date: Date(), comment: "Dette er første commentar"),
+            Comment(ppm: 600, date: Date(), comment: "Dette er anden commentar"),
+            Comment(ppm: 700, date: Date(), comment: "Dette er tredje commentar"),
+            Comment(ppm: 800, date: Date(), comment: "Dette er fjerde commentar"),
+            Comment(ppm: 550, date: Date(), comment: "Dette er femte commentar"),
+            Comment(ppm: 1300, date: Date(), comment: "Dette er sjette commentar"),
+            Comment(ppm: 1433, date: Date(), comment: "Dette er syvende commentar"),
+            Comment(ppm: 1384, date: Date(), comment: "Dette er ottende commentar"),
+            Comment(ppm: 0943, date: Date(), comment: "Dette er niende commentar")
+        ]
+        comments = sampleComments.compactMap {$0}
+    }
+    // MARK: - Table view data source
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return comments.count
     }
 
+    
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
