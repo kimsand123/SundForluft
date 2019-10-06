@@ -17,7 +17,7 @@ class PedalDataTableViewController: UITableViewController{
     
     let roomNames = ["room1", "room2", "room3", "room4", "room5"]
     //var pickerData: [String] = [String]()
-    
+    var levelCO = 650
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +32,28 @@ class PedalDataTableViewController: UITableViewController{
         PedalStatusLabel.shadowColor = UIColor.lightGray
         PedalStatusLabel.shadowOffset = CGSize (width: 2, height: 4)
         PedalStatusLabel.center = self.view.center
-        
         PedalStatusLabel.text = "test test"
+        
+        if levelCO <= 600{
+            PedalStatusLabel.text = "You are outside of the class, arent you?"
+        }
+            // check later
+        else if levelCO > 600 /*&& <= 850 */ {
+            PedalStatusLabel.text = "Great atmosphere to study!"
+        }
+        else if levelCO > 850 {
+            PedalStatusLabel.text = "Huh, to open a window soon can be a good idea!"
+        }
+        else if levelCO > 1200 {
+            PedalStatusLabel.text = "Can you really breath in it?"
+        }
+        else if levelCO > 10000 {
+            PedalStatusLabel.text = "It was nice to work with you. But we are burning"
+        }
+        else {
+            PedalStatusLabel.text = "Something went wrong"
+        }
+        
  }
 
 }
