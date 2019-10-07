@@ -34,17 +34,19 @@ class PedalDataTableViewController: UITableViewController{
         PedalStatusLabel.center = self.view.center
         PedalStatusLabel.text = "test test"
         
+        
+        // good idea to put it in a  function
         if levelCO <= 600{
             PedalStatusLabel.text = "You are outside of the class, arent you?"
         }
-            // check later
-        else if levelCO > 600 /*&& <= 850 */ {
+            
+        else if levelCO > 600 && levelCO <= 850 {
             PedalStatusLabel.text = "Great atmosphere to study!"
         }
-        else if levelCO > 850 {
+        else if levelCO > 850 && levelCO <= 1200 {
             PedalStatusLabel.text = "Huh, to open a window soon can be a good idea!"
         }
-        else if levelCO > 1200 {
+        else if levelCO > 1200 && levelCO <= 10000 {
             PedalStatusLabel.text = "Can you really breath in it?"
         }
         else if levelCO > 10000 {
