@@ -8,18 +8,18 @@
 
 import UIKit
 
-class TeacherCommentController: UIViewController {
+class TeacherCommentController: UITableViewController {
     var comments = [Comment]()
     @IBOutlet weak var commentTabelView: UITableView!
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "CustomCommentCell", bundle: nil)
-        commentTabelView.register(nib,forCellReuseIdentifier:"CustomCommentCell")
-            
-        commentTabelView.dataSource = self as? UITableViewDataSource
-
+//        let nib = UINib(nibName: "CustomCommentCell", bundle: nil)
+//        commentTabelView.register(nib,forCellReuseIdentifier:"CustomCommentCell")
+//
+//        commentTabelView.dataSource = self
+        
         fillComments()
         
         // Do any additional setup after loading the view.
@@ -38,49 +38,48 @@ class TeacherCommentController: UIViewController {
             Comment(ppm: 0943, date: Date(), comment: "Dette er niende commentar")
         ]
         comments = sampleComments.compactMap {$0}
-        
-
-      
-        
     }
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //extension TeacherCommentController: UITableViewDataSource {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Fetch a cell of the appropriate type.
         let df = DateFormatter()
-        df.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        df.dateStyle = .short
+        df.timeStyle = .short
+        //df.dateFormat = "yyyy-MM-dd hh:mm:ss"
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCommentCell", for: indexPath)
+
         
-        var counter: Int
-        counter = 1
-        for comment in comments{
-            print("kommentar nr. \(counter)  \(comment.comment)!")
-            counter = counter + 1
-        }
-        
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCommentCell") as? CustomCommentCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCommentCell", for: indexPath) as! CustomCommentCell
             cell.ppmLabel?.text = String(comments[indexPath.row].ppm)
             //df.stringFromDate(Date())
             cell.dateLabel?.text = df.string(from: comments[indexPath.row].date)
             cell.commentLabel?.text = comments[indexPath.row].comment
-            
-        }
         return cell
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+//extension TeacherCommentController: UITableViewDelegate {
+//
+//}
+
+
+//}

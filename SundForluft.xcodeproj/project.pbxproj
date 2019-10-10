@@ -22,11 +22,9 @@
 		E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */; };
 		E86C7AC8233DF1D9003E3C28 /* SchoolDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */; };
 		E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7ACB233E0776003E3C28 /* AppState.swift */; };
-		E8FEB5C1234B69010079656B /* CustomCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8FEB5C0234B69010079656B /* CustomCommentCell.xib */; };
+		E8986A6D234F480B000CEB2F /* TeacherCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */; };
 		E8FEB5C3234B6A7E0079656B /* CustomCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEB5C2234B6A7E0079656B /* CustomCommentCell.swift */; };
 		E8FEB5C5234B6F740079656B /* TeacherCommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEB5C4234B6F740079656B /* TeacherCommentController.swift */; };
-		F381F27D234615B500E4CFA7 /* PedalDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F381F27C234615B500E4CFA7 /* PedalDataTableViewController.swift */; };
-		F381F27F23462B9400E4CFA7 /* RoomsRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F381F27E23462B9400E4CFA7 /* RoomsRange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,11 +66,9 @@
 		E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInFrontViewController.swift; sourceTree = "<group>"; };
 		E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataTableViewController.swift; sourceTree = "<group>"; };
 		E86C7ACB233E0776003E3C28 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		E8FEB5C0234B69010079656B /* CustomCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCommentCell.xib; sourceTree = "<group>"; };
+		E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherCommentTableViewController.swift; sourceTree = "<group>"; };
 		E8FEB5C2234B6A7E0079656B /* CustomCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCommentCell.swift; sourceTree = "<group>"; };
 		E8FEB5C4234B6F740079656B /* TeacherCommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherCommentController.swift; sourceTree = "<group>"; };
-		F381F27C234615B500E4CFA7 /* PedalDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedalDataTableViewController.swift; sourceTree = "<group>"; };
-		F381F27E23462B9400E4CFA7 /* RoomsRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsRange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +125,7 @@
 				E86C7ACB233E0776003E3C28 /* AppState.swift */,
 				E853049B233CD3CA00105CA7 /* ViewController.swift */,
 				E853049D233CD3CA00105CA7 /* Main.storyboard */,
+				E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */,
 				E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */,
 				E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */,
 				E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */,
@@ -136,10 +133,7 @@
 				E85304A5233CD3CD00105CA7 /* LaunchScreen.storyboard */,
 				E85304A8233CD3CD00105CA7 /* Info.plist */,
 				E85304A0233CD3CA00105CA7 /* SundForluft.xcdatamodeld */,
-				F381F27C234615B500E4CFA7 /* PedalDataTableViewController.swift */,
-				F381F27E23462B9400E4CFA7 /* RoomsRange.swift */,
 				E847B8A92348BE9600672BC5 /* Comment.swift */,
-				E8FEB5C0234B69010079656B /* CustomCommentCell.xib */,
 				E8FEB5C2234B6A7E0079656B /* CustomCommentCell.swift */,
 				E8FEB5C4234B6F740079656B /* TeacherCommentController.swift */,
 			);
@@ -268,7 +262,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8FEB5C1234B69010079656B /* CustomCommentCell.xib in Resources */,
 				E85304A7233CD3CD00105CA7 /* LaunchScreen.storyboard in Resources */,
 				E85304A4233CD3CD00105CA7 /* Assets.xcassets in Resources */,
 				E853049F233CD3CA00105CA7 /* Main.storyboard in Resources */,
@@ -301,13 +294,12 @@
 				E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */,
 				E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */,
 				E86C7AC8233DF1D9003E3C28 /* SchoolDataTableViewController.swift in Sources */,
+				E8986A6D234F480B000CEB2F /* TeacherCommentTableViewController.swift in Sources */,
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
 				E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */,
 				E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */,
 				E847B8AA2348BE9600672BC5 /* Comment.swift in Sources */,
-				F381F27F23462B9400E4CFA7 /* RoomsRange.swift in Sources */,
 				E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */,
-				F381F27D234615B500E4CFA7 /* PedalDataTableViewController.swift in Sources */,
 				E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */,
 				E8FEB5C3234B6A7E0079656B /* CustomCommentCell.swift in Sources */,
 			);
