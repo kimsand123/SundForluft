@@ -12,8 +12,15 @@ private let reuseIdentifier = "Cell"
 
 class RoomsCollectionViewController: UICollectionViewController {
 
+    var rooms = [Room]()
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fillRooms()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,6 +29,20 @@ class RoomsCollectionViewController: UICollectionViewController {
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+    }
+    
+    func fillRooms(){
+        let sampleRooms = [
+            Room(cloudImage: UIImage(named: "LOGO")!, room:"Lok 14a"),
+            Room(cloudImage: UIImage(named: "LOGO")!, room: "Lok 14b"),
+            Room(cloudImage: UIImage(named: "LOGO")!, room:"Lok 15a"),
+            Room(cloudImage: UIImage(named: "LOGO")!, room: "Lok 15b"),
+            Room(cloudImage: UIImage(named: "LOGO")!, room:"Lærerværelse"),
+            Room(cloudImage: UIImage(named: "LOGO")!, room: "Sløjd"),
+            Room(cloudImage: UIImage(named: "LOGO")!, room:"Lok 20"),
+            Room(cloudImage: UIImage(named: "LOGO")!, room: "Musik 1"),
+        ]
+        rooms = sampleRooms.compactMap{$0}
     }
 
     /*
@@ -38,20 +59,28 @@ class RoomsCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return rooms.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+        
         // Configure the cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomRoomCollectionViewCell", for: indexPath) as! CustomRoomCollectionViewCell
+        cell.imageView.image = rooms[indexPath.row].cloudImage
+        cell.roomLabel.text = rooms[indexPath.row].room
+            
+        
     
+    
+        
+        
+        
         return cell
     }
 
