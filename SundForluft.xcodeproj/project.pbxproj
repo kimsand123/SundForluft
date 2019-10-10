@@ -20,11 +20,12 @@
 		E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85304CC233CDC3B00105CA7 /* LoginViewController.swift */; };
 		E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */; };
 		E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */; };
-		E86C7AC8233DF1D9003E3C28 /* SchoolDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */; };
 		E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7ACB233E0776003E3C28 /* AppState.swift */; };
 		E8986A6D234F480B000CEB2F /* TeacherCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */; };
+		E8986A71234FA1B4000CEB2F /* RoomsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A70234FA1B4000CEB2F /* RoomsCollectionViewController.swift */; };
+		E8986A75234FA381000CEB2F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A74234FA381000CEB2F /* Room.swift */; };
+		E8986A77234FA410000CEB2F /* CustomRoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A76234FA410000CEB2F /* CustomRoomCollectionViewCell.swift */; };
 		E8FEB5C3234B6A7E0079656B /* CustomCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEB5C2234B6A7E0079656B /* CustomCommentCell.swift */; };
-		E8FEB5C5234B6F740079656B /* TeacherCommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEB5C4234B6F740079656B /* TeacherCommentController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,11 +65,12 @@
 		E85304CC233CDC3B00105CA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInFrontViewController.swift; sourceTree = "<group>"; };
-		E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataTableViewController.swift; sourceTree = "<group>"; };
 		E86C7ACB233E0776003E3C28 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherCommentTableViewController.swift; sourceTree = "<group>"; };
+		E8986A70234FA1B4000CEB2F /* RoomsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsCollectionViewController.swift; sourceTree = "<group>"; };
+		E8986A74234FA381000CEB2F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		E8986A76234FA410000CEB2F /* CustomRoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoomCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8FEB5C2234B6A7E0079656B /* CustomCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCommentCell.swift; sourceTree = "<group>"; };
-		E8FEB5C4234B6F740079656B /* TeacherCommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherCommentController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,23 +121,16 @@
 		E8530496233CD3CA00105CA7 /* SundForluft */ = {
 			isa = PBXGroup;
 			children = (
-				E85304CC233CDC3B00105CA7 /* LoginViewController.swift */,
+				E8986A6F234F7D28000CEB2F /* Objects */,
+				E8986A6E234F7CDB000CEB2F /* Views */,
 				E8530497233CD3CA00105CA7 /* AppDelegate.swift */,
 				E8530499233CD3CA00105CA7 /* SceneDelegate.swift */,
 				E86C7ACB233E0776003E3C28 /* AppState.swift */,
-				E853049B233CD3CA00105CA7 /* ViewController.swift */,
 				E853049D233CD3CA00105CA7 /* Main.storyboard */,
-				E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */,
-				E86C7AC7233DF1D9003E3C28 /* SchoolDataTableViewController.swift */,
-				E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */,
-				E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */,
 				E85304A3233CD3CD00105CA7 /* Assets.xcassets */,
 				E85304A5233CD3CD00105CA7 /* LaunchScreen.storyboard */,
 				E85304A8233CD3CD00105CA7 /* Info.plist */,
 				E85304A0233CD3CA00105CA7 /* SundForluft.xcdatamodeld */,
-				E847B8A92348BE9600672BC5 /* Comment.swift */,
-				E8FEB5C2234B6A7E0079656B /* CustomCommentCell.swift */,
-				E8FEB5C4234B6F740079656B /* TeacherCommentController.swift */,
 			);
 			path = SundForluft;
 			sourceTree = "<group>";
@@ -156,6 +151,30 @@
 				E85304BE233CD3CD00105CA7 /* Info.plist */,
 			);
 			path = SundForluftUITests;
+			sourceTree = "<group>";
+		};
+		E8986A6E234F7CDB000CEB2F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */,
+				E8FEB5C2234B6A7E0079656B /* CustomCommentCell.swift */,
+				E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */,
+				E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */,
+				E853049B233CD3CA00105CA7 /* ViewController.swift */,
+				E85304CC233CDC3B00105CA7 /* LoginViewController.swift */,
+				E8986A70234FA1B4000CEB2F /* RoomsCollectionViewController.swift */,
+				E8986A76234FA410000CEB2F /* CustomRoomCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E8986A6F234F7D28000CEB2F /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E847B8A92348BE9600672BC5 /* Comment.swift */,
+				E8986A74234FA381000CEB2F /* Room.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8FEB5C5234B6F740079656B /* TeacherCommentController.swift in Sources */,
 				E85304A2233CD3CA00105CA7 /* SundForluft.xcdatamodeld in Sources */,
 				E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */,
+				E8986A75234FA381000CEB2F /* Room.swift in Sources */,
 				E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */,
-				E86C7AC8233DF1D9003E3C28 /* SchoolDataTableViewController.swift in Sources */,
+				E8986A71234FA1B4000CEB2F /* RoomsCollectionViewController.swift in Sources */,
 				E8986A6D234F480B000CEB2F /* TeacherCommentTableViewController.swift in Sources */,
+				E8986A77234FA410000CEB2F /* CustomRoomCollectionViewCell.swift in Sources */,
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
 				E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */,
 				E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */,

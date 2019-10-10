@@ -1,16 +1,22 @@
 //
-//  SchoolDataTableViewController.swift
+//  TeacherCommentTableViewController.swift
 //  SundForluft
 //
-//  Created by Kim Sandberg on 27/09/2019.
+//  Created by Kim Sandberg on 10/10/2019.
 //  Copyright © 2019 Kim Sandberg. All rights reserved.
 //
 
 import UIKit
 
-class SchoolDataTableViewController: UITableViewController {
+class TeacherCommentTableViewController: UITableViewController {
+
+    
     
     var comments = [Comment]()
+    
+    @IBAction func backButton(_ sender: Any) {
+           self.dismiss(animated: true, completion: nil)
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +28,8 @@ class SchoolDataTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+
+    // MARK: - Table view data source
     func fillComments() {
         let sampleComments = [
             Comment(ppm: 600, date: Date(), comment: "Dette er første commentar"),
@@ -36,10 +44,6 @@ class SchoolDataTableViewController: UITableViewController {
         ]
         comments = sampleComments.compactMap {$0}
     }
-    // MARK: - Table view data source
-
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -50,17 +54,23 @@ class SchoolDataTableViewController: UITableViewController {
         return comments.count
     }
 
-    
-    
-    /*
+    //Denne funktion bliver kaldt for hver celle
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let df = DateFormatter()
+        df.dateStyle = .short
+        df.timeStyle = .short
+        //df.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        
 
-        // Configure the cell...
-
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCommentCell", for: indexPath) as! CustomCommentCell
+            cell.ppmLabel?.text = String(comments[indexPath.row].ppm)
+            //df.stringFromDate(Date())
+            cell.dateLabel?.text = df.string(from: comments[indexPath.row].date)
+            cell.commentLabel?.text = comments[indexPath.row].comment
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
