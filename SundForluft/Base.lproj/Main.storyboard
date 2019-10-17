@@ -21,7 +21,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-aa-Jhq">
                                 <rect key="frame" x="0.0" y="591.66666666666663" width="375" height="220.33333333333337"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="Udfordring">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -101,6 +101,38 @@
             </objects>
             <point key="canvasLocation" x="1345" y="683"/>
         </scene>
+        <!--Room Detailed View Controller-->
+        <scene sceneID="AL7-5I-VI2">
+            <objects>
+                <viewController storyboardIdentifier="RoomDetailedViewController" id="Ti9-o6-TMa" customClass="RoomDetailedViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S8s-Zk-6m7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joz-xK-Zqf">
+                                <rect key="frame" x="3" y="118" width="369" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="joz-xK-Zqf" firstAttribute="centerX" secondItem="2lq-N9-ozx" secondAttribute="centerX" id="boi-hW-ffK"/>
+                            <constraint firstItem="joz-xK-Zqf" firstAttribute="top" secondItem="2lq-N9-ozx" secondAttribute="top" constant="30" id="iKR-fz-5fC"/>
+                            <constraint firstItem="joz-xK-Zqf" firstAttribute="leading" secondItem="2lq-N9-ozx" secondAttribute="leading" constant="3" id="t4U-Ut-66B"/>
+                            <constraint firstItem="2lq-N9-ozx" firstAttribute="trailing" secondItem="joz-xK-Zqf" secondAttribute="trailing" constant="3" id="uJu-Lp-0Ll"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2lq-N9-ozx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1OI-jM-WlA">
+                        <barButtonItem key="leftBarButtonItem" title="Tilbage" id="Jay-16-EYc"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KO9-kO-zhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1854" y="-913"/>
+        </scene>
         <!--Rooms Collection View Controller-->
         <scene sceneID="b1U-9A-XvM">
             <objects>
@@ -123,7 +155,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="118" height="127"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-pB-tX7">
+                                        <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" highlightedImage="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-pB-tX7">
                                             <rect key="frame" x="3" y="3" width="121" height="79.333333333333329"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDc-Z6-LBk" customClass="Room">
@@ -157,7 +189,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="Vau-JU-qPM">
-                        <barButtonItem key="rightBarButtonItem" title="Tilbage" id="E6a-R5-Zps">
+                        <barButtonItem key="leftBarButtonItem" title="Tilbage" id="E6a-R5-Zps">
                             <connections>
                                 <action selector="backButton:" destination="fsV-92-CP9" id="oEY-Ml-TLB"/>
                             </connections>
@@ -166,7 +198,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8z-8t-GM5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-468" y="-843.10344827586209"/>
+            <point key="canvasLocation" x="474.39999999999998" y="-843.10344827586209"/>
         </scene>
         <!--Logged In Front View Controller-->
         <scene sceneID="0hT-cG-xEx">
@@ -178,7 +210,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-Va-Q55">
                                 <rect key="frame" x="0.0" y="591.66666666666663" width="187.66666666666666" height="220.33333333333337"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Skole statistik">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -191,7 +223,7 @@
                                 <rect key="frame" x="0.0" y="164" width="375" height="206.33333333333337"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Tryk for kommentar" backgroundImage="LOGO">
-                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -207,7 +239,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6u-B0-lAL">
                                 <rect key="frame" x="187.66666666666663" y="591.66666666666663" width="187.33333333333337" height="220.33333333333337"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Lærer kommentarer">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -243,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYB-q3-JwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1399.2" y="-843.10344827586209"/>
+            <point key="canvasLocation" x="2341.5999999999999" y="-843.10344827586209"/>
         </scene>
         <!--Teacher Comment Table View Controller-->
         <scene sceneID="lrm-fe-j5K">
@@ -333,7 +365,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ubd-ah-myy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3293.5999999999999" y="-843.10344827586209"/>
+            <point key="canvasLocation" x="4236" y="-843.10344827586209"/>
         </scene>
         <!--School Data Table View Controller-->
         <scene sceneID="DVH-Zp-7aY">
@@ -407,7 +439,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yn4-fU-LPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2351.1999999999998" y="-843.10344827586209"/>
+            <point key="canvasLocation" x="3293.5999999999999" y="-843.10344827586209"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KHT-3G-bk9">
@@ -426,7 +458,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjc-Wq-Fd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="362" y="-843"/>
+            <point key="canvasLocation" x="1303.2" y="-843.10344827586209"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="535-UB-jDr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n45-7q-bdd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q2Q-ag-EOf">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ti9-o6-TMa" kind="relationship" relationship="rootViewController" id="q4J-c7-Zyo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqR-JL-UaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-959" y="-913"/>
         </scene>
     </scenes>
     <resources>
