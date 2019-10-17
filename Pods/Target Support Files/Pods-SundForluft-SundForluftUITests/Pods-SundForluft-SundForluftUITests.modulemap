@@ -1,0 +1,6 @@
+framework module Pods_SundForluft_SundForluftUITests {
+  umbrella header "Pods-SundForluft-SundForluftUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
