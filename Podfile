@@ -7,6 +7,7 @@ target 'SundForluft' do
 
   # Pods for SundForluft
     pod 'ILG'
+    pod 'Charts'
 
 
   target 'SundForluftTests' do

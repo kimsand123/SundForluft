@@ -1,16 +1,22 @@
 PODS:
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
   - ILG (1.0.0)
 
 DEPENDENCIES:
+  - Charts
   - ILG
 
 SPEC REPOS:
   trunk:
+    - Charts
     - ILG
 
 SPEC CHECKSUMS:
+  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
   ILG: 7675cf389f34289e2c266410b618cfa0dee26701
 
-PODFILE CHECKSUM: 0a659c378eb37f98a79334ef898f1cc1610ec9a6
+PODFILE CHECKSUM: 44b32d3fb544d8e290faf172cb6b2b47d6ea8d5a
 
 COCOAPODS: 1.8.4

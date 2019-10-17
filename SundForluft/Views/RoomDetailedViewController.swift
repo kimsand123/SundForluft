@@ -10,12 +10,18 @@ import UIKit
 
 //Am using the ILG chart from
 //https://iosexample.com/interactive-line-graph-ios-chart-library/
+import Charts
 import ILG
+
 
 class RoomDetailedViewController: UIViewController {
 
-    var ppmDataCluster = [ppmDTO]()
     let graphView = InteractiveLineGraphView()
+    let graph = LineChartView()
+   
+    
+    var ppmDataCluster = [ppmDTO]()
+
     var room : String = ""
     
     
@@ -38,7 +44,7 @@ class RoomDetailedViewController: UIViewController {
             
             
             graphView.update(withDataPoints: ppmData, animated: true)
-            graphView.
+            graph.
             
         }
         
