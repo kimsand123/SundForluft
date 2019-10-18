@@ -21,7 +21,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-aa-Jhq">
                                 <rect key="frame" x="0.0" y="591.66666666666663" width="375" height="220.33333333333337"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="Udfordring">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -106,21 +106,29 @@
             <objects>
                 <viewController storyboardIdentifier="RoomDetailedViewController" id="Ti9-o6-TMa" customClass="RoomDetailedViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S8s-Zk-6m7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joz-xK-Zqf">
-                                <rect key="frame" x="3" y="118" width="369" height="21"/>
+                                <rect key="frame" x="3" y="86" width="369" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Km6-eK-ehL" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="3" y="137" width="369" height="537"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Km6-eK-ehL" firstAttribute="leading" secondItem="2lq-N9-ozx" secondAttribute="leading" constant="3" id="CkR-AU-2Mk"/>
+                            <constraint firstItem="Km6-eK-ehL" firstAttribute="leading" secondItem="2lq-N9-ozx" secondAttribute="leading" constant="3" id="EcU-t6-ooC"/>
+                            <constraint firstItem="2lq-N9-ozx" firstAttribute="bottom" secondItem="Km6-eK-ehL" secondAttribute="bottom" constant="50" id="KKp-Yh-bXc"/>
+                            <constraint firstItem="2lq-N9-ozx" firstAttribute="trailing" secondItem="Km6-eK-ehL" secondAttribute="trailing" constant="3" id="QIf-Ft-Ihs"/>
                             <constraint firstItem="joz-xK-Zqf" firstAttribute="centerX" secondItem="2lq-N9-ozx" secondAttribute="centerX" id="boi-hW-ffK"/>
                             <constraint firstItem="joz-xK-Zqf" firstAttribute="top" secondItem="2lq-N9-ozx" secondAttribute="top" constant="30" id="iKR-fz-5fC"/>
-                            <constraint firstItem="joz-xK-Zqf" firstAttribute="leading" secondItem="2lq-N9-ozx" secondAttribute="leading" constant="3" id="t4U-Ut-66B"/>
+                            <constraint firstItem="Km6-eK-ehL" firstAttribute="top" secondItem="joz-xK-Zqf" secondAttribute="bottom" constant="30" id="mhD-51-i7Y"/>
                             <constraint firstItem="2lq-N9-ozx" firstAttribute="trailing" secondItem="joz-xK-Zqf" secondAttribute="trailing" constant="3" id="uJu-Lp-0Ll"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2lq-N9-ozx"/>
@@ -128,10 +136,13 @@
                     <navigationItem key="navigationItem" id="1OI-jM-WlA">
                         <barButtonItem key="leftBarButtonItem" title="Tilbage" id="Jay-16-EYc"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lineChartView" destination="Km6-eK-ehL" id="Ez0-fL-Ct9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KO9-kO-zhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1854" y="-913"/>
+            <point key="canvasLocation" x="-1855.2" y="-913.30049261083752"/>
         </scene>
         <!--Rooms Collection View Controller-->
         <scene sceneID="b1U-9A-XvM">
@@ -195,6 +206,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="n45-7q-bdd" kind="show" id="zX5-qM-VNZ"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8z-8t-GM5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -210,7 +224,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-Va-Q55">
                                 <rect key="frame" x="0.0" y="591.66666666666663" width="187.66666666666666" height="220.33333333333337"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Skole statistik">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -223,7 +237,7 @@
                                 <rect key="frame" x="0.0" y="164" width="375" height="206.33333333333337"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Tryk for kommentar" backgroundImage="LOGO">
-                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -239,7 +253,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6u-B0-lAL">
                                 <rect key="frame" x="187.66666666666663" y="591.66666666666663" width="187.33333333333337" height="220.33333333333337"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Lærer kommentarer">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -465,8 +479,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n45-7q-bdd" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="G4k-nw-qI0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q2Q-ag-EOf">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

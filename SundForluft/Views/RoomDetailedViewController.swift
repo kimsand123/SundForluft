@@ -15,19 +15,22 @@ import ILG
 
 
 class RoomDetailedViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var lineChartView: LineChartView!
+    
     let graphView = InteractiveLineGraphView()
     let graph = LineChartView()
-   
+    
     
     var ppmDataCluster = [ppmDTO]()
-
+    
     var room : String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         populateGraph(ppmDataCluster: DAO.shared.getDataPointsForGraph(room: room))
         
         // Do any additional setup after loading the view.
@@ -38,28 +41,38 @@ class RoomDetailedViewController: UIViewController {
         var ppmDates  = [Date]()
         let length = ppmDataCluster.count
         
-        for dataItem in ppmDataCluster {
-            ppmData.append(dataItem.ppm)
-            ppmDates.append(dataItem.date)
-            
-            
-            graphView.update(withDataPoints: ppmData, animated: true)
-            graph.
-            
+        
+        
+        let values = (0..<length).map { (i) -> ChartDataEntry in
+            let val = Double(arc4random_uniform(UInt32(length))+3)
+            return ChartDataEntry(x: Double(i), y: val)
         }
         
+        //        for dataItem in ppmDataCluster {
+        //            ppmData.append(dataItem.ppm)
+        //            ppmDates.append(dataItem.date)
+        //            }
+        //
+        
+        let set1 = LineChartDataSet(entries: values, label: "ppm Målinger")
+        let data = LineChartData(dataSet: set1)
+        
+        self.lineChartView.data = data
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
+
+
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destination.
+ // Pass the selected object to the new view controller.
+ }
+ */
+
+
