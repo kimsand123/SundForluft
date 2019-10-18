@@ -19,6 +19,8 @@ class RoomDetailedViewController: UIViewController {
     
     @IBOutlet weak var lineChartView: LineChartView!
     
+    @IBOutlet weak var roomLabel: UILabel!
+    
     let graphView = InteractiveLineGraphView()
     let graph = LineChartView()
     
@@ -31,7 +33,11 @@ class RoomDetailedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        roomLabel.text = room
+       
         populateGraph(ppmDataCluster: DAO.shared.getDataPointsForGraph(room: room))
+        
+        
         
         // Do any additional setup after loading the view.
     }

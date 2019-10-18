@@ -74,14 +74,17 @@ class RoomsCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomRoomCollectionViewCell", for: indexPath) as! CustomRoomCollectionViewCell
         cell.imageView.image = rooms[indexPath.row].cloudImage
         cell.roomLabel.text = rooms[indexPath.row].room
-            
-        
-    
-    
-        
-        
-        
         return cell
+    }
+    
+    
+    
+    func collectionView(_collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath){
+        print("selected \rooms[indexPath.row]")
+        let vc = storyboard?.instantiateViewController(identifier: "RoomDetailedViewController") as? RoomDetailedViewController
+        
+        vc?.room = rooms[indexPath.row].room
+        self.navigationController?.pushViewController(vc! , animated: true)
     }
 
     // MARK: UICollectionViewDelegate
@@ -93,12 +96,20 @@ class RoomsCollectionViewController: UICollectionViewController {
     }
     */
 
-    /*
+    
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        print ("indexpath: \(indexPath.row)")
+        print ("roomname: \(rooms[indexPath.row].room)")
+        let vc = storyboard?.instantiateViewController(identifier: "RoomDetailedViewController") as? RoomDetailedViewController
+        
+        
+        
+        vc?.room = rooms[indexPath.row].room
+        self.navigationController?.pushViewController(vc! , animated: true)
         return true
     }
-    */
+    
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
@@ -116,3 +127,5 @@ class RoomsCollectionViewController: UICollectionViewController {
     */
 
 }
+
+
