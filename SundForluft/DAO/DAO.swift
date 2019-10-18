@@ -20,9 +20,26 @@ class DAO{
     
     public func getDataPointsForGraph(room: String) -> [ppmDTO] {
         var dataPoints = [ppmDTO]()
+        var condition : Bool
+        var counter : Int
+        counter = 0
+        condition = true
+        
+        
+        let today = Date()
         
         //Getting the datapoints from backend with the room as search criteria.
-        
+        while(condition == true) {
+            var dataPoint = ppmDTO()
+            dataPoint.ppm = Double(arc4random())
+            dataPoint.date = Calendar.current.date(byAdding: .day, value: -100+counter, to: today)!
+            dataPoints.append(dataPoint)
+            
+            counter = counter + 1
+            if (counter > 99) {
+                condition = false
+            }
+        }
         
         
         return dataPoints

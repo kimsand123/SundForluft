@@ -35,7 +35,15 @@ class RoomDetailedViewController: UIViewController {
         
         roomLabel.text = room
        
-        populateGraph(ppmDataCluster: DAO.shared.getDataPointsForGraph(room: room))
+        
+        ppmDataCluster = DAO.shared.getDataPointsForGraph(room: room)
+        
+        for data in ppmDataCluster {
+            print ("ppm \(data.ppm)  date \(data.date) \n")
+            
+        }
+        
+        populateGraph(ppmDataCluster: ppmDataCluster)
         
         
         
@@ -45,15 +53,23 @@ class RoomDetailedViewController: UIViewController {
     func populateGraph(ppmDataCluster : [ppmDTO]) {
         var ppmData = [Double]()
         var ppmDates  = [Date]()
-        let length = 30
         
-        
-        
-        let values = (0..<length).map { (i) -> ChartDataEntry in
-            let val = Double(arc4random_uniform(UInt32(length))+3)
-            return ChartDataEntry(x: Double(i), y: val)
+        for i in 0..<ppmDataCluster.count-1 {
+            ppmData.append(ppmDataCluster[i].ppm)
+            //print ("i = \(i) ppmData = \(ppmData[i]) dataCluster = \(ppmDataCluster[i].ppm) ")
         }
         
+        let values = (0..<ppmDataCluster.count-1).map { (i) -> ChartDataEntry in
+            let val = ppmDataCluster[i].ppm
+             return ChartDataEntry(x: Double(i), y: val)
+        }
+        
+        
+//        let values = (0..<length).map { (i) -> ChartDataEntry in
+//            let val = Double(arc4random_uniform(UInt32(length))+3)
+//            return ChartDataEntry(x: Double(i), y: val)
+//        }
+//
         //        for dataItem in ppmDataCluster {
         //            ppmData.append(dataItem.ppm)
         //            ppmDates.append(dataItem.date)

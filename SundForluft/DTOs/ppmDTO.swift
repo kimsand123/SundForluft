@@ -13,11 +13,15 @@ class ppmDTO {
     var ppm: Double
     var date: Date
 
-    
-    init?(ppm: Double, date: Date) {
-        self.ppm = ppm
-        self.date = date
+    init() {
+        ppm = 0.0
+        date = Date()
     }
     
+    
+//    init?(ppm: Double, date: Date) {
+//        self.ppm = ppm
+//        self.date = date
+//    }
     
 }
