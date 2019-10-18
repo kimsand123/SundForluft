@@ -45,7 +45,7 @@ class RoomDetailedViewController: UIViewController {
     func populateGraph(ppmDataCluster : [ppmDTO]) {
         var ppmData = [Double]()
         var ppmDates  = [Date]()
-        let length = ppmDataCluster.count
+        let length = 30
         
         
         
