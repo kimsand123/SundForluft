@@ -11,16 +11,16 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SundForluft" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-wm-abF">
-                                <rect key="frame" x="0.0" y="104.00000000000001" width="375" height="220.33333333333337"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sky" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-wm-abF">
+                                <rect key="frame" x="0.0" y="164" width="375" height="220.33333333333337"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-aa-Jhq">
-                                <rect key="frame" x="0.0" y="591.66666666666663" width="375" height="220.33333333333337"/>
+                                <rect key="frame" x="3" y="554.66666666666663" width="369" height="220.33333333333337"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <state key="normal" title="Udfordring">
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRG-Kb-unH">
-                                <rect key="frame" x="166.66666666666666" y="401" width="41.666666666666657" height="20.333333333333314"/>
+                                <rect key="frame" x="166.66666666666666" y="431" width="41.666666666666657" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,14 +46,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="bRG-Kb-unH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0kk-Lv-F9b"/>
-                            <constraint firstAttribute="trailing" secondItem="azZ-aa-Jhq" secondAttribute="trailing" id="0yO-69-r7U"/>
-                            <constraint firstItem="azZ-aa-Jhq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="3dM-1I-rEr"/>
+                            <constraint firstItem="bRG-Kb-unH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="30" id="0kk-Lv-F9b"/>
+                            <constraint firstItem="azZ-aa-Jhq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-3" id="3dM-1I-rEr"/>
                             <constraint firstItem="bRG-Kb-unH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Gc-OB-FmT"/>
-                            <constraint firstAttribute="leading" secondItem="azZ-aa-Jhq" secondAttribute="leading" id="PnS-b5-Vci"/>
                             <constraint firstItem="8Ug-wm-abF" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.3" id="Ye2-HG-8S0"/>
+                            <constraint firstItem="azZ-aa-Jhq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="bBl-NU-FZH"/>
                             <constraint firstItem="azZ-aa-Jhq" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.3" id="buR-Kw-Cdb"/>
-                            <constraint firstItem="8Ug-wm-abF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="hFH-8a-W7F"/>
+                            <constraint firstItem="azZ-aa-Jhq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-3" id="dbp-DO-7tv"/>
+                            <constraint firstItem="8Ug-wm-abF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="hFH-8a-W7F"/>
                             <constraint firstItem="k1G-XI-fMp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="lwK-nO-MOw"/>
                             <constraint firstItem="8Ug-wm-abF" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="pTT-Qp-dxe"/>
                             <constraint firstItem="8Ug-wm-abF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r07-PH-wJH"/>
@@ -76,7 +76,7 @@
         <!--Challenge View Controller-->
         <scene sceneID="Fp6-Es-KG0">
             <objects>
-                <viewController storyboardIdentifier="ChallengeViewController" id="vvL-BZ-Nom" customClass="ChallengeViewController" customModule="SundForluft" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChallengeViewController" id="vvL-BZ-Nom" customClass="ChallengeViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qak-IM-v4t" customClass="chall">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,11 +134,15 @@
                         <viewLayoutGuide key="safeArea" id="2lq-N9-ozx"/>
                     </view>
                     <navigationItem key="navigationItem" id="1OI-jM-WlA">
-                        <barButtonItem key="leftBarButtonItem" title="Tilbage" id="Jay-16-EYc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Tilbage" id="Jay-16-EYc">
+                            <connections>
+                                <action selector="backButton:" destination="Ti9-o6-TMa" id="TxX-Gd-Bpg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="lineChartView" destination="Km6-eK-ehL" id="Ez0-fL-Ct9"/>
-                        <outlet property="roomLabel" destination="joz-xK-Zqf" id="5ZC-LT-KaW"/>
+                        <outlet property="roomLabel" destination="joz-xK-Zqf" id="d3L-O8-vfM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KO9-kO-zhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -224,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-Va-Q55">
-                                <rect key="frame" x="0.0" y="591.66666666666663" width="187.66666666666666" height="220.33333333333337"/>
+                                <rect key="frame" x="3" y="554.66666666666663" width="187.66666666666666" height="220.33333333333337"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Skole statistik">
@@ -235,7 +239,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="os7-A8-Vg1">
-                                <rect key="frame" x="0.0" y="164" width="375" height="206.33333333333337"/>
+                                <rect key="frame" x="3" y="164" width="369" height="220.33333333333337"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Tryk for kommentar" backgroundImage="LOGO">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -252,11 +256,13 @@
                                     <action selector="logOutButton:" destination="2Ve-m5-znu" eventType="touchUpInside" id="yjK-wh-EBH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6u-B0-lAL">
-                                <rect key="frame" x="187.66666666666663" y="591.66666666666663" width="187.33333333333337" height="220.33333333333337"/>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="E6u-B0-lAL">
+                                <rect key="frame" x="193.66666666666663" y="554.66666666666663" width="178.33333333333337" height="220.33333333333337"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Lærer kommentarer">
+                                <state key="normal">
+                                    <string key="title">Lærer 
+kommentarer</string>
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
@@ -267,19 +273,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="os7-A8-Vg1" firstAttribute="top" secondItem="Dpj-8s-sfs" secondAttribute="top" constant="120" id="4td-Zz-5dR"/>
-                            <constraint firstItem="E6u-B0-lAL" firstAttribute="bottom" secondItem="Dpj-8s-sfs" secondAttribute="bottom" constant="34" id="60X-so-WDU"/>
-                            <constraint firstItem="os7-A8-Vg1" firstAttribute="leading" secondItem="Dpj-8s-sfs" secondAttribute="leading" id="9M0-xR-Gfr"/>
+                            <constraint firstItem="E6u-B0-lAL" firstAttribute="bottom" secondItem="Dpj-8s-sfs" secondAttribute="bottom" constant="-3" id="60X-so-WDU"/>
+                            <constraint firstItem="os7-A8-Vg1" firstAttribute="leading" secondItem="Dpj-8s-sfs" secondAttribute="leading" constant="3" id="9M0-xR-Gfr"/>
+                            <constraint firstItem="E6u-B0-lAL" firstAttribute="trailing" secondItem="Dpj-8s-sfs" secondAttribute="trailing" constant="-3" id="A2x-oE-d1u"/>
+                            <constraint firstItem="os7-A8-Vg1" firstAttribute="height" secondItem="Dpj-8s-sfs" secondAttribute="height" multiplier="0.3" id="ETl-9d-BTB"/>
+                            <constraint firstItem="Dpj-8s-sfs" firstAttribute="trailing" secondItem="os7-A8-Vg1" secondAttribute="trailing" constant="3" id="ITx-Zh-fJy"/>
                             <constraint firstItem="E6u-B0-lAL" firstAttribute="height" secondItem="Dpj-8s-sfs" secondAttribute="height" multiplier="0.3" id="KHU-Rk-bWK"/>
-                            <constraint firstItem="Dpj-8s-sfs" firstAttribute="trailing" secondItem="os7-A8-Vg1" secondAttribute="trailing" id="N9g-xY-o5e"/>
-                            <constraint firstItem="Dpj-8s-sfs" firstAttribute="bottom" secondItem="os7-A8-Vg1" secondAttribute="bottom" multiplier="2.1" id="P3x-TL-zWl"/>
-                            <constraint firstItem="bWW-Va-Q55" firstAttribute="bottom" secondItem="Dpj-8s-sfs" secondAttribute="bottom" constant="33.999999999999886" id="XWf-Qw-Y9Q"/>
+                            <constraint firstItem="bWW-Va-Q55" firstAttribute="bottom" secondItem="Dpj-8s-sfs" secondAttribute="bottom" constant="-3" id="XWf-Qw-Y9Q"/>
                             <constraint firstItem="cgO-b7-lwD" firstAttribute="top" secondItem="Dpj-8s-sfs" secondAttribute="top" constant="44" id="dDZ-t4-Xdl"/>
                             <constraint firstItem="cgO-b7-lwD" firstAttribute="leading" secondItem="Dpj-8s-sfs" secondAttribute="leading" constant="313" id="h16-GQ-JzC"/>
-                            <constraint firstItem="E6u-B0-lAL" firstAttribute="leading" secondItem="bWW-Va-Q55" secondAttribute="trailing" id="lMH-XV-rcB"/>
-                            <constraint firstItem="Dpj-8s-sfs" firstAttribute="trailing" secondItem="E6u-B0-lAL" secondAttribute="trailing" id="sBQ-oo-YjA"/>
+                            <constraint firstItem="E6u-B0-lAL" firstAttribute="leading" secondItem="bWW-Va-Q55" secondAttribute="trailing" constant="3" id="lMH-XV-rcB"/>
                             <constraint firstItem="bWW-Va-Q55" firstAttribute="width" secondItem="Dpj-8s-sfs" secondAttribute="width" multiplier="0.5" id="tBJ-UA-pXb"/>
-                            <constraint firstItem="bWW-Va-Q55" firstAttribute="trailing" secondItem="E6u-B0-lAL" secondAttribute="leading" id="tbR-sA-5IO"/>
-                            <constraint firstItem="bWW-Va-Q55" firstAttribute="leading" secondItem="Dpj-8s-sfs" secondAttribute="leading" id="tos-Bh-W6y"/>
+                            <constraint firstItem="bWW-Va-Q55" firstAttribute="leading" secondItem="Dpj-8s-sfs" secondAttribute="leading" constant="3" id="tos-Bh-W6y"/>
                             <constraint firstItem="bWW-Va-Q55" firstAttribute="height" secondItem="Dpj-8s-sfs" secondAttribute="height" multiplier="0.3" id="wZ6-Su-Xj8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dpj-8s-sfs"/>
@@ -287,6 +292,10 @@
                     <navigationItem key="navigationItem" id="ST2-D9-VLP">
                         <barButtonItem key="rightBarButtonItem" title="Log Ud" id="TS0-AL-4nU"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="schoolStatistics" destination="bWW-Va-Q55" id="spt-iM-Gnz"/>
+                        <outlet property="teachCommentaryButton" destination="E6u-B0-lAL" id="Jv4-mM-4zB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYB-q3-JwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -497,5 +506,6 @@
     </scenes>
     <resources>
         <image name="LOGO" width="75" height="44"/>
+        <image name="Sky" width="640" height="453"/>
     </resources>
 </document>

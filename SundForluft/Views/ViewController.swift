@@ -98,6 +98,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.
+        
+        ChallengeButton.titleLabel?.textAlignment = .center
+        ChallengeButton.sizeToFit()
+        ChallengeButton.layer.borderWidth = 2.0
+        ChallengeButton.layer.borderColor = UIColor.blue.cgColor
+        ChallengeButton.layer.cornerRadius = 10.0
     }
     
     

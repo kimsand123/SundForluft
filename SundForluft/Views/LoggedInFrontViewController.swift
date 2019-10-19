@@ -10,11 +10,11 @@ import UIKit
 
 class LoggedInFrontViewController: UIViewController {
     
+    @IBOutlet weak var schoolStatistics: UIButton!
+    @IBOutlet weak var teachCommentaryButton: UIButton!
     @IBAction func commentaryButton(_ sender: Any) {
         
         //instantier og initialiser alert
-        
-        
         
         
         let alert = UIAlertController(title: "Kommentar", message: "Indtast kommentar ", preferredStyle: UIAlertController.Style.alert )
@@ -52,5 +52,16 @@ class LoggedInFrontViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.
+        teachCommentaryButton.titleLabel?.textAlignment = .center
+        teachCommentaryButton.sizeToFit()
+        teachCommentaryButton.layer.borderWidth = 2.0
+        teachCommentaryButton.layer.borderColor = UIColor.blue.cgColor
+        teachCommentaryButton.layer.cornerRadius = 10.0
+        
+        schoolStatistics.titleLabel?.textAlignment = .center
+        schoolStatistics.sizeToFit()
+        schoolStatistics.layer.borderWidth = 2.0
+        schoolStatistics.layer.borderColor = UIColor.blue.cgColor
+        schoolStatistics.layer.cornerRadius = 10.0
     }
 }

@@ -30,6 +30,8 @@ class DAO{
         
         //Getting the datapoints from backend with the room as search criteria.
         while(condition == true) {
+            //make new instance everytime as dataPoint is a reference and that
+            //sees to it that it is a reference to a new instance for each iteracin.
             var dataPoint = ppmDTO()
             dataPoint.ppm = Double(arc4random())
             dataPoint.date = Calendar.current.date(byAdding: .day, value: -100+counter, to: today)!
@@ -44,5 +46,15 @@ class DAO{
         
         return dataPoints
     }
+    
+    public func getCurrentppm(room: String)-> ppmDTO{
+        var currentppm = ppmDTO()
+        
+        //get the latest ppm reading from this room
+        
+        return currentppm
+    }
+    
+    
     
 }
