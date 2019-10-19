@@ -32,6 +32,16 @@ class DAO{
         while(condition == true) {
             //make new instance everytime as dataPoint is a reference and that
             //sees to it that it is a reference to a new instance for each iteracin.
+           
+            
+            
+            
+            
+            
+            
+            
+            
+            
             var dataPoint = ppmDTO()
             dataPoint.ppm = Double(arc4random())
             dataPoint.date = Calendar.current.date(byAdding: .day, value: -100+counter, to: today)!
@@ -55,6 +65,48 @@ class DAO{
         return currentppm
     }
     
+    func getLocalData(completion: (json: [[String:AnyObject]]?) -> Void) {
+        let endPoint = "http://******************"
+
+        let url:NSURL? = NSURL(string: endPoint)
+        let session = URLSession.shared
+
+        let request:NSMutableURLRequest = NSMutableURLRequest(url: url! as URL)
+
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("", forHTTPHeaderField: "Authorization-Header")
+
+
+        let task = session.dataTask(with: request as URLRequest) {(data, response, error) -> Void in
+            print("Session") //not able to get in here
+            guard let data = data, error == nil else {
+                //network error
+                print("Error with network: \(error?.localizedDescription)")
+                completion(nil)
+                return
+            }
+
+            let httpResponse = response as! HTTPURLResponse//HTTPURLResponse
+            let statusCode = httpResponse.statusCode
+
+            if statusCode == 200 {
+                do {
+                    print("Here buddy")
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String: AnyObject]]
+                    // return json
+                    completion(json)
+                }
+
+                catch {
+                    print("Error in json")
+                    completion(nil)
+                }
+            }
+        }
+
+        task.resume()
+    }
     
     
 }
