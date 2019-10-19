@@ -67,6 +67,7 @@
                     <connections>
                         <outlet property="ChallengeButton" destination="azZ-aa-Jhq" id="bLY-ty-kCo"/>
                         <outlet property="messageLabel" destination="bRG-Kb-unH" id="X7v-zN-cSp"/>
+                        <outlet property="ppmLabel" destination="bRG-Kb-unH" id="va5-Cb-Hag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

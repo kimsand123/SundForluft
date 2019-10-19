@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     
     
+    @IBOutlet weak var ppmLabel: UILabel!
     @IBOutlet weak var ChallengeButton: UIButton!
     
     @IBAction func loginButton(_ sender: Any) {
@@ -44,7 +45,6 @@ class ViewController: UIViewController {
                     okToLogin = false
                 }
             }
-            print("Ok to login = \(okToLogin)")
             
             if okToLogin == true {
                 //Skift til LoggedInFrontViewController
@@ -99,12 +99,17 @@ class ViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.
         
+        var ppmData: ppmDTO
         ChallengeButton.titleLabel?.textAlignment = .center
         ChallengeButton.sizeToFit()
         ChallengeButton.layer.borderWidth = 2.0
         ChallengeButton.layer.borderColor = UIColor.blue.cgColor
         ChallengeButton.layer.cornerRadius = 10.0
-    }
+        
+        ppmData = DAO.shared.getCurrentppm(room: "thisRoom")
+        
+        ppmLabel.text = String(ppmData.ppm) + " ppm"
+    }ß
     
     
     

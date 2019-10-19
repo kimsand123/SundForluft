@@ -57,55 +57,19 @@ class DAO{
         return dataPoints
     }
     
-    public func getCurrentppm(room: String)-> ppmDTO{
-        var currentppm = ppmDTO()
-        
-        //get the latest ppm reading from this room
-        
-        return currentppm
-    }
+//GET "https://api.allthingstalk.io/device/6nGZdUDfxK8DR3XgqY7G9McY/assets" \-H "Authorization: Bearer maker:4GJSKorDcNh8W1VeVufmMNzJEhm3aw26Fsov2NJ"
     
-    func getLocalData(completion: (json: [[String:AnyObject]]?) -> Void) {
-        let endPoint = "http://******************"
+    func getCurrentppm(room: String) -> ppmDTO {
+        
+        let task: Data // received from a network request, for example
+    
+        let endPoint = "https://api.allthingstalk.io/device/6nGZdUDfxK8DR3XgqY7G9McY/assets \\-H Authorization: Bearer maker:4GJSKorDcNh8W1VeVufmMNzJEhm3aw26Fsov2NJ"
 
-        let url:NSURL? = NSURL(string: endPoint)
-        let session = URLSession.shared
-
-        let request:NSMutableURLRequest = NSMutableURLRequest(url: url! as URL)
-
-        request.httpMethod = "GET"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("", forHTTPHeaderField: "Authorization-Header")
-
-
-        let task = session.dataTask(with: request as URLRequest) {(data, response, error) -> Void in
-            print("Session") //not able to get in here
-            guard let data = data, error == nil else {
-                //network error
-                print("Error with network: \(error?.localizedDescription)")
-                completion(nil)
-                return
+        let task = URLSession.shared.dataTask(with: endPoint) { (data, response, error) in
+            if error == nil {
             }
-
-            let httpResponse = response as! HTTPURLResponse//HTTPURLResponse
-            let statusCode = httpResponse.statusCode
-
-            if statusCode == 200 {
-                do {
-                    print("Here buddy")
-                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String: AnyObject]]
-                    // return json
-                    completion(json)
-                }
-
-                catch {
-                    print("Error in json")
-                    completion(nil)
-                }
-            }
+            let json = try? JSONSerialization.jsonObject(with: task, options: [])
         }
-
-        task.resume()
     }
     
     
