@@ -105,9 +105,9 @@ class ViewController: UIViewController {
         ChallengeButton.layer.borderWidth = 2.0
         ChallengeButton.layer.borderColor = UIColor.blue.cgColor
         ChallengeButton.layer.cornerRadius = 10.0
-        
+        print("calling homepage")
         ppmData = DAO.shared.getCurrentppm(room: "thisRoom")
-        
+        print("done calling homepage")
         ppmLabel.text = String(ppmData.ppm) + " ppm"
     }
     

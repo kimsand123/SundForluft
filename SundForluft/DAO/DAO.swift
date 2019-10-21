@@ -49,6 +49,8 @@ class DAO{
         return dataPoints
     }
     
+    
+    //Getting the current ppm for a room. Frontpage ppmLabel
     func getCurrentppm(room: String) -> ppmDTO {
         var currentppm = ppmDTO()
         
@@ -73,6 +75,7 @@ class DAO{
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
+            print ("task started")
             // Check for error
             if error != nil
             {
@@ -82,52 +85,28 @@ class DAO{
             
             // Print out response string and other result variables
             let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print("data = \(data)  \n\n")
-            print("responseString = \(responseString)  \n\n")
-            print("response = \(response)\n\n")
-            print("error = \(error)")
+//            print("data = \(data)  \n\n")
+//            print("responseString = \(responseString)  \n\n")
+//            print("response = \(response)\n\n")
+//            print("error = \(error)")
             
             
             // Convert server json response to data that i can use
-            let json = try JSON(data: data!)  {
+            
+            if let usableData = data {
+                let json = JSON(usableData)
+                let row = json[0]
+                
+                let state = row["state"]
+                if case currentppm.ppm = state[0].double{}
+                
+                print(state)
+            
             }
-            if let currentppm.ppm = json[0]["value"].string {
-                //Now you got your value
-            }
-            
-            
-            
-            
-            
-            /*
-            // Convert server json response to NSDictionary
-            do {
-                if let jsonDict = try JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary {
-                    
-                    // Print out dictionary
-                    print(jsonDict)
-                    
-                    // Get value by key
-                    let ppm = jsonDict["value"] as? Double
-                    let date = jsonDict["at"] as? Date
-                    currentppm.ppm = ppm ?? 0
-                    currentppm.date = date ?? Date()
-                    
-                    print(currentppm.ppm)
-                    print("\n")
-                    print(currentppm.date)
-                    
-                }
-            } catch let error as NSError {
-                print("json error ")
-                print(error.localizedDescription)
-            }
-            */
         }
-        
+        print ("Task done")
         task.resume()
+        
         return currentppm
     }
-    
-    
 }
