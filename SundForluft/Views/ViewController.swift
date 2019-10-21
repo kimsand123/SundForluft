@@ -8,13 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DownloadResponder{
+
+    
     
     
     
     
     @IBOutlet weak var ppmLabel: UILabel!
     @IBOutlet weak var ChallengeButton: UIButton!
+  
+    func downloadFinished() {
+        ppmLabel.text = "0.0 ppm"
+    }
+    
     
     @IBAction func loginButton(_ sender: Any) {
         

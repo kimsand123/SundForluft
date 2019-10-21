@@ -13,10 +13,13 @@ import SwiftyJSON
 
 class DAO{
     
-    static let shared = DAO()
+    weak var responder : DownloadResponder?
     
-    private init(){
+    static let shared = DAO(responde)
+    
+    private init(responder: DownloadResponder){
         
+        self.responder = responder
     }
     
     public func getDataPointsForGraph(room: String) -> [ppmDTO] {
