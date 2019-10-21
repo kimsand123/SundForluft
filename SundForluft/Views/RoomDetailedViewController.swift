@@ -11,7 +11,7 @@ import UIKit
 //Am using the ILG chart from
 //https://iosexample.com/interactive-line-graph-ios-chart-library/
 import Charts
-import ILG
+
 
 
 class RoomDetailedViewController: UIViewController {
@@ -24,7 +24,6 @@ class RoomDetailedViewController: UIViewController {
     
     @IBOutlet weak var roomLabel: UILabel!
     
-    let graphView = InteractiveLineGraphView()
     let graph = LineChartView()
     
     

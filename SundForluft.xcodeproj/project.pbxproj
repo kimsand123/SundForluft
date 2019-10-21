@@ -12,6 +12,7 @@
 		54F3808EF482D6ECDAF8701A /* Pods_SundForluft_SundForluftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04CEB3AB350E75CAE191937 /* Pods_SundForluft_SundForluftUITests.framework */; };
 		E80A466D2358A8DA00450F4A /* ppmDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A466C2358A8DA00450F4A /* ppmDTO.swift */; };
 		E80A46702358AE3000450F4A /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A466F2358AE3000450F4A /* DAO.swift */; };
+		E80A4674235DC6CD00450F4A /* userDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A4673235DC6CC00450F4A /* userDTO.swift */; };
 		E847B8AA2348BE9600672BC5 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847B8A92348BE9600672BC5 /* Comment.swift */; };
 		E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8530497233CD3CA00105CA7 /* AppDelegate.swift */; };
 		E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8530499233CD3CA00105CA7 /* SceneDelegate.swift */; };
@@ -63,6 +64,7 @@
 		DA6A95AB76BD59A14B63EFB0 /* Pods-SundForluft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SundForluft.debug.xcconfig"; path = "Target Support Files/Pods-SundForluft/Pods-SundForluft.debug.xcconfig"; sourceTree = "<group>"; };
 		E80A466C2358A8DA00450F4A /* ppmDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ppmDTO.swift; sourceTree = "<group>"; };
 		E80A466F2358AE3000450F4A /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		E80A4673235DC6CC00450F4A /* userDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDTO.swift; sourceTree = "<group>"; };
 		E847B8A92348BE9600672BC5 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		E8530494233CD3CA00105CA7 /* SundForluft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SundForluft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8530497233CD3CA00105CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				E80A466C2358A8DA00450F4A /* ppmDTO.swift */,
+				E80A4673235DC6CC00450F4A /* userDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				E8986A6D234F480B000CEB2F /* TeacherCommentTableViewController.swift in Sources */,
 				E80A46702358AE3000450F4A /* DAO.swift in Sources */,
 				E8986A77234FA410000CEB2F /* CustomRoomCollectionViewCell.swift in Sources */,
+				E80A4674235DC6CD00450F4A /* userDTO.swift in Sources */,
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
 				E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */,
 				E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */,

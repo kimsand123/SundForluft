@@ -6,8 +6,10 @@ target 'SundForluft' do
   use_frameworks!
 
   # Pods for SundForluft
-    pod 'ILG'
     pod 'Charts'
+    pod 'Moya'
+    pod 'Alamofire'
+    pod 'SwiftyJSON'
 
 
   target 'SundForluftTests' do

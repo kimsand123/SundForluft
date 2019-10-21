@@ -109,7 +109,7 @@ class ViewController: UIViewController {
         ppmData = DAO.shared.getCurrentppm(room: "thisRoom")
         
         ppmLabel.text = String(ppmData.ppm) + " ppm"
-    }ß
+    }
     
     
     

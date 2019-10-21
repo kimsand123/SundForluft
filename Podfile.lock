@@ -1,22 +1,37 @@
 PODS:
+  - Alamofire (4.9.0)
   - Charts (3.4.0):
     - Charts/Core (= 3.4.0)
   - Charts/Core (3.4.0)
-  - ILG (1.0.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Result (4.1.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Charts
-  - ILG
+  - Moya
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Charts
-    - ILG
+    - Moya
+    - Result
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
-  ILG: 7675cf389f34289e2c266410b618cfa0dee26701
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 44b32d3fb544d8e290faf172cb6b2b47d6ea8d5a
+PODFILE CHECKSUM: 681860f712769d4180487964ee8c2f007e518945
 
 COCOAPODS: 1.8.4
