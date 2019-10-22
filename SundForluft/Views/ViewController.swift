@@ -10,15 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     @IBOutlet weak var ppmLabel: UILabel!
     @IBOutlet weak var ChallengeButton: UIButton!
     
-    
-    var ppmData: ppmDTO
+    var ppmData = ppmDTO()
     @IBAction func loginButton(_ sender: Any) {
         
         var okToLogin : Bool
@@ -89,6 +84,7 @@ class ViewController: UIViewController {
     
     @IBAction func challengeButton(_
         sender: Any) {
+        
         //Skift til LoggedInFrontViewController
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let challengeViewController = storyBoard.instantiateViewController(withIdentifier: "ChallengeViewController") as! ChallengeViewController
@@ -102,30 +98,19 @@ class ViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.
         
-        
         ChallengeButton.titleLabel?.textAlignment = .center
         ChallengeButton.sizeToFit()
         ChallengeButton.layer.borderWidth = 2.0
         ChallengeButton.layer.borderColor = UIColor.blue.cgColor
         ChallengeButton.layer.cornerRadius = 10.0
-        print("calling homepage")
-        ppmData = DAO.shared.getCurrentppm(room: "thisRoom")
-        // ready for receiving notification
-        let defaultCenter = NotificationCenter.default
+        print("calling API")
         
-        defaultCenter.addObserver(self,
-                                  selector: Selector(("handleCompleteDownload")),
-             name: NSNotification.Name(rawValue: "CompleteDownloadNotification"),
-             object: nil)
-
-        print("done calling homepage")
-        ppmLabel.text = String(ppmData.ppm) + " ppm"
+        ppmData = DAO.shared.getCurrentppm(room: "thisRoom")
     }
     
-    func handleCompleteDownload(ppmData: ppmDTO) {
-        // if notification received, change label value
-        ppmLabel.text = String(ppmData.ppm)
-        
+    func reloadData(ppm: Double){
+        ppmLabel.text = String(ppm) + " ppm"
+        print("done calling API")
     }
     
     

@@ -11,19 +11,19 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartupScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sky" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-wm-abF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sky" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-wm-abF">
                                 <rect key="frame" x="0.0" y="164" width="375" height="220.33333333333337"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-aa-Jhq">
                                 <rect key="frame" x="3" y="554.66666666666663" width="369" height="220.33333333333337"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <state key="normal" title="Udfordring">
+                                <state key="normal" title="Konkurrence">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
@@ -37,8 +37,8 @@
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9HL-Sf-sa3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRG-Kb-unH">
-                                <rect key="frame" x="166.66666666666666" y="431" width="41.666666666666657" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 ppm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRG-Kb-unH">
+                                <rect key="frame" x="156" y="431" width="63" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -172,11 +172,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="118" height="127"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" highlightedImage="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-pB-tX7">
-                                            <rect key="frame" x="3" y="3" width="121" height="79.333333333333329"/>
+                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" highlightedImage="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-pB-tX7">
+                                            <rect key="frame" x="3" y="3" width="115" height="79.333333333333329"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDc-Z6-LBk" customClass="Room">
-                                            <rect key="frame" x="3" y="92.333333333333329" width="112" height="37.999999999999986"/>
+                                            <rect key="frame" x="3" y="84.333333333333329" width="112" height="39.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -184,12 +184,12 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="kP0-pB-tX7" firstAttribute="leading" secondItem="8lt-op-60E" secondAttribute="leading" constant="3" id="1yW-rE-Ge4"/>
-                                        <constraint firstItem="XDc-Z6-LBk" firstAttribute="height" secondItem="8lt-op-60E" secondAttribute="height" multiplier="0.3" id="L67-9S-1mU"/>
+                                        <constraint firstItem="XDc-Z6-LBk" firstAttribute="bottom" secondItem="8lt-op-60E" secondAttribute="bottom" constant="-3" id="FmI-p6-Hjt"/>
                                         <constraint firstItem="kP0-pB-tX7" firstAttribute="height" secondItem="8lt-op-60E" secondAttribute="height" multiplier="0.6" constant="3" id="Zxq-c2-q5f"/>
                                         <constraint firstItem="kP0-pB-tX7" firstAttribute="top" secondItem="8lt-op-60E" secondAttribute="top" constant="3" id="hZR-SU-xV7"/>
-                                        <constraint firstItem="kP0-pB-tX7" firstAttribute="width" secondItem="8lt-op-60E" secondAttribute="width" constant="3" id="lxd-Sh-0td"/>
-                                        <constraint firstAttribute="trailing" secondItem="XDc-Z6-LBk" secondAttribute="trailing" constant="3" id="m6G-ke-xdt"/>
-                                        <constraint firstItem="XDc-Z6-LBk" firstAttribute="top" secondItem="kP0-pB-tX7" secondAttribute="bottom" constant="10" id="oe6-Cl-RX7"/>
+                                        <constraint firstItem="kP0-pB-tX7" firstAttribute="width" secondItem="8lt-op-60E" secondAttribute="width" constant="-3" id="lxd-Sh-0td"/>
+                                        <constraint firstItem="XDc-Z6-LBk" firstAttribute="trailing" secondItem="8lt-op-60E" secondAttribute="trailing" constant="-3" id="m6G-ke-xdt"/>
+                                        <constraint firstItem="XDc-Z6-LBk" firstAttribute="top" secondItem="kP0-pB-tX7" secondAttribute="bottom" constant="2" id="oe6-Cl-RX7"/>
                                         <constraint firstItem="XDc-Z6-LBk" firstAttribute="leading" secondItem="8lt-op-60E" secondAttribute="leading" constant="3" id="sfY-WS-96f"/>
                                     </constraints>
                                 </collectionViewCellContentView>
