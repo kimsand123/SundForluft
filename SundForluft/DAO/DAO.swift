@@ -15,11 +15,9 @@ class DAO{
     
     weak var responder : DownloadResponder?
     
-    static let shared = DAO(responde)
+    static let shared = DAO()
     
-    private init(responder: DownloadResponder){
-        
-        self.responder = responder
+    private init(){
     }
     
     public func getDataPointsForGraph(room: String) -> [ppmDTO] {
@@ -102,7 +100,11 @@ class DAO{
                 
                 let state = row["state"]
                 if case currentppm.ppm = state[0].double{}
-                
+                // notify download complete!
+                let defaultCenter = NotificationCenter.default
+                defaultCenter.post(name: NSNotification.Name(rawValue: "CompleteDownloadNotification"),
+                object: nil,
+                userInfo: nil)
                 print(state)
             
             }
