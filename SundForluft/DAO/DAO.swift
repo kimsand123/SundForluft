@@ -73,49 +73,34 @@ class DAO{
             }
             
             // Print out response string and other result variables
-            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            //            print("data = \(data)  \n\n")
-            //            print("responseString = \(responseString)  \n\n")
-            //            print("response = \(response)\n\n")
-            //            print("error = \(error)")
-            // decode Json object
-            
-            //            if let usableData = data{
-            //                print ("Com-Task done")
-            //                completionHandler(usableData)
-            //            } else {
-            //                print("JSON ERROR \n\n\(responseString ?? "NO DATA")")
-            //            }
+            // let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            // print("data = \(data)  \n\n")
+            // print("responseString = \(responseString)  \n\n")
+            // print("response = \(response)\n\n")
+            // print("error = \(error)")
+
+            //Decode JSON in data object. It is being read into an array.
+            //It should be possible to make a generic solution.
+            //want to move the decoding into BusinessLogic
             
             if let usableData = data {
                 print ("UsableData: \(usableData)")
                 var ppm:Double=0.0
                 var dataPoints=[ppmDatapointDTO]()
-                var dataPoint:ppmDatapointDTO
                 let decoder = JSONDecoder()
                 do {
                     dataPoints = try decoder.decode([ppmDatapointDTO].self, from: usableData)
-//                    dataPoints.append(dataPoint)
-//                    print("dataPoint: \(dataPoint)")
                     ppm = dataPoints[0].state.value
                 } catch {
                     print (error.localizedDescription)
                 }
-                
-                //                let json = JSON(usableData)
-                //                //print (json)
-                //                let row = json[0]
-                //                let state = row["state"]
-                //                let ppm = state["value"].
                 print("ppm: \(ppm)")
                 completionHandler(ppm)
-                
             } else {
-                print("JSON ERROR \n\n\(responseString ?? "NO DATA")")
+                print("JSON ERROR")
             }
-            
         }
-        
+        //Start task
         task.resume()
     }
     
