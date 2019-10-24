@@ -13,8 +13,6 @@ import SwiftyJSON
 
 class DAO{
     
-    weak var responder : DownloadResponder?
-    
     static let shared = DAO()
     
     private var dat = Data()
@@ -22,8 +20,8 @@ class DAO{
     private init(){
     }
     
-    public func getDataPointsForGraph(room: String) -> [ppmDTO] {
-        var dataPoints = [ppmDTO]()
+    public func getDataPointsForGraph(room: String) -> ppmDatapointsDTO {
+        var dataPoints: ppmDatapointsDTO
         var condition : Bool
         var counter : Int
         counter = 0
@@ -37,10 +35,18 @@ class DAO{
             //make new instance everytime as dataPoint is a reference and that
             //sees to it that it is a reference to a new instance for each iteracin.
             //It will be cleaned up by housekeeping
-            var dataPoint = ppmDTO()
-            dataPoint.ppm = Double(arc4random())
-            dataPoint.date = Calendar.current.date(byAdding: .day, value: -100+counter, to: today)!
-            dataPoints.append(dataPoint)
+            var dataPoint: ppmDatapointDTO
+            
+            if let tempDate = Calendar.current.date(byAdding: .day, value: -100+counter, to: today){
+                let tmpDataPoint = ppmDatapointDTO(state: <#T##String#>, data: <#T##ppmDatapointDTO.data#>)
+                dataPoint.data.ppm = Double(arc4random())
+                dataPoint.data.pointDate = tempDate
+                
+                dataPoints.dataPoints.append(dataPoint)
+            }
+            
+            
+            
             
             counter = counter + 1
             if (counter > 99) {
@@ -51,8 +57,8 @@ class DAO{
     }
     
     //Getting the last ppm for a room. Frontpage ppmLabel
-    func getCurrentppm(room: String) -> ppmDTO {
-        var currentppm = ppmDTO()
+    func getCurrentppm(room: String, completionHandler: @escaping (Double) -> Void ){
+        //var currentppm = ppmDTO()
         
         // Define server URL
         let scriptUrl = "https://api.allthingstalk.io/"
@@ -85,27 +91,42 @@ class DAO{
             //            print("responseString = \(responseString)  \n\n")
             //            print("response = \(response)\n\n")
             //            print("error = \(error)")
+            // decode Json object
             
+            //            if let usableData = data{
+            //                print ("Com-Task done")
+            //                completionHandler(usableData)
+            //            } else {
+            //                print("JSON ERROR \n\n\(responseString ?? "NO DATA")")
+            //            }
             
-            // Update the UI on the main thread
-            DispatchQueue.main.async {
-                
-                if let usableData = data {
-                    var ppm = Double()
+            if let usableData = data {
+                var ppm:Double
+                var dataPoint:ppmDatapointDTO
+                let decoder = JSONDecoder()
+                do {
+                    dataPoint = try decoder.decode(ppmDatapointDTO.self, from: usableData)
+                    ppm = 
                     
-                    let json = JSON(usableData)
-                    let row = json[0]
-                    let state = row["state"]
-                    if case ppm = state[0].double{}
-                    //ViewController.reloadData(ppm)
-                    print(state)
-                } else {
-                    print("JSON ERROR \n\n\(responseString ?? "NO DATA")")
+                    
+                } catch {
+                    print (error.localizedDescription)
                 }
+                
+//                let json = JSON(usableData)
+//                //print (json)
+//                let row = json[0]
+//                let state = row["state"]
+//                let ppm = state["value"].
+                print("ppm: \(ppm)")
+                completionHandler(ppm)
+               
+            } else {
+                print("JSON ERROR \n\n\(responseString ?? "NO DATA")")
             }
+            
         }
-        print ("Com-Task done")
+        
         task.resume()
-        return currentppm
     }
 }

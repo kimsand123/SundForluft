@@ -12,8 +12,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ppmLabel: UILabel!
     @IBOutlet weak var ChallengeButton: UIButton!
-    
+
     var ppmData = ppmDTO()
+    
     @IBAction func loginButton(_ sender: Any) {
         
         var okToLogin : Bool
@@ -105,12 +106,21 @@ class ViewController: UIViewController {
         ChallengeButton.layer.cornerRadius = 10.0
         print("calling API")
         
-        ppmData = DAO.shared.getCurrentppm(room: "thisRoom")
+        DAO.shared.getCurrentppm(room: "thisRoom"){ (ppm) in
+            //var businessLogic = BusinessLogic()
+            //let ppm = businessLogic.decodeJsonForppmValue(data: data)
+            print ("PPM: \(ppm)")
+            
+            DispatchQueue.main.async {
+                self.reloadData(ppm: ppm)
+            }
+            
+        }
     }
     
     func reloadData(ppm: Double){
         ppmLabel.text = String(ppm) + " ppm"
-        print("done calling API")
+        print("done updating UI")
     }
     
     
