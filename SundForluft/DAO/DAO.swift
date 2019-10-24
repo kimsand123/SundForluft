@@ -19,29 +19,22 @@ class DAO{
     private var dat=Data()
     
     private init(){
-      
+        
     }
     
-    public func getDataPointsForGraph(room: String) -> ppmDatapointsDTO {
-        var dataPoints: ppmDatapointsDTO = ppmDatapointsDTO()
+    public func getDataPointsForGraph(room: String) -> [ppmDatapointDTO] {
+        var dataPoints=[ppmDatapointDTO]()
         var condition : Bool
         var counter : Int
+        var tempDate:String = ""
         counter = 0
         condition = true
-        
-        var tempDate:String = ""
         let today = Date()
         
         //Getting the datapoints from backend with the room as search criteria.
         while(condition == true) {
-            //make new instance everytime as dataPoint is a reference and that
-            //sees to it that it is a reference to a new instance for each iteracin.
-            //It will be cleaned up by housekeeping
-            
-            
             if let tempDate = Calendar.current.date(byAdding: .day, value: -100+counter, to: today){
-                var dataPoint = ppmDatapointDTO(value: Double(arc4random()), at: businessLogic.DateToString(date: tempDate))
-                dataPoints.dataPoints.append(dataPoint)
+                dataPoints.append(ppmDatapointDTO(value: Double(arc4random()), at: businessLogic.DateToString(date: tempDate)))
             }
         }
         counter = counter + 1
@@ -95,12 +88,16 @@ class DAO{
             //            }
             
             if let usableData = data {
+                print ("UsableData: \(usableData)")
                 var ppm:Double=0.0
+                var dataPoints=[ppmDatapointDTO]()
                 var dataPoint:ppmDatapointDTO
                 let decoder = JSONDecoder()
                 do {
-                    dataPoint = try decoder.decode(ppmDatapointDTO.self, from: usableData)
-                    ppm = dataPoint.state.value
+                    dataPoints = try decoder.decode([ppmDatapointDTO].self, from: usableData)
+//                    dataPoints.append(dataPoint)
+//                    print("dataPoint: \(dataPoint)")
+                    ppm = dataPoints[0].state.value
                 } catch {
                     print (error.localizedDescription)
                 }

@@ -9,5 +9,9 @@
 import Foundation
 
 struct ppmDatapointsDTO: Decodable {
-    var dataPoints = [ppmDatapointDTO]();
+    var dataPoints = [ppmDatapointDTO]()
+    
+    init?() {
+        return nil
+    }
 }

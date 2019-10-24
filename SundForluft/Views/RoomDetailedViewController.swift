@@ -26,33 +26,27 @@ class RoomDetailedViewController: UIViewController {
     
     let graph = LineChartView()
     
-    
-    var ppmDataCluster = ppmDatapointsDTO()
-    
     var room : String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var dataPoints:[ppmDatapointDTO]
         roomLabel.text = room
-       
-        
-        ppmDataCluster = DAO.shared.getDataPointsForGraph(room: room)
-        
+        dataPoints = DAO.shared.getDataPointsForGraph(room: room)
 //        for data in ppmDataCluster {
 //            print ("ppm \(data.ppm)  date \(data.date) \n")
 //
 //        }
         
-        populateGraph(ppmDataCluster: ppmDataCluster)
+        populateGraph(ppmDataPoints: dataPoints)
         
         
         
         // Do any additional setup after loading the view.
     }
     
-    func populateGraph(ppmDataCluster : ppmDatapointsDTO) {
+    func populateGraph(ppmDataPoints : [ppmDatapointDTO]) {
         var ppmData = [Double]()
         var ppmDates  = [Date]()
         

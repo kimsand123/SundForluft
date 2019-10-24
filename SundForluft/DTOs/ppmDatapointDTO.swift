@@ -22,7 +22,7 @@ struct ppmDatapointDTO: Decodable {
     }
     
     init(value:Double, at:String) {
-        self.state = data(value: value, at: at)
+        state = data(value: value, at: at)
     }
     
 }
