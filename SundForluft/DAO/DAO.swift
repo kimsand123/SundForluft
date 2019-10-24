@@ -13,21 +13,23 @@ import SwiftyJSON
 
 class DAO{
     
+    private var businessLogic=BusinessLogic()
     static let shared = DAO()
     
-    private var dat = Data()
+    private var dat=Data()
     
     private init(){
+      
     }
     
     public func getDataPointsForGraph(room: String) -> ppmDatapointsDTO {
-        var dataPoints: ppmDatapointsDTO
+        var dataPoints: ppmDatapointsDTO = ppmDatapointsDTO()
         var condition : Bool
         var counter : Int
         counter = 0
         condition = true
         
-        
+        var tempDate:String = ""
         let today = Date()
         
         //Getting the datapoints from backend with the room as search criteria.
@@ -35,31 +37,23 @@ class DAO{
             //make new instance everytime as dataPoint is a reference and that
             //sees to it that it is a reference to a new instance for each iteracin.
             //It will be cleaned up by housekeeping
-            var dataPoint: ppmDatapointDTO
+            
             
             if let tempDate = Calendar.current.date(byAdding: .day, value: -100+counter, to: today){
-                let tmpDataPoint = ppmDatapointDTO(state: <#T##String#>, data: <#T##ppmDatapointDTO.data#>)
-                dataPoint.data.ppm = Double(arc4random())
-                dataPoint.data.pointDate = tempDate
-                
+                var dataPoint = ppmDatapointDTO(value: Double(arc4random()), at: businessLogic.DateToString(date: tempDate))
                 dataPoints.dataPoints.append(dataPoint)
             }
-            
-            
-            
-            
-            counter = counter + 1
-            if (counter > 99) {
-                condition = false
-            }
+        }
+        counter = counter + 1
+        if (counter > 99) {
+            condition = false
         }
         return dataPoints
     }
     
+    
     //Getting the last ppm for a room. Frontpage ppmLabel
     func getCurrentppm(room: String, completionHandler: @escaping (Double) -> Void ){
-        //var currentppm = ppmDTO()
-        
         // Define server URL
         let scriptUrl = "https://api.allthingstalk.io/"
         // Add parameters and endpoints
@@ -101,26 +95,24 @@ class DAO{
             //            }
             
             if let usableData = data {
-                var ppm:Double
+                var ppm:Double=0.0
                 var dataPoint:ppmDatapointDTO
                 let decoder = JSONDecoder()
                 do {
                     dataPoint = try decoder.decode(ppmDatapointDTO.self, from: usableData)
-                    ppm = 
-                    
-                    
+                    ppm = dataPoint.state.value
                 } catch {
                     print (error.localizedDescription)
                 }
                 
-//                let json = JSON(usableData)
-//                //print (json)
-//                let row = json[0]
-//                let state = row["state"]
-//                let ppm = state["value"].
+                //                let json = JSON(usableData)
+                //                //print (json)
+                //                let row = json[0]
+                //                let state = row["state"]
+                //                let ppm = state["value"].
                 print("ppm: \(ppm)")
                 completionHandler(ppm)
-               
+                
             } else {
                 print("JSON ERROR \n\n\(responseString ?? "NO DATA")")
             }
@@ -129,4 +121,5 @@ class DAO{
         
         task.resume()
     }
+    
 }

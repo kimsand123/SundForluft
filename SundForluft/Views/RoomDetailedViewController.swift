@@ -27,7 +27,7 @@ class RoomDetailedViewController: UIViewController {
     let graph = LineChartView()
     
     
-    var ppmDataCluster = [ppmDTO]()
+    var ppmDataCluster = ppmDatapointsDTO()
     
     var room : String = ""
     
@@ -40,10 +40,10 @@ class RoomDetailedViewController: UIViewController {
         
         ppmDataCluster = DAO.shared.getDataPointsForGraph(room: room)
         
-        for data in ppmDataCluster {
-            print ("ppm \(data.ppm)  date \(data.date) \n")
-            
-        }
+//        for data in ppmDataCluster {
+//            print ("ppm \(data.ppm)  date \(data.date) \n")
+//
+//        }
         
         populateGraph(ppmDataCluster: ppmDataCluster)
         
@@ -52,19 +52,19 @@ class RoomDetailedViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func populateGraph(ppmDataCluster : [ppmDTO]) {
+    func populateGraph(ppmDataCluster : ppmDatapointsDTO) {
         var ppmData = [Double]()
         var ppmDates  = [Date]()
         
-        for i in 0..<ppmDataCluster.count-1 {
-            ppmData.append(ppmDataCluster[i].ppm)
-            //print ("i = \(i) ppmData = \(ppmData[i]) dataCluster = \(ppmDataCluster[i].ppm) ")
-        }
-        
-        let values = (0..<ppmDataCluster.count-1).map { (i) -> ChartDataEntry in
-            let val = ppmDataCluster[i].ppm
-             return ChartDataEntry(x: Double(i), y: val)
-        }
+//        for i in 0..<ppmDataCluster.count-1 {
+//            ppmData.append(ppmDataCluster[i].ppm)
+//            //print ("i = \(i) ppmData = \(ppmData[i]) dataCluster = \(ppmDataCluster[i].ppm) ")
+//        }
+//
+//        let values = (0..<ppmDataCluster.count-1).map { (i) -> ChartDataEntry in
+//            let val = ppmDataCluster[i].ppm
+//             return ChartDataEntry(x: Double(i), y: val)
+//        }
         
         
 //        let values = (0..<length).map { (i) -> ChartDataEntry in
@@ -78,10 +78,10 @@ class RoomDetailedViewController: UIViewController {
         //            }
         //
         
-        let set1 = LineChartDataSet(entries: values, label: "ppm Målinger")
-        let data = LineChartData(dataSet: set1)
-        
-        self.lineChartView.data = data
+//        let set1 = LineChartDataSet(entries: values, label: "ppm Målinger")
+//        let data = LineChartData(dataSet: set1)
+//        
+//        self.lineChartView.data = data
         
     }
     

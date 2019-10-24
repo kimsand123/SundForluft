@@ -14,12 +14,15 @@
 import Foundation
 
 struct ppmDatapointDTO: Decodable {
-    var state: data
+    var state:data
 
     struct data: Decodable {
         var value: Double
-        var at: Date
+        var at: String
     }
     
+    init(value:Double, at:String) {
+        self.state = data(value: value, at: at)
+    }
     
 }

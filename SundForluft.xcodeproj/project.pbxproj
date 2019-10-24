@@ -34,6 +34,7 @@
 		E8D2638B235883C300E514EA /* RoomDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2638A235883C300E514EA /* RoomDetailedViewController.swift */; };
 		E8E7B6A0236194FB00DA31B7 /* BussinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E7B69F236194FB00DA31B7 /* BussinessLogic.swift */; };
 		E8E7B6A22361AF4700DA31B7 /* ppmDatapointsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E7B6A12361AF4700DA31B7 /* ppmDatapointsDTO.swift */; };
+		E8E7B6A423623DD800DA31B7 /* dataPointJSON.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E8E7B6A323623DD800DA31B7 /* dataPointJSON.rtf */; };
 		E8FEB5C3234B6A7E0079656B /* CustomCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEB5C2234B6A7E0079656B /* CustomCommentCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		E8D2638A235883C300E514EA /* RoomDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailedViewController.swift; sourceTree = "<group>"; };
 		E8E7B69F236194FB00DA31B7 /* BussinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BussinessLogic.swift; sourceTree = "<group>"; };
 		E8E7B6A12361AF4700DA31B7 /* ppmDatapointsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ppmDatapointsDTO.swift; sourceTree = "<group>"; };
+		E8E7B6A323623DD800DA31B7 /* dataPointJSON.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = dataPointJSON.rtf; sourceTree = "<group>"; };
 		E8FEB5C2234B6A7E0079656B /* CustomCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCommentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +206,7 @@
 				E85304A5233CD3CD00105CA7 /* LaunchScreen.storyboard */,
 				E85304A8233CD3CD00105CA7 /* Info.plist */,
 				E85304A0233CD3CA00105CA7 /* SundForluft.xcdatamodeld */,
+				E8E7B6A323623DD800DA31B7 /* dataPointJSON.rtf */,
 			);
 			path = SundForluft;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E85304A7233CD3CD00105CA7 /* LaunchScreen.storyboard in Resources */,
+				E8E7B6A423623DD800DA31B7 /* dataPointJSON.rtf in Resources */,
 				E85304A4233CD3CD00105CA7 /* Assets.xcassets in Resources */,
 				E853049F233CD3CA00105CA7 /* Main.storyboard in Resources */,
 			);

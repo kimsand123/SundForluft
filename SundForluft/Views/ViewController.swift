@@ -12,8 +12,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ppmLabel: UILabel!
     @IBOutlet weak var ChallengeButton: UIButton!
-
-    var ppmData = ppmDTO()
     
     @IBAction func loginButton(_ sender: Any) {
         

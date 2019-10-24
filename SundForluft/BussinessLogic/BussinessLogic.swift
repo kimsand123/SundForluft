@@ -36,4 +36,27 @@ class BusinessLogic{
         print ("Done parsing JSON")
         return ppm
     }
+    
+    func DateToString (date:Date)-> String{
+        var dateString:String
+        
+        dateString = date.toString(dateFormat: "dd-MM")
+        
+        return dateString
+    }
+    
+    
+}
+
+//from https://stackoverflow.com/questions/42524651/convert-nsdate-to-string-in-ios-swift
+//Extends the Date class with a toString function
+extension Date
+{
+    func toString( dateFormat format  : String ) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
+
 }
