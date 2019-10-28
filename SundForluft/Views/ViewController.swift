@@ -18,10 +18,10 @@ class ViewController: UIViewController {
         var okToLogin : Bool
         okToLogin = false
         
-        //instantier og initialiser alert
+        //Instantiate and initialize alert
         let alert = UIAlertController(title: "Log ind", message: "Indtast brugernavn og password", preferredStyle: UIAlertController.Style.alert )
         
-        //Hvad skal der ske når man trykker færdig
+        //What should happen when you press færdig
         let save = UIAlertAction(title: "Færdig", style: .default) { (alertAction) in
             let usernameTextField = alert.textFields![0] as UITextField
             let passwordTextField = alert.textFields![1] as UITextField
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             }
             
             if okToLogin == true {
-                //Skift til LoggedInFrontViewController
+                //Change to LoggedInFrontViewController
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let loggedInFrontViewController = storyBoard.instantiateViewController(withIdentifier: "LoggedInFrontViewController") as! LoggedInFrontViewController
                 loggedInFrontViewController.modalPresentationStyle = .fullScreen
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         
         alert.addAction(save)
         
-        //Hvad skal der ske ved cancel
+        //What should happen when pressing cancel
         let cancel = UIAlertAction(title: "Fortryd", style: .default) { (alertAction) in }
         alert.addAction(cancel)
         
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
     @IBAction func challengeButton(_
         sender: Any) {
         
-        //Skift til LoggedInFrontViewController
+        //Change to LoggedInFrontViewController
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let challengeViewController = storyBoard.instantiateViewController(withIdentifier: "ChallengeViewController") as! ChallengeViewController
         challengeViewController.modalPresentationStyle = .fullScreen
@@ -105,14 +105,11 @@ class ViewController: UIViewController {
         print("calling API")
         
         DAO.shared.getCurrentppm(room: "thisRoom"){ (ppm) in
-            //var businessLogic = BusinessLogic()
-            //let ppm = businessLogic.decodeJsonForppmValue(data: data)
             print ("PPM: \(ppm)")
             
             DispatchQueue.main.async {
                 self.reloadData(ppm: ppm)
             }
-            
         }
     }
     
@@ -120,7 +117,5 @@ class ViewController: UIViewController {
         ppmLabel.text = String(ppm) + " ppm"
         print("done updating UI")
     }
-    
-    
 }
 
