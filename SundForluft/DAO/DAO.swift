@@ -30,7 +30,7 @@ class DAO{
         let scriptUrl = "https://api.allthingstalk.io/"
         // Add parameters and endpoints
         //let urlWithParameters = scriptUrl + "device/6nGZdUDfxK8DR3XgqY7G9McY/assets"
-        let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states?From=2019-10-10T12:11:19.631Z&To=2019-10-28T12:11:19.631Z?&page=1"
+        let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states?From=2019-10-10T12:11:19.631Z&To=2019-10-28T12:11:19.631Z&page=1"
         // Create NSURL Object
         let myUrl = NSURL(string: urlWithParameters);
         // Create URL Request
