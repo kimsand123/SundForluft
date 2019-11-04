@@ -9,7 +9,14 @@
 import Foundation
 
 struct ppmDatapointsDTO: Decodable {
-    var dataPoints = [ppmDatapointDTO]()
+
+    var data: [dataPoints]
+
+    struct dataPoints: Decodable {
+        var at: String
+        var data: String
+        
+    }
     
     init?() {
         return nil

@@ -13,14 +13,13 @@ class BusinessLogic{
     
     init(){}
     
-    
     func decodeJsonForppmValue(data:Data)-> Double {
         print ("Parsing JSON")
         
         let ppm = Double()
         let usableData = Data()
         
-        print("Data : \(data)")
+        //print("Data : \(data)")
         if case usableData = data {
             let json = JSON(usableData)
             print (json)
@@ -43,6 +42,40 @@ class BusinessLogic{
         dateString = date.toString(dateFormat: "dd-MM")
         
         return dateString
+    }
+    
+    func validateEmployee(userName:String, password:String)->Bool{
+
+        var employeeFound = EmployeeDAO.shared.getEmployee(userName: userName, password: password)
+        
+        if employeeFound.firstName != "" {
+             return true
+        } else{
+            
+            ///SHOULD BE RETURN FALSE!!! THIS IS JUST FOR DEBUGGING
+            return true
+        }
+        
+    }
+    
+    func decodeJSONEmployeeFromQuery(data:Data)->EmployeeDTO{
+        var employee = EmployeeDTO()
+        var usableData = Data()
+        
+        if case usableData = data {
+            let json = JSON(usableData)
+            //print (json)
+            let row = json[0]
+            let employeeData = row["id"]
+            
+            
+            print(employeeData)
+            
+        } else {
+            print("JSON ERROR")
+        }
+        
+        return employee
     }
     
     

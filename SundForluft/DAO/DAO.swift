@@ -22,15 +22,16 @@ class DAO{
         
     }
     
-    func getDataPointsForGraph(room: String, completionHandler: @escaping ([ppmDatapointDTO]) -> Void ){
-        var dataPoints=[ppmDatapointDTO]()
-        
+    func getDataPointsForGraph(room: String, completionHandler: @escaping (ppmDatapointsDTO) -> Void ){
+        var dataPoints=ppmDatapointsDTO()
         
         // Define server URL
         let scriptUrl = "https://api.allthingstalk.io/"
         // Add parameters and endpoints
         //let urlWithParameters = scriptUrl + "device/6nGZdUDfxK8DR3XgqY7G9McY/assets"
-        let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states/?From=2019-10-10T12:11:19.631Z&To=2019-10-28T12:11:19.631Z&page=1"
+        //let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states?from=2019-10-10T12:11:19+0100&to=2019-10-28T12:11:19&page=1"
+       let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states?to=10%2F31%2F2019%2012%3A11%3A19"
+        
         // Create NSURL Object
         let myUrl = NSURL(string: urlWithParameters);
         // Create URL Request
@@ -65,14 +66,14 @@ class DAO{
             
             if let usableData = data {
                 print ("UsableData: \(usableData)")
-                var dataPoints=[ppmDatapointDTO]()
+                var dataPoints=ppmDatapointsDTO()
                 let decoder = JSONDecoder()
                 do {
-                    dataPoints = try decoder.decode([ppmDatapointDTO].self, from: usableData)
+                    dataPoints = try decoder.decode(ppmDatapointsDTO.self, from: usableData)
                 } catch {
                     print (error.localizedDescription)
                 }
-                completionHandler(dataPoints)
+                completionHandler(dataPoints!)
             } else {
                 print("JSON ERROR")
             }

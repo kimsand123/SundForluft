@@ -31,19 +31,18 @@ class RoomDetailedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var dataPoints = [ppmDatapointDTO]()
+        var dataPoints = ppmDatapointsDTO()
         roomLabel.text = room
         
         DAO.shared.getDataPointsForGraph(room: "thisRoom"){ (dataPoints) in
             DispatchQueue.main.async {
                 print("dataPoints: \(dataPoints)")
-                
                 self.populateGraph(ppmDataPoints: dataPoints)
             }
         }
     }
     
-    func populateGraph(ppmDataPoints : [ppmDatapointDTO]) {
+    func populateGraph(ppmDataPoints : ppmDatapointsDTO) {
 //        var ppmData = [Double]()
 //        var ppmDates  = [String]()
         
@@ -60,8 +59,8 @@ class RoomDetailedViewController: UIViewController {
         
         //fill the data into values in the format of
         //the viewmodel
-        let values = (0..<ppmDataPoints.count-1).map { (i) -> ChartDataEntry in
-            let val = ppmDataPoints[i].state.value
+        let values = (0..<ppmDataPoints.data.count-1).map { (i) -> ChartDataEntry in
+            let val = ppmDataPoints.data[i].data
             return ChartDataEntry(x: Double(i), y: val)
         }
 

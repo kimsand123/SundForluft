@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ChallengeButton: UIButton!
     
     @IBAction func loginButton(_ sender: Any) {
-        
+        var businessLogic=BusinessLogic()
         var okToLogin : Bool
         okToLogin = false
         
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
                 if usernameTextField.text != "" {
                     okToLogin = true
                 } else {
-                    usernameTextField.placeholder = "Du har ikke indtaste Brugernavn"
+                    usernameTextField.placeholder = "Du har ikke indtastet Brugernavn"
                     usernameTextField.textColor = .red
                     okToLogin = false
                 }
@@ -44,11 +44,17 @@ class ViewController: UIViewController {
             }
             
             if okToLogin == true {
-                //Change to LoggedInFrontViewController
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let loggedInFrontViewController = storyBoard.instantiateViewController(withIdentifier: "LoggedInFrontViewController") as! LoggedInFrontViewController
-                loggedInFrontViewController.modalPresentationStyle = .fullScreen
-                self.present(loggedInFrontViewController, animated: true, completion: nil)
+                let userName=usernameTextField.text!
+                let password=passwordTextField.text!
+                
+                if businessLogic.validateEmployee(userName: usernameTextField.text!, password: passwordTextField.text!) == true {
+                    
+                    //Change to LoggedInFrontViewController
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let loggedInFrontViewController = storyBoard.instantiateViewController(withIdentifier: "LoggedInFrontViewController") as! LoggedInFrontViewController
+                    loggedInFrontViewController.modalPresentationStyle = .fullScreen
+                    self.present(loggedInFrontViewController, animated: true, completion: nil)
+                }
             }
         }
         
@@ -62,7 +68,7 @@ class ViewController: UIViewController {
         alert.addTextField { (passwordTextField) in
             passwordTextField.placeholder = "Password"
             passwordTextField.textColor = .black
-            passwordTextField.isSecureTextEntry = true
+            //passwordTextField.isSecureTextEntry = true
         }
         
         alert.addAction(save)

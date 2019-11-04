@@ -12,7 +12,12 @@
 		54F3808EF482D6ECDAF8701A /* Pods_SundForluft_SundForluftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04CEB3AB350E75CAE191937 /* Pods_SundForluft_SundForluftUITests.framework */; };
 		E80A466D2358A8DA00450F4A /* ppmDatapointDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A466C2358A8DA00450F4A /* ppmDatapointDTO.swift */; };
 		E80A46702358AE3000450F4A /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A466F2358AE3000450F4A /* DAO.swift */; };
-		E80A4674235DC6CD00450F4A /* userDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A4673235DC6CC00450F4A /* userDTO.swift */; };
+		E80A4674235DC6CD00450F4A /* EmployeeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A4673235DC6CC00450F4A /* EmployeeDTO.swift */; };
+		E83971FC237031FD00C7A6C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83971FB237031FC00C7A6C8 /* GoogleService-Info.plist */; };
+		E83971FE2370390600C7A6C8 /* EmployeeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83971FD2370390600C7A6C8 /* EmployeeDAO.swift */; };
+		E83972002370391700C7A6C8 /* StudentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83971FF2370391700C7A6C8 /* StudentDAO.swift */; };
+		E8397202237039C300C7A6C8 /* StudentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8397201237039C300C7A6C8 /* StudentDTO.swift */; };
+		E83972042370480200C7A6C8 /* CommentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83972032370480200C7A6C8 /* CommentDTO.swift */; };
 		E847B8AA2348BE9600672BC5 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847B8A92348BE9600672BC5 /* Comment.swift */; };
 		E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8530497233CD3CA00105CA7 /* AppDelegate.swift */; };
 		E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8530499233CD3CA00105CA7 /* SceneDelegate.swift */; };
@@ -67,7 +72,12 @@
 		DA6A95AB76BD59A14B63EFB0 /* Pods-SundForluft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SundForluft.debug.xcconfig"; path = "Target Support Files/Pods-SundForluft/Pods-SundForluft.debug.xcconfig"; sourceTree = "<group>"; };
 		E80A466C2358A8DA00450F4A /* ppmDatapointDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ppmDatapointDTO.swift; sourceTree = "<group>"; };
 		E80A466F2358AE3000450F4A /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
-		E80A4673235DC6CC00450F4A /* userDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDTO.swift; sourceTree = "<group>"; };
+		E80A4673235DC6CC00450F4A /* EmployeeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDTO.swift; sourceTree = "<group>"; };
+		E83971FB237031FC00C7A6C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E83971FD2370390600C7A6C8 /* EmployeeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDAO.swift; sourceTree = "<group>"; };
+		E83971FF2370391700C7A6C8 /* StudentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDAO.swift; sourceTree = "<group>"; };
+		E8397201237039C300C7A6C8 /* StudentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDTO.swift; sourceTree = "<group>"; };
+		E83972032370480200C7A6C8 /* CommentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDTO.swift; sourceTree = "<group>"; };
 		E847B8A92348BE9600672BC5 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		E8530494233CD3CA00105CA7 /* SundForluft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SundForluft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8530497233CD3CA00105CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,8 +164,10 @@
 			isa = PBXGroup;
 			children = (
 				E80A466C2358A8DA00450F4A /* ppmDatapointDTO.swift */,
-				E80A4673235DC6CC00450F4A /* userDTO.swift */,
+				E80A4673235DC6CC00450F4A /* EmployeeDTO.swift */,
+				E8397201237039C300C7A6C8 /* StudentDTO.swift */,
 				E8E7B6A12361AF4700DA31B7 /* ppmDatapointsDTO.swift */,
+				E83972032370480200C7A6C8 /* CommentDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -164,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				E80A466F2358AE3000450F4A /* DAO.swift */,
+				E83971FD2370390600C7A6C8 /* EmployeeDAO.swift */,
+				E83971FF2370391700C7A6C8 /* StudentDAO.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -204,6 +218,7 @@
 				E853049D233CD3CA00105CA7 /* Main.storyboard */,
 				E85304A3233CD3CD00105CA7 /* Assets.xcassets */,
 				E85304A5233CD3CD00105CA7 /* LaunchScreen.storyboard */,
+				E83971FB237031FC00C7A6C8 /* GoogleService-Info.plist */,
 				E85304A8233CD3CD00105CA7 /* Info.plist */,
 				E85304A0233CD3CA00105CA7 /* SundForluft.xcdatamodeld */,
 				E8E7B6A323623DD800DA31B7 /* dataPointJSON.rtf */,
@@ -373,6 +388,7 @@
 			files = (
 				E85304A7233CD3CD00105CA7 /* LaunchScreen.storyboard in Resources */,
 				E8E7B6A423623DD800DA31B7 /* dataPointJSON.rtf in Resources */,
+				E83971FC237031FD00C7A6C8 /* GoogleService-Info.plist in Resources */,
 				E85304A4233CD3CD00105CA7 /* Assets.xcassets in Resources */,
 				E853049F233CD3CA00105CA7 /* Main.storyboard in Resources */,
 			);
@@ -503,14 +519,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E85304A2233CD3CA00105CA7 /* SundForluft.xcdatamodeld in Sources */,
+				E83971FE2370390600C7A6C8 /* EmployeeDAO.swift in Sources */,
 				E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */,
 				E8986A75234FA381000CEB2F /* Room.swift in Sources */,
+				E83972002370391700C7A6C8 /* StudentDAO.swift in Sources */,
 				E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */,
 				E8986A71234FA1B4000CEB2F /* RoomsCollectionViewController.swift in Sources */,
 				E8986A6D234F480B000CEB2F /* TeacherCommentTableViewController.swift in Sources */,
+				E8397202237039C300C7A6C8 /* StudentDTO.swift in Sources */,
 				E80A46702358AE3000450F4A /* DAO.swift in Sources */,
 				E8986A77234FA410000CEB2F /* CustomRoomCollectionViewCell.swift in Sources */,
-				E80A4674235DC6CD00450F4A /* userDTO.swift in Sources */,
+				E80A4674235DC6CD00450F4A /* EmployeeDTO.swift in Sources */,
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
 				E8E7B6A22361AF4700DA31B7 /* ppmDatapointsDTO.swift in Sources */,
 				E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */,
@@ -520,6 +539,7 @@
 				E8D2638B235883C300E514EA /* RoomDetailedViewController.swift in Sources */,
 				E8E7B6A0236194FB00DA31B7 /* BussinessLogic.swift in Sources */,
 				E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */,
+				E83972042370480200C7A6C8 /* CommentDTO.swift in Sources */,
 				E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */,
 				E8FEB5C3234B6A7E0079656B /* CustomCommentCell.swift in Sources */,
 			);

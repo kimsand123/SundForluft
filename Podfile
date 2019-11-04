@@ -10,6 +10,9 @@ target 'SundForluft' do
     pod 'Moya'
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'Firebase/Firestore'
+    pod 'Firebase/Core'
+    pod 'Firebase/Analytics'
 
 
   target 'SundForluftTests' do
