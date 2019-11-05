@@ -28,9 +28,8 @@ class DAO{
         // Define server URL
         let scriptUrl = "https://api.allthingstalk.io/"
         // Add parameters and endpoints
-        //let urlWithParameters = scriptUrl + "device/6nGZdUDfxK8DR3XgqY7G9McY/assets"
-        //let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states?from=2019-10-10T12:11:19+0100&to=2019-10-28T12:11:19&page=1"
-       let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states?to=10%2F31%2F2019%2012%3A11%3A19"
+        let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states?from=2019-10-10T12:11:19+0100&to=2019-10-31T12:11:19"
+//       let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states?to=10%2F31%2F2019%2012%3A11%3A19"
         
         // Create NSURL Object
         let myUrl = NSURL(string: urlWithParameters);
@@ -40,6 +39,7 @@ class DAO{
         request.httpMethod = "GET"
         // Add the authorization header and token
         request.addValue("Bearer 4GJSKorDcNh8W1VeVufmMNzJEhm3aw26Fsov2NJ", forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         // Excute Request and JSON conversion
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
@@ -55,25 +55,25 @@ class DAO{
             
             // Print out response string and other result variables
             let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            // print("data = \(data)  \n\n")
-            // print("responseString = \(responseString)  \n\n")
-            // print("response = \(response)\n\n")
-            // print("error = \(error)")
-            print ("responseString: \(responseString)")
+            print ("responseString Data: \(responseString)")
+            
+            
             //Decode JSON in data object. It is being read into an array.
             //It should be possible to make a generic solution.
             //want to move the decoding into BusinessLogic
-            
             if let usableData = data {
-                print ("UsableData: \(usableData)")
-                var dataPoints=ppmDatapointsDTO()
+                //print ("UsableData: \(usableData)")
+                let responseString = NSString(data: usableData, encoding: String.Encoding.utf8.rawValue)
+                print ("responseString UsableData: \(responseString)")
+                
                 let decoder = JSONDecoder()
                 do {
-                    dataPoints = try decoder.decode(ppmDatapointsDTO.self, from: usableData)
+                    let dataPoints = try decoder.decode(ppmDatapointsDTO.self, from: usableData)
+                    completionHandler(dataPoints)
                 } catch {
-                    print (error.localizedDescription)
+                    print ("Error: " + error.localizedDescription)
                 }
-                completionHandler(dataPoints!)
+                
             } else {
                 print("JSON ERROR")
             }

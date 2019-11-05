@@ -10,11 +10,11 @@ import Foundation
 
 struct ppmDatapointsDTO: Decodable {
 
-    var data: [dataPoints]
+    var data: [dataPoints]?
 
     struct dataPoints: Decodable {
-        var at: String
-        var data: String
+        var at: String?
+        var data: Double?
         
     }
     

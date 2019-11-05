@@ -59,8 +59,8 @@ class RoomDetailedViewController: UIViewController {
         
         //fill the data into values in the format of
         //the viewmodel
-        let values = (0..<ppmDataPoints.data.count-1).map { (i) -> ChartDataEntry in
-            let val = ppmDataPoints.data[i].data
+        let values = (0..<ppmDataPoints.data!.count-1).map { (i) -> ChartDataEntry in
+            let val = ppmDataPoints.data![i].data!
             return ChartDataEntry(x: Double(i), y: val)
         }
 
