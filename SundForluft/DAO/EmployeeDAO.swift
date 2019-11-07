@@ -28,14 +28,15 @@ class EmployeeDAO {
         db.collection("Employee")
             .whereField("userName" , isEqualTo: userName)
             .whereField("password" , isEqualTo: password )
-            .getDocuments{ (document, err) in
-                print("document data: \(document)")
-                print("document data: \(err)")
+            .getDocuments{ (querySnapshot, err) in
+                print("********** getDocuments")
                 
                 if let err = err {
                     print("Error getting employee: \(err)")
                 } else {
-                    
+                    for document in querySnapshot!.documents {
+                        print("Document data:  \(document.data())")
+                    }
                     
                 }
         }
