@@ -115,7 +115,7 @@ class ViewController: UIViewController {
         ChallengeButton.layer.cornerRadius = 10.0
         print("calling API")
         
-        DAO.shared.getCurrentppm(room: "thisRoom"){ (ppm) in
+        ATTDAO.shared.getCurrentppm(room: "thisRoom"){ (ppm) in
             print ("PPM: \(ppm)")
             
             DispatchQueue.main.async {

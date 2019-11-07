@@ -1,5 +1,5 @@
 //
-//  DAO.swift
+//  ATTDAO.swift
 //  SundForluft
 //
 //  Created by Kim Sandberg on 17/10/2019.
@@ -9,12 +9,12 @@
 import Foundation
 import SwiftyJSON
 //This is defined as a singleton so to access its
-//funcitons you write DAO.shared.<function>
+//funcitons you write ATTDAO.shared.<function>
 
-class DAO{
+class ATTDAO{
     
     private var businessLogic=BusinessLogic()
-    static let shared = DAO()
+    static let shared = ATTDAO()
     
     private var dat=Data()
     

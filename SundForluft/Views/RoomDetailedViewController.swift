@@ -34,7 +34,7 @@ class RoomDetailedViewController: UIViewController {
         var dataPoints = ppmDatapointsDTO()
         roomLabel.text = room
         
-        DAO.shared.getDataPointsForGraph(room: "thisRoom"){ (dataPoints) in
+        ATTDAO.shared.getDataPointsForGraph(room: "thisRoom"){ (dataPoints) in
             DispatchQueue.main.async {
                 print("dataPoints: \(dataPoints)")
                 self.populateGraph(ppmDataPoints: dataPoints)
