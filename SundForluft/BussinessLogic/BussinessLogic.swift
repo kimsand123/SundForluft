@@ -79,6 +79,23 @@ class BusinessLogic{
     }
     
     
+    // from https://stackoverflow.com/questions/48867030/swift-iso8601-format-to-date
+    func getDateInISOFormat()->String{
+        
+       let dateFormatter = ISO8601DateFormatter()
+
+        dateFormatter.formatOptions = [
+            .withYear,
+            .withMonth,
+            .withDay,
+            .withTime,
+            .withTimeZone,
+            .withColonSeparatorInTime
+        ]
+        return dateFormatter.string(from: Date())
+    }
+    
+    
 }
 
 //from https://stackoverflow.com/questions/42524651/convert-nsdate-to-string-in-ios-swift

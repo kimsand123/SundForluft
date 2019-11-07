@@ -142,6 +142,15 @@ class DAO{
         //Start task
         task.resume()
     }
+    
+    func writeComment (comment:CommentDTO){
+        
+        
+        
+    }
+    
+    
+    
 }
 
 

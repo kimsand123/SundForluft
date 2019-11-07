@@ -10,18 +10,15 @@ import Foundation
 
 
 struct CommentDTO: Decodable {
-    var id: String
-    var collection: data
-
-    struct data: Decodable {
-        var value: String
-        var comment: String
-        var date: String
-    }
+    var uniquePhoneID: String
+    var comment: String?
+    var date: String
     
-    init( id:String, value:String, comment:String, date:String) {
-        self.id = id
-        collection = data(value: value, comment: comment, date: date)
-    }
     
+    init(uniquePhoneID:String, comment:String, date:String) {
+        self.uniquePhoneID = uniquePhoneID
+        self.comment = comment
+        self.date = date
+    }
 }
+

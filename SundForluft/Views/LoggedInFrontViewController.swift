@@ -24,6 +24,13 @@ class LoggedInFrontViewController: UIViewController {
             let commentaryTextField = alert.textFields![0] as UITextField
             
             if commentaryTextField.text != "" {
+                let commentDAO = CommentDAO()
+                let businessLogic = BusinessLogic()
+                
+                let comment = CommentDTO(uniquePhoneID: UIDevice.current.identifierForVendor!.uuidString, comment: commentaryTextField.text!, date: businessLogic.getDateInISOFormat())
+                
+                debugPrint("comment.date  : \(comment.date )")
+                commentDAO.writeComment(comment: comment)
             } else {
                 print("Der er ingen kommentar")
             }
