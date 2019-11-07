@@ -29,8 +29,7 @@ class ATTDAO{
         let scriptUrl = "https://api.allthingstalk.io/"
         // Add parameters and endpoints
         let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states?from=2019-10-10T12:11:19+0100&to=2019-10-31T12:11:19"
-//       let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states?to=10%2F31%2F2019%2012%3A11%3A19"
-        
+    
         // Create NSURL Object
         let myUrl = NSURL(string: urlWithParameters);
         // Create URL Request
@@ -82,8 +81,6 @@ class ATTDAO{
         task.resume()
     }
     
-    
-    
     //Getting the last ppm for a room. Frontpage ppmLabel
     func getCurrentppm(room: String, completionHandler: @escaping (Double) -> Void ){
         // Define server URL
@@ -113,15 +110,12 @@ class ATTDAO{
             
             // Print out response string and other result variables
             let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            // print("data = \(data)  \n\n")
-            // print("responseString = \(responseString)  \n\n")
-            // print("response = \(response)\n\n")
-            // print("error = \(error)")
             print ("responseString: \(responseString)")
+           
+            
             //Decode JSON in data object. It is being read into an array.
             //It should be possible to make a generic solution.
             //want to move the decoding into BusinessLogic
-            
             if let usableData = data {
                 print ("UsableData: \(usableData)")
                 var ppm:Double=0.0
@@ -142,15 +136,8 @@ class ATTDAO{
         //Start task
         task.resume()
     }
-    
     func writeComment (comment:CommentDTO){
-        
-        
-        
     }
-    
-    
-    
 }
 
 
