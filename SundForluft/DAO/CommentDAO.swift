@@ -24,7 +24,8 @@ class CommentDAO {
         db.collection("Comment").document().setData([
             "uniquePhoneID": comment.uniquePhoneID,
             "comment": comment.comment!,
-            "date": comment.date
+            "date": comment.date,
+            "ppm": comment.ppm
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")

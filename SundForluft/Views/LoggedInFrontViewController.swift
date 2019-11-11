@@ -27,10 +27,25 @@ class LoggedInFrontViewController: UIViewController {
                 let commentDAO = CommentDAO()
                 let businessLogic = BusinessLogic()
                 
-                let comment = CommentDTO(uniquePhoneID: UIDevice.current.identifierForVendor!.uuidString, comment: commentaryTextField.text!, date: businessLogic.getDateInISOFormat())
+                //getting the aktual date in ISO format
                 
-                debugPrint("comment.date  : \(comment.date )")
-                commentDAO.writeComment(comment: comment)
+                
+                
+                //debugPrint("comment.date  : \(comment.date )")
+                
+                //Write to FireStore
+                let ppm2:Double=0.0
+                
+                var commentary = CommentDTO(uniquePhoneID: UIDevice.current.identifierForVendor!.uuidString, comment: commentaryTextField.text!, date: businessLogic.getDateInISOFormat(), ppm: ppm2)
+                
+                ATTDAO.shared.getCurrentppm(room: "thisRoom"){ (ppm) in
+                    print ("comment PPM: \(ppm)")
+                    commentary.ppm = ppm
+                    commentDAO.writeComment(comment: commentary)
+                }
+                
+                
+                
             } else {
                 print("Der er ingen kommentar")
             }

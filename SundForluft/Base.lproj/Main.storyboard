@@ -168,7 +168,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="118" height="127"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" highlightedImage="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-pB-tX7">
+                                        <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blå" highlightedImage="Blå" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-pB-tX7">
                                             <rect key="frame" x="3" y="3" width="115" height="79.333333333333329"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDc-Z6-LBk" customClass="Room">
@@ -236,10 +236,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="os7-A8-Vg1">
-                                <rect key="frame" x="3" y="208" width="369" height="207"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Tryk for kommentar" backgroundImage="LOGO">
-                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="3" y="208" width="369" height="276"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Tryk for kommentar" backgroundImage="Blå">
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -266,7 +266,7 @@ kommentarer</string>
                             <constraint firstItem="E6u-B0-lAL" firstAttribute="bottom" secondItem="Dpj-8s-sfs" secondAttribute="bottom" constant="-3" id="60X-so-WDU"/>
                             <constraint firstItem="os7-A8-Vg1" firstAttribute="leading" secondItem="Dpj-8s-sfs" secondAttribute="leading" constant="3" id="9M0-xR-Gfr"/>
                             <constraint firstItem="E6u-B0-lAL" firstAttribute="trailing" secondItem="Dpj-8s-sfs" secondAttribute="trailing" constant="-3" id="A2x-oE-d1u"/>
-                            <constraint firstItem="os7-A8-Vg1" firstAttribute="height" secondItem="Dpj-8s-sfs" secondAttribute="height" multiplier="0.3" id="ETl-9d-BTB"/>
+                            <constraint firstItem="os7-A8-Vg1" firstAttribute="height" secondItem="Dpj-8s-sfs" secondAttribute="height" multiplier="0.4" id="ETl-9d-BTB"/>
                             <constraint firstItem="Dpj-8s-sfs" firstAttribute="trailing" secondItem="os7-A8-Vg1" secondAttribute="trailing" constant="3" id="ITx-Zh-fJy"/>
                             <constraint firstItem="E6u-B0-lAL" firstAttribute="height" secondItem="Dpj-8s-sfs" secondAttribute="height" multiplier="0.3" id="KHU-Rk-bWK"/>
                             <constraint firstItem="bWW-Va-Q55" firstAttribute="bottom" secondItem="Dpj-8s-sfs" secondAttribute="bottom" constant="-3" id="XWf-Qw-Y9Q"/>
@@ -549,7 +549,7 @@ kommentarer</string>
         </scene>
     </scenes>
     <resources>
-        <image name="LOGO" width="75" height="44"/>
+        <image name="Blå" width="2609" height="1850"/>
         <image name="Sky" width="640" height="453"/>
     </resources>
 </document>

@@ -33,14 +33,14 @@ class RoomsCollectionViewController: UICollectionViewController {
     
     func fillRooms(){
         let sampleRooms = [
-            Room(cloudImage: UIImage(named: "LOGO")!, room:"Lok 14a"),
-            Room(cloudImage: UIImage(named: "LOGO")!, room: "Lok 14b"),
-            Room(cloudImage: UIImage(named: "LOGO")!, room:"Lok 15a"),
-            Room(cloudImage: UIImage(named: "LOGO")!, room: "Lok 15b"),
-            Room(cloudImage: UIImage(named: "LOGO")!, room:"Lærerværelse"),
-            Room(cloudImage: UIImage(named: "LOGO")!, room: "Sløjd"),
-            Room(cloudImage: UIImage(named: "LOGO")!, room:"Lok 20"),
-            Room(cloudImage: UIImage(named: "LOGO")!, room: "Musik 1"),
+            Room(cloudImage: UIImage(named: "Blue")!, room:"Lok 14a"),
+            Room(cloudImage: UIImage(named: "Blue")!, room: "Lok 14b"),
+            Room(cloudImage: UIImage(named: "Blue")!, room:"Lok 15a"),
+            Room(cloudImage: UIImage(named: "Blue")!, room: "Lok 15b"),
+            Room(cloudImage: UIImage(named: "Blue")!, room:"Lærerværelse"),
+            Room(cloudImage: UIImage(named: "Blue")!, room: "Sløjd"),
+            Room(cloudImage: UIImage(named: "Blue")!, room:"Lok 20"),
+            Room(cloudImage: UIImage(named: "Blue")!, room: "Musik 1"),
         ]
         rooms = sampleRooms.compactMap{$0}
     }

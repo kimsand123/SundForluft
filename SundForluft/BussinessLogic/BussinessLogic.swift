@@ -44,46 +44,47 @@ class BusinessLogic{
         return dateString
     }
     
-    func validateEmployee(userName:String, password:String)->Bool{
-
-        var employeeFound = EmployeeDAO.shared.getEmployee(userName: userName, password: password)
-        
-        if employeeFound.firstName != "" {
-             return true
-        } else{
-            
-            ///SHOULD BE RETURN FALSE!!! THIS IS JUST FOR DEBUGGING
-            return false
-        }
-        
-    }
-    
-    func decodeJSONEmployeeFromQuery(data:Data)->EmployeeDTO{
-        var employee = EmployeeDTO()
-        var usableData = Data()
-        
-        if case usableData = data {
-            let json = JSON(usableData)
-            //print (json)
-            let row = json[0]
-            let employeeData = row["id"]
-            
-            
-            print(employeeData)
-            
-        } else {
-            print("JSON ERROR")
-        }
-        
-        return employee
-    }
-    
+//    func validateEmployee(userName:String, password:String)->Bool{
+//
+//        var employeeFound = EmployeeDAO.shared.getEmployee(userName: userName, password: password)
+//
+//        if employeeFound.firstName != "" {
+//             return true
+//        } else{
+//
+//            ///SHOULD BE RETURN FALSE!!! THIS IS JUST FOR DEBUGGING
+//            return false
+//        }
+//
+//    }
+//
+//    func decodeJSONEmployeeFromQuery(data:Data)->EmployeeDTO{
+//        var employee = EmployeeDTO()
+//        var usableData = Data()
+//
+//        if case usableData = data {
+//            let json = JSON(usableData)
+//            //print (json)
+//            let row = json[0]
+//            let employeeData = row["id"]
+//
+//
+//            print(employeeData)
+//
+//        } else {
+//            print("JSON ERROR")
+//        }
+//
+//        return employee
+//    }
+//
     
     // from https://stackoverflow.com/questions/48867030/swift-iso8601-format-to-date
     func getDateInISOFormat()->String{
+        let date=Date()
+        let dateFormatter = ISO8601DateFormatter()
         
-       let dateFormatter = ISO8601DateFormatter()
-
+        
         dateFormatter.formatOptions = [
             .withYear,
             .withMonth,
@@ -92,7 +93,7 @@ class BusinessLogic{
             .withTimeZone,
             .withColonSeparatorInTime
         ]
-        return dateFormatter.string(from: Date())
+        return dateFormatter.string(from: date)
     }
     
     

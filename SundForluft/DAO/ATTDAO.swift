@@ -136,8 +136,7 @@ class ATTDAO{
         //Start task
         task.resume()
     }
-    func writeComment (comment:CommentDTO){
-    }
+
 }
 
 
