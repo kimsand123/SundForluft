@@ -9,11 +9,11 @@
 import Foundation
 
 class Comment {
-    var ppm: Int
-    var date: Date
+    var ppm: Double
+    var date: String
     var comment: String
     
-    init?(ppm: Int, date: Date, comment: String) {
+    init?(ppm: Double, date: String, comment: String) {
         
         guard !comment.isEmpty else {
             return nil

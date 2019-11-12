@@ -12,8 +12,6 @@ import Firebase
 
 class CommentDAO {
     
-    
-    
     func writeComment(comment:CommentDTO){
         
         let db = Firestore.firestore()
@@ -33,5 +31,32 @@ class CommentDAO {
                 print("Document successfully written!")
             }
         }
+    }
+    
+    func getComments(uniquePhoneID:String)-> [CommentDTO]{
+        var comments = [CommentDTO]()
+        var counter:Int=0
+        let db = Firestore.firestore()
+        let query = db.collection("Comments").whereField("uniquePhoneID", isEqualTo: UIDevice.current.identifierForVendor!.uuidString).order(by: "date" , descending: false)
+        
+        // or
+        // query = db.collection("animal").whereField("colors", arrayContains: "Black")
+        // to filter data by an array value
+        query.getDocuments { (querySnapshot, err) in
+            if let docs = querySnapshot?.documents {
+                for docSnapshot in docs {
+                    
+                    debugPrint(docSnapshot.get("uniquePhoneID"))
+                    comments[counter].uniquePhoneID=docSnapshot.get("uniquePhoneID") as! String
+                    comments[counter].comment=(docSnapshot.get("comment") as! String)
+                    comments[counter].date=docSnapshot.get("date") as! String
+                    comments[counter].ppm=docSnapshot.get("ppm") as! Double
+                    counter=counter+1
+                }
+            }
+            
+            
+        }
+        return comments
     }
 }

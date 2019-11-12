@@ -43,16 +43,6 @@ class RoomDetailedViewController: UIViewController {
     }
     
     func populateGraph(ppmDataPoints : ppmDatapointsDTO) {
-//        var ppmData = [Double]()
-//        var ppmDates  = [String]()
-        
-        //put the different data into its respective arrays for
-        //the viewmodel of Chart
-//        for i in 0..<ppmDataPoints.count-1 {
-//            ppmData.append(ppmDataPoints[i].state.value)
-//            ppmDates.append(ppmDataPoints[i].state.at)
-//        }
-        
         
         //TODO need to put the dates on the x-axis
         

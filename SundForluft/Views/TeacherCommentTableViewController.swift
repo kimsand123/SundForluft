@@ -12,7 +12,8 @@ class TeacherCommentTableViewController: UITableViewController {
 
     
     
-    var comments = [Comment]()
+    var comments = [CommentDTO]()
+    var businessLogic:BusinessLogic?=nil
     
     @IBAction func backButton(_ sender: Any) {
            self.dismiss(animated: true, completion: nil)
@@ -20,7 +21,6 @@ class TeacherCommentTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fillComments()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -30,19 +30,22 @@ class TeacherCommentTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    func fillComments() {
-        let sampleComments = [
-            Comment(ppm: 600, date: Date(), comment: "Dette er første commentar"),
-            Comment(ppm: 600, date: Date(), comment: "Dette er anden commentar"),
-            Comment(ppm: 700, date: Date(), comment: "Dette er tredje commentar"),
-            Comment(ppm: 800, date: Date(), comment: "Dette er fjerde commentar"),
-            Comment(ppm: 550, date: Date(), comment: "Dette er femte commentar"),
-            Comment(ppm: 1300, date: Date(), comment: "Dette er sjette commentar"),
-            Comment(ppm: 1433, date: Date(), comment: "Dette er syvende commentar"),
-            Comment(ppm: 1384, date: Date(), comment: "Dette er ottende commentar"),
-            Comment(ppm: 0943, date: Date(), comment: "Dette er niende commentar")
-        ]
+    func fillComments(sampleComments:[CommentDTO]) {
+        
+        
+//        let sampleComments =
+//            [CommentDTO(ppm: 600, date: businessLogic?.getDateInISOFormat(), comment: "Dette er første commentar", ppm: 850.0),
+//            CommentDTO(ppm: 600, date: businessLogic?.getDateInISOFormat(), comment: "Dette er anden commentar", ppm: 850.0),
+//            CommentDTO(ppm: 700, date: businessLogic?.getDateInISOFormat(), comment: "Dette er tredje commentar", ppm: 850.0),
+//            CommentDTO(ppm: 800, date: businessLogic?.getDateInISOFormat(), comment: "Dette er fjerde commentar", ppm: 850.0),
+//            CommentDTO(ppm: 550, date: businessLogic?.getDateInISOFormat(), comment: "Dette er femte commentar", ppm: 850.0),
+//            CommentDTO(ppm: 1300, date: businessLogic?.getDateInISOFormat(), comment: "Dette er sjette commentar", ppm: 850.0),
+//            CommentDTO(ppm: 1433, date: businessLogic?.getDateInISOFormat(), comment: "Dette er syvende commentar", ppm: 850.0),
+//            CommentDTO(ppm: 1384, date: businessLogic?.getDateInISOFormat(), comment: "Dette er ottende commentar", ppm: 850.0),
+//            CommentDTO("2", comment: "Dette er niende commentar", date: businessLogic?.getDateInISOFormat(), ppm: 850.0)]
+        
         comments = sampleComments.compactMap {$0}
+        
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -60,13 +63,11 @@ class TeacherCommentTableViewController: UITableViewController {
         df.dateStyle = .short
         df.timeStyle = .short
         //df.dateFormat = "yyyy-MM-dd hh:mm:ss"
-        
 
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCommentCell", for: indexPath) as! CustomCommentCell
             cell.ppmLabel?.text = String(comments[indexPath.row].ppm)
             //df.stringFromDate(Date())
-            cell.dateLabel?.text = df.string(from: comments[indexPath.row].date)
+            cell.dateLabel?.text = comments[indexPath.row].date
             cell.commentLabel?.text = comments[indexPath.row].comment
         return cell
     }

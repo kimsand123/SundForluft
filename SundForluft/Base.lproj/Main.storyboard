@@ -168,7 +168,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="118" height="127"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blå" highlightedImage="Blå" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-pB-tX7">
+                                        <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue" highlightedImage="Blue" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-pB-tX7">
                                             <rect key="frame" x="3" y="3" width="115" height="79.333333333333329"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDc-Z6-LBk" customClass="Room">
@@ -239,7 +239,7 @@
                                 <rect key="frame" x="3" y="208" width="369" height="276"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Tryk for kommentar" backgroundImage="Blå">
+                                <state key="normal" title="Tryk for kommentar" backgroundImage="Blue">
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -549,7 +549,7 @@ kommentarer</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Blå" width="2609" height="1850"/>
+        <image name="Blue" width="869.66668701171875" height="616.66668701171875"/>
         <image name="Sky" width="640" height="453"/>
     </resources>
 </document>
