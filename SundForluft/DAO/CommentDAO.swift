@@ -44,7 +44,7 @@ class CommentDAO {
     func getComments(uniquePhoneID:String, completionHandler: @escaping ([CommentDTO]) -> Void ){
         var comments = [CommentDTO]()
         var counter:Int=0
-        var businessLogic:BusinessLogic
+        var businessLogic=BusinessLogic()
         let db = Firestore.firestore()
         let query = db.collection("Comment").whereField("uniquePhoneID", isEqualTo: uniquePhoneID).order(by: "date" , descending: false)
         
@@ -58,7 +58,7 @@ class CommentDAO {
                     debugPrint(docSnapshot.get("uniquePhoneID")as! String)
                     let uniquePhoneID = docSnapshot.get("uniquePhoneID") as! String
                     let comment=(docSnapshot.get("comment") as! String)
-                    let date=businessLogic.formatDateFromISO(docSnapshot.get("date")) as! String
+                    let date=businessLogic.formatDateFromISO(isoDate: docSnapshot.get("date") as! String)
                     let ppm=docSnapshot.get("ppm") as! Double
                     let commentDTO = CommentDTO(uniquePhoneID: uniquePhoneID, comment: comment, date: date, ppm: ppm)
                     comments.append(commentDTO)

@@ -35,7 +35,7 @@ class LoggedInFrontViewController: UIViewController {
                 
                 let ppm2:Double=0.0
                 
-                var commentary = CommentDTO(uniquePhoneID: UIDevice.current.identifierForVendor!.uuidString, comment: commentaryTextField.text!, date: businessLogic.getDateInISOFormat(), ppm: ppm2)
+                var commentary = CommentDTO(uniquePhoneID: UIDevice.current.identifierForVendor!.uuidString, comment: commentaryTextField.text!, date: businessLogic.getDateInISOFormat(date: Date()), ppm: ppm2)
                 
                 ATTDAO.shared.getCurrentppm(room: "thisRoom"){ (ppm) in
                     print ("comment PPM: \(ppm)")

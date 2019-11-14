@@ -99,12 +99,31 @@ class BusinessLogic{
     func formatDateFromISO(isoDate:String)->String  {
         var dateResult=String()
         
-        let array = isoDate.components(separatedBy: CharacterSet(charactersIn: "TZ"))
+        let yearArray = isoDate.components(separatedBy: CharacterSet(charactersIn: "TZ"))
         
-        array[0].get
+        let year = getSubstring(string: yearArray[0], fromIndex: 0, toIndex: 3)
+        let day = getSubstring(string: yearArray[0],fromIndex: 4,toIndex: 5)
+        let month = getSubstring(string: yearArray[0], fromIndex: 6, toIndex: 7)
         
+        let timeArray = yearArray[1].components(separatedBy: ":")
         
+        let hours = timeArray[0]
+        let minutes = timeArray[1]
+        let seconds = timeArray[2]
+        
+        let dateResult = day + "-" + month + "-" + year + "  kl. " + hours + ":" + minutes
         return dateResult
+    }
+    
+    //https://stackoverflow.com/questions/39677330/how-does-string-substring-work-in-swift/39677704
+    func getSubstring(string: String, fromIndex: Int, toIndex: Int) -> String? {
+        if fromIndex < toIndex && toIndex < string.count /*use string.characters.count for swift3*/{
+            let startIndex = string.index(string.startIndex, offsetBy: fromIndex)
+            let endIndex = string.index(string.startIndex, offsetBy: toIndex)
+            return String(string[startIndex..<endIndex])
+        }else{
+            return nil
+        }
     }
     
     
