@@ -10,6 +10,9 @@ import UIKit
 
 class LoggedInFrontViewController: UIViewController {
     
+    @IBAction func tilbageButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var schoolStatistics: UIButton!
     @IBOutlet weak var teachCommentaryButton: UIButton!
     @IBAction func commentaryButton(_ sender: Any) {
@@ -24,16 +27,12 @@ class LoggedInFrontViewController: UIViewController {
             let commentaryTextField = alert.textFields![0] as UITextField
             
             if commentaryTextField.text != "" {
-                let commentDAO = CommentDAO()
                 let businessLogic = BusinessLogic()
                 
                 //getting the aktual date in ISO format
-                
-                
-                
                 //debugPrint("comment.date  : \(comment.date )")
-                
                 //Write to FireStore
+                
                 let ppm2:Double=0.0
                 
                 var commentary = CommentDTO(uniquePhoneID: UIDevice.current.identifierForVendor!.uuidString, comment: commentaryTextField.text!, date: businessLogic.getDateInISOFormat(), ppm: ppm2)
@@ -41,7 +40,7 @@ class LoggedInFrontViewController: UIViewController {
                 ATTDAO.shared.getCurrentppm(room: "thisRoom"){ (ppm) in
                     print ("comment PPM: \(ppm)")
                     commentary.ppm = ppm
-                    commentDAO.writeComment(comment: commentary)
+                    CommentDAO.shared.writeComment(comment: commentary)
                 }
                 
                 

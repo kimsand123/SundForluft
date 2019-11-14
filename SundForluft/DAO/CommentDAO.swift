@@ -10,7 +10,15 @@ import Foundation
 import FirebaseFirestore
 import Firebase
 
+
+
 class CommentDAO {
+    
+    static let shared = CommentDAO()
+    
+    private init(){
+        
+    }
     
     func writeComment(comment:CommentDTO){
         
@@ -33,30 +41,31 @@ class CommentDAO {
         }
     }
     
-    func getComments(uniquePhoneID:String)-> [CommentDTO]{
+    func getComments(uniquePhoneID:String, completionHandler: @escaping ([CommentDTO]) -> Void ){
         var comments = [CommentDTO]()
         var counter:Int=0
+        var businessLogic:BusinessLogic
         let db = Firestore.firestore()
-        let query = db.collection("Comments").whereField("uniquePhoneID", isEqualTo: UIDevice.current.identifierForVendor!.uuidString).order(by: "date" , descending: false)
+        let query = db.collection("Comment").whereField("uniquePhoneID", isEqualTo: uniquePhoneID).order(by: "date" , descending: false)
         
-        // or
-        // query = db.collection("animal").whereField("colors", arrayContains: "Black")
-        // to filter data by an array value
         query.getDocuments { (querySnapshot, err) in
+            guard err == nil else {
+                return
+            }
             if let docs = querySnapshot?.documents {
                 for docSnapshot in docs {
                     
-                    debugPrint(docSnapshot.get("uniquePhoneID"))
-                    comments[counter].uniquePhoneID=docSnapshot.get("uniquePhoneID") as! String
-                    comments[counter].comment=(docSnapshot.get("comment") as! String)
-                    comments[counter].date=docSnapshot.get("date") as! String
-                    comments[counter].ppm=docSnapshot.get("ppm") as! Double
-                    counter=counter+1
+                    debugPrint(docSnapshot.get("uniquePhoneID")as! String)
+                    let uniquePhoneID = docSnapshot.get("uniquePhoneID") as! String
+                    let comment=(docSnapshot.get("comment") as! String)
+                    let date=businessLogic.formatDateFromISO(docSnapshot.get("date")) as! String
+                    let ppm=docSnapshot.get("ppm") as! Double
+                    let commentDTO = CommentDTO(uniquePhoneID: uniquePhoneID, comment: comment, date: date, ppm: ppm)
+                    comments.append(commentDTO)
                 }
+                completionHandler(comments)
             }
-            
-            
         }
-        return comments
     }
 }
+

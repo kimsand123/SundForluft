@@ -80,8 +80,8 @@ class BusinessLogic{
 //
     
     // from https://stackoverflow.com/questions/48867030/swift-iso8601-format-to-date
-    func getDateInISOFormat()->String{
-        let date=Date()
+    func getDateInISOFormat(date:Date)->String{
+        
         let dateFormatter = ISO8601DateFormatter()
         
         
@@ -95,6 +95,20 @@ class BusinessLogic{
         ]
         return dateFormatter.string(from: date)
     }
+    
+    func formatDateFromISO(isoDate:String)->String  {
+        var dateResult=String()
+        
+        let array = isoDate.components(separatedBy: CharacterSet(charactersIn: "TZ"))
+        
+        array[0].get
+        
+        
+        return dateResult
+    }
+    
+    
+    
     
     
 }
