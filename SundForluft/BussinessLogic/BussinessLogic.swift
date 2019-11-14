@@ -97,7 +97,7 @@ class BusinessLogic{
     }
     
     func formatDateFromISO(isoDate:String)->String  {
-        var dateResult=String()
+        var dateResult:String
         
         let yearArray = isoDate.components(separatedBy: CharacterSet(charactersIn: "TZ"))
         
@@ -111,7 +111,7 @@ class BusinessLogic{
         let minutes = timeArray[1]
         let seconds = timeArray[2]
         
-        let dateResult = day + "-" + month + "-" + year + "  kl. " + hours + ":" + minutes
+        dateResult = day + "-" + month + "-" + year + "  kl. " + hours + ":" + minutes
         return dateResult
     }
     
