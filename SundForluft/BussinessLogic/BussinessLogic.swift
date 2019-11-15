@@ -97,30 +97,21 @@ class BusinessLogic{
     }
     
     func formatDateFromISO(isoDate:String)->String  {
-        var dateResult:String
-        var yearArray:[String]
-        var timeArray:[String]
-        var year:String
-        var day:String
-        var month:String
-        var hours:String
-        var minutes:String
-        var seconds:String
         
-        yearArray = isoDate.components(separatedBy: CharacterSet(charactersIn: "TZ"))
+        let yearArray = isoDate.components(separatedBy: CharacterSet(charactersIn: "TZ"))
         
         
-        year = getSubstring(string: yearArray[0], fromIndex: 0, toIndex: 3)!
-        month = getSubstring(string: yearArray[0],fromIndex: 4,toIndex: 5)!
-        day = getSubstring(string: yearArray[0], fromIndex: 6, toIndex: 7)!
+        let year = getSubstring(string: yearArray[0], fromIndex: 0, toIndex: 3)!
+        let month = getSubstring(string: yearArray[0],fromIndex: 4,toIndex: 5)!
+        let day = getSubstring(string: yearArray[0], fromIndex: 6, toIndex: 7)!
         
-        timeArray = yearArray[1].components(separatedBy: ":")
+        let timeArray = yearArray[1].components(separatedBy: ":")
         
-        hours = timeArray[0]
-        minutes = timeArray[1]
-        seconds = timeArray[2]
+        let hours = timeArray[0]
+        let minutes = timeArray[1]
+        let seconds = timeArray[2]
         
-        dateResult = day + "-" + month + "-" + year
+        var dateResult = day + "-" + month + "-" + year
         dateResult = dateResult + "  kl. " + hours + ":" + minutes
         return dateResult
     }
@@ -144,6 +135,19 @@ class BusinessLogic{
         let resultDate = Calendar.current.date(byAdding: dateCmpt, to: currentDate)
         return resultDate!
     }
+    
+    func formatDateForSearch(date:String) -> String {
+        let yearArray = date.components(separatedBy: CharacterSet(charactersIn: "TZ"))
+    
+        let year = getSubstring(string: yearArray[0], fromIndex: 0, toIndex: 3)!
+        let month = getSubstring(string: yearArray[0],fromIndex: 4,toIndex: 5)!
+        let day = getSubstring(string: yearArray[0], fromIndex: 6, toIndex: 7)!
+        
+        let resultDate = year + "-" + month + "-" + day
+        
+        return resultDate
+    }
+    
 }
 
 //from https://stackoverflow.com/questions/42524651/convert-nsdate-to-string-in-ios-swift

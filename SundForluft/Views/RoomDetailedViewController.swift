@@ -33,8 +33,9 @@ class RoomDetailedViewController: UIViewController {
         super.viewDidLoad()
         roomLabel.text = room
         let fromDate = businessLogic.getDateInISOFormat(date: businessLogic.gettingNewDate(date: Date(), daysFrom: -14))
+        let toDate = businessLogic.getDateInISOFormat(date: Date())
         
-        ATTDAO.shared.getDataPointsForGraph(id: id, fromDate: fromDate){ (dataPoints) in
+        ATTDAO.shared.getDataPointsForGraph(id: id, fromDate: fromDate, toDate: toDate){ (dataPoints) in
             DispatchQueue.main.async {
                 print("dataPoints: \(dataPoints)")
                 self.populateGraph(ppmDataPoints: dataPoints)

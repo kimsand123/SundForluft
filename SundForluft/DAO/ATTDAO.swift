@@ -22,13 +22,13 @@ class ATTDAO{
         
     }
     
-    func getDataPointsForGraph(id: String, fromDate:String ,completionHandler: @escaping (ppmDatapointsDTO) -> Void ){
+    func getDataPointsForGraph(id: String, fromDate:String, toDate:String ,completionHandler: @escaping (ppmDatapointsDTO) -> Void ){
         var dataPoints=ppmDatapointsDTO()
         
         // Define server URL
         let scriptUrl = "https://api.allthingstalk.io/"
         // Add parameters and endpoints
-        let urlWithParameters = scriptUrl + "asset/"+id+"/states?from="+fromDate+"T00:01:00+0100&to=2019-10-31T12:11:19"
+        let urlWithParameters = scriptUrl + "asset/"+id+"/states?from=" + businessLogic.formatDateForSearch(date: fromDate) + "T00:01:00+0100&to=" + businessLogic.formatDateForSearch(date: toDate)+"T23:59:00"
         
         // Create NSURL Object
         let myUrl = NSURL(string: urlWithParameters);
