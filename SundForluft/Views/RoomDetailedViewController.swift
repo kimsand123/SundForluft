@@ -31,7 +31,6 @@ class RoomDetailedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var dataPoints = ppmDatapointsDTO()
         roomLabel.text = room
         
         ATTDAO.shared.getDataPointsForGraph(room: "thisRoom"){ (dataPoints) in

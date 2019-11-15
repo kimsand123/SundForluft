@@ -29,7 +29,7 @@ class ATTDAO{
         let scriptUrl = "https://api.allthingstalk.io/"
         // Add parameters and endpoints
         let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states?from=2019-10-10T12:11:19+0100&to=2019-10-31T12:11:19"
-    
+        
         // Create NSURL Object
         let myUrl = NSURL(string: urlWithParameters);
         // Create URL Request
@@ -111,7 +111,7 @@ class ATTDAO{
             // Print out response string and other result variables
             let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
             print ("responseString: \(responseString)")
-           
+            
             
             //Decode JSON in data object. It is being read into an array.
             //It should be possible to make a generic solution.
@@ -136,7 +136,65 @@ class ATTDAO{
         //Start task
         task.resume()
     }
-
+    
+    func getDeviceAssets(completionHandler: @escaping (AssetsDTO) -> Void ){
+        
+        //https://api.allthingstalk.io/device/{id}/assets
+        // Define server URL
+        let scriptUrl = "https://api.allthingstalk.io/"
+        // Add parameters and endpoint device id
+        let urlWithParameters = scriptUrl + "device/6nGZdUDfxK8DR3XgqY7G9McY/assets/"
+        // Create NSURL Object
+        let myUrl = NSURL(string: urlWithParameters);
+        // Create URL Request
+        let request = NSMutableURLRequest(url:myUrl! as URL);
+        // Set request HTTP method.
+        request.httpMethod = "GET"
+        // Add the authorization header and token
+        request.addValue("Bearer 4GJSKorDcNh8W1VeVufmMNzJEhm3aw26Fsov2NJ", forHTTPHeaderField: "Authorization")
+        
+        // Excute Request and JSON conversion
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            print ("Com-task started")
+            // Check for error
+            if error != nil
+            {
+                print("error=\(String(describing: error))")
+                return
+            }
+            
+            // Print out response string and other result variables
+            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            print ("responseString Data: \(responseString)")
+            
+            //Decode JSON in data object. It is being read into an array.
+            //It should be possible to make a generic solution.
+            //want to move the decoding into BusinessLogic
+            
+            if let usableData = data {
+                //print ("UsableData: \(usableData)")
+                let responseString = NSString(data: usableData, encoding: String.Encoding.utf8.rawValue)
+                print ("responseString UsableData: \(responseString)")
+                
+                let decoder = JSONDecoder()
+                do {
+                    let assets = try decoder.decode(AssetsDTO.self, from: usableData)
+                    completionHandler(assets)
+                } catch {
+                    print ("Error: " + error.localizedDescription)
+                }
+                
+            } else {
+                print("JSON ERROR")
+            }
+        }
+        //Start task
+        task.resume()
+    }
 }
+
+
 
 

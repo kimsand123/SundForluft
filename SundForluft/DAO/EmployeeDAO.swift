@@ -19,28 +19,28 @@ class EmployeeDAO {
     private init(){
     }
     
-    func getEmployee(userName:String, password:String)-> EmployeeDTO{
-        var employee=EmployeeDTO()
-        let db = Firestore.firestore()
-        let settings = db.settings
-        settings.isPersistenceEnabled=false
-        
-        db.collection("Employee")
-            .whereField("userName" , isEqualTo: userName)
-            .whereField("password" , isEqualTo: password )
-            .getDocuments{ (querySnapshot, err) in
-                print("********** getDocuments")
-                
-                if let err = err {
-                    print("Error getting employee: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        print("Document data:  \(document.data())")
-                    }
-                    
-                }
-        }
-       
-        return employee
-    }
+//    func getEmployee(userName:String, password:String)-> EmployeeDTO{
+//        var employee=EmployeeDTO()
+//        let db = Firestore.firestore()
+//        let settings = db.settings
+//        settings.isPersistenceEnabled=false
+//        
+//        db.collection("Employee")
+//            .whereField("userName" , isEqualTo: userName)
+//            .whereField("password" , isEqualTo: password )
+//            .getDocuments{ (querySnapshot, err) in
+//                print("********** getDocuments")
+//                
+//                if let err = err {
+//                    print("Error getting employee: \(err)")
+//                } else {
+//                    for document in querySnapshot!.documents {
+//                        print("Document data:  \(document.data())")
+//                    }
+//                    
+//                }
+//        }
+//       
+//        return employee
+//    }
 }

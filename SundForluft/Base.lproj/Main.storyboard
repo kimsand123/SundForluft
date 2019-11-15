@@ -172,18 +172,18 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="CustomRoomCollectionViewCell" id="YcQ-sh-pT2" customClass="CustomRoomCollectionViewCell" customModule="SundForluft" customModuleProvider="target">
+                            <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="CustomRoomCollectionViewCell" id="YcQ-sh-pT2" customClass="CustomRoomCollectionViewCell" customModule="SundForluft" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="118" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8lt-op-60E">
+                                <collectionViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" id="8lt-op-60E">
                                     <rect key="frame" x="0.0" y="0.0" width="118" height="127"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue" highlightedImage="Blue" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-pB-tX7">
-                                            <rect key="frame" x="3" y="3" width="115.00000000000023" height="79.333333333333329"/>
+                                        <imageView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="LOGO" highlightedImage="LOGO" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-pB-tX7">
+                                            <rect key="frame" x="3" y="3" width="115" height="76.333333333333329"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDc-Z6-LBk" customClass="Room">
-                                            <rect key="frame" x="3" y="84.333333333333329" width="112" height="39.666666666666671"/>
+                                            <rect key="frame" x="3" y="81.333333333333329" width="112" height="42.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -192,7 +192,7 @@
                                     <constraints>
                                         <constraint firstItem="kP0-pB-tX7" firstAttribute="leading" secondItem="8lt-op-60E" secondAttribute="leading" constant="3" id="1yW-rE-Ge4"/>
                                         <constraint firstItem="XDc-Z6-LBk" firstAttribute="bottom" secondItem="8lt-op-60E" secondAttribute="bottom" constant="-3" id="FmI-p6-Hjt"/>
-                                        <constraint firstItem="kP0-pB-tX7" firstAttribute="height" secondItem="8lt-op-60E" secondAttribute="height" multiplier="0.6" constant="3" id="Zxq-c2-q5f"/>
+                                        <constraint firstItem="kP0-pB-tX7" firstAttribute="height" secondItem="8lt-op-60E" secondAttribute="height" multiplier="0.6" id="Zxq-c2-q5f"/>
                                         <constraint firstItem="kP0-pB-tX7" firstAttribute="top" secondItem="8lt-op-60E" secondAttribute="top" constant="3" id="hZR-SU-xV7"/>
                                         <constraint firstItem="kP0-pB-tX7" firstAttribute="width" secondItem="8lt-op-60E" secondAttribute="width" constant="-3" id="lxd-Sh-0td"/>
                                         <constraint firstItem="XDc-Z6-LBk" firstAttribute="trailing" secondItem="8lt-op-60E" secondAttribute="trailing" constant="-3" id="m6G-ke-xdt"/>
@@ -247,7 +247,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="os7-A8-Vg1">
-                                <rect key="frame" x="3" y="208" width="369.00000000000023" height="276"/>
+                                <rect key="frame" x="3" y="208" width="369" height="276"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Tryk for kommentar" backgroundImage="Blue">
@@ -565,6 +565,7 @@ kommentarer</string>
     </scenes>
     <resources>
         <image name="Blue" width="869.66668701171875" height="616.66668701171875"/>
+        <image name="LOGO" width="75" height="44"/>
         <image name="Sky" width="640" height="453"/>
     </resources>
 </document>
