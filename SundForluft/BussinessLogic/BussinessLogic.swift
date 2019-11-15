@@ -44,40 +44,40 @@ class BusinessLogic{
         return dateString
     }
     
-//    func validateEmployee(userName:String, password:String)->Bool{
-//
-//        var employeeFound = EmployeeDAO.shared.getEmployee(userName: userName, password: password)
-//
-//        if employeeFound.firstName != "" {
-//             return true
-//        } else{
-//
-//            ///SHOULD BE RETURN FALSE!!! THIS IS JUST FOR DEBUGGING
-//            return false
-//        }
-//
-//    }
-//
-//    func decodeJSONEmployeeFromQuery(data:Data)->EmployeeDTO{
-//        var employee = EmployeeDTO()
-//        var usableData = Data()
-//
-//        if case usableData = data {
-//            let json = JSON(usableData)
-//            //print (json)
-//            let row = json[0]
-//            let employeeData = row["id"]
-//
-//
-//            print(employeeData)
-//
-//        } else {
-//            print("JSON ERROR")
-//        }
-//
-//        return employee
-//    }
-//
+    //    func validateEmployee(userName:String, password:String)->Bool{
+    //
+    //        var employeeFound = EmployeeDAO.shared.getEmployee(userName: userName, password: password)
+    //
+    //        if employeeFound.firstName != "" {
+    //             return true
+    //        } else{
+    //
+    //            ///SHOULD BE RETURN FALSE!!! THIS IS JUST FOR DEBUGGING
+    //            return false
+    //        }
+    //
+    //    }
+    //
+    //    func decodeJSONEmployeeFromQuery(data:Data)->EmployeeDTO{
+    //        var employee = EmployeeDTO()
+    //        var usableData = Data()
+    //
+    //        if case usableData = data {
+    //            let json = JSON(usableData)
+    //            //print (json)
+    //            let row = json[0]
+    //            let employeeData = row["id"]
+    //
+    //
+    //            print(employeeData)
+    //
+    //        } else {
+    //            print("JSON ERROR")
+    //        }
+    //
+    //        return employee
+    //    }
+    //
     
     // from https://stackoverflow.com/questions/48867030/swift-iso8601-format-to-date
     func getDateInISOFormat(date:Date)->String{
@@ -106,7 +106,7 @@ class BusinessLogic{
         var hours:String
         var minutes:String
         var seconds:String
-    
+        
         yearArray = isoDate.components(separatedBy: CharacterSet(charactersIn: "TZ"))
         
         
@@ -136,6 +136,14 @@ class BusinessLogic{
             return nil
         }
     }
+    
+    func gettingNewDate(date:Date, daysFrom:Int) -> Date{
+        let currentDate = date
+        var dateCmpt = DateComponents()
+        dateCmpt.day = daysFrom
+        let resultDate = Calendar.current.date(byAdding: dateCmpt, to: currentDate)
+        return resultDate!
+    }
 }
 
 //from https://stackoverflow.com/questions/42524651/convert-nsdate-to-string-in-ios-swift
@@ -148,5 +156,5 @@ extension Date
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
     }
-
+    
 }

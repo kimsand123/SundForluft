@@ -32,8 +32,7 @@ class RoomDetailedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         roomLabel.text = room
-        let fromDate = businessLogic.getDateInISOFormat(date: Date()-14)
-        
+        let fromDate = businessLogic.getDateInISOFormat(date: businessLogic.gettingNewDate(date: Date(), daysFrom: -14))
         
         ATTDAO.shared.getDataPointsForGraph(id: id, fromDate: fromDate){ (dataPoints) in
             DispatchQueue.main.async {
