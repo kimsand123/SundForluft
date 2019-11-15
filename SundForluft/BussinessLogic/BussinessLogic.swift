@@ -109,9 +109,10 @@ class BusinessLogic{
     
         yearArray = isoDate.components(separatedBy: CharacterSet(charactersIn: "TZ"))
         
-        year = getSubstring(string: yearArray[0], fromIndex: 0, toIndex: 4)!
-        day = getSubstring(string: yearArray[0],fromIndex: 4,toIndex: 5)!
-        month = getSubstring(string: yearArray[0], fromIndex: 6, toIndex: 7)!
+        
+        year = getSubstring(string: yearArray[0], fromIndex: 0, toIndex: 3)!
+        month = getSubstring(string: yearArray[0],fromIndex: 4,toIndex: 5)!
+        day = getSubstring(string: yearArray[0], fromIndex: 6, toIndex: 7)!
         
         timeArray = yearArray[1].components(separatedBy: ":")
         
@@ -129,7 +130,8 @@ class BusinessLogic{
         if fromIndex < toIndex && toIndex < string.count {
             let startIndex = string.index(string.startIndex, offsetBy: fromIndex)
             let endIndex = string.index(string.startIndex, offsetBy: toIndex)
-            return String(string[startIndex..<endIndex])
+            let returnString = String(string[startIndex...endIndex])
+            return returnString
         }else{
             return nil
         }
