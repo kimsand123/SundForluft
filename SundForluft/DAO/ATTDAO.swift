@@ -22,13 +22,13 @@ class ATTDAO{
         
     }
     
-    func getDataPointsForGraph(room: String, completionHandler: @escaping (ppmDatapointsDTO) -> Void ){
+    func getDataPointsForGraph(id: String, fromDate:String ,completionHandler: @escaping (ppmDatapointsDTO) -> Void ){
         var dataPoints=ppmDatapointsDTO()
         
         // Define server URL
         let scriptUrl = "https://api.allthingstalk.io/"
         // Add parameters and endpoints
-        let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/states?from=2019-10-10T12:11:19+0100&to=2019-10-31T12:11:19"
+        let urlWithParameters = scriptUrl + "asset/"+id+"/states?from="+fromDate+"T00:01:00+0100&to=2019-10-31T12:11:19"
         
         // Create NSURL Object
         let myUrl = NSURL(string: urlWithParameters);
@@ -137,7 +137,7 @@ class ATTDAO{
         task.resume()
     }
     
-    func getDeviceAssets(completionHandler: @escaping (AssetsDTO) -> Void ){
+    func getDeviceAssets(completionHandler: @escaping ([AssetDTO]) -> Void ){
         
         //https://api.allthingstalk.io/device/{id}/assets
         // Define server URL
@@ -180,7 +180,7 @@ class ATTDAO{
                 
                 let decoder = JSONDecoder()
                 do {
-                    let assets = try decoder.decode(AssetsDTO.self, from: usableData)
+                    let assets = try decoder.decode([AssetDTO].self, from: usableData)
                     completionHandler(assets)
                 } catch {
                     print ("Error: " + error.localizedDescription)

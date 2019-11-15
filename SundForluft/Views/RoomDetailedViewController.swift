@@ -19,21 +19,23 @@ class RoomDetailedViewController: UIViewController {
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion:    nil)
     }
-    
     @IBOutlet weak var lineChartView: LineChartView!
-    
     @IBOutlet weak var roomLabel: UILabel!
     
     let graph = LineChartView()
+    var businessLogic = BusinessLogic()
     
     var room : String = ""
+    var id : String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         roomLabel.text = room
+        let fromDate = businessLogic.getDateInISOFormat(date: Date()-14)
         
-        ATTDAO.shared.getDataPointsForGraph(room: "thisRoom"){ (dataPoints) in
+        
+        ATTDAO.shared.getDataPointsForGraph(id: id, fromDate: fromDate){ (dataPoints) in
             DispatchQueue.main.async {
                 print("dataPoints: \(dataPoints)")
                 self.populateGraph(ppmDataPoints: dataPoints)

@@ -12,7 +12,7 @@ private let reuseIdentifier = "Cell"
 
 class RoomsCollectionViewController: UICollectionViewController {
     
-    var clasrooms = [Room]()
+    var clasrooms = [AssetDTO]()
     
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -24,7 +24,8 @@ class RoomsCollectionViewController: UICollectionViewController {
         ATTDAO.shared.getDeviceAssets(completionHandler: { (assets) in
             DispatchQueue.main.async {
                 print("dataPoints: \(assets)")
-                self.fillRooms(assets: assets)
+                self.clasrooms = assets.compactMap{$0}
+                self.collectionView.reloadData()
             }
         })
         
@@ -38,28 +39,7 @@ class RoomsCollectionViewController: UICollectionViewController {
         
         // Do any additional setup after loading the view.
     }
-    
-    func fillRooms(assets:AssetsDTO){
-        var rooms=[Room]()
-        let room=Room(name: "")
-        
-        for asset in assets.data!{
-            room!.name = asset.name!
-            rooms.append(room!)
-            }
 
-//        let sampleRooms = [
-//            Room(room:"Lok 14a"),
-//            Room(room: "Lok 14b"),
-//            Room( room:"Lok 15a"),
-//            Room(room: "Lok 15b"),
-//            Room(room:"Lærerværelse"),
-//            Room(room: "Sløjd"),
-//            Room(room:"Lok 20"),
-//            Room(room: "Musik 1"),
-//        ]
-        clasrooms = rooms.compactMap{$0}
-    }
     
     // MARK: UICollectionViewDataSource
     
@@ -86,7 +66,7 @@ class RoomsCollectionViewController: UICollectionViewController {
         print("selected \rooms[indexPath.row]")
         let vc = storyboard?.instantiateViewController(identifier: "RoomDetailedViewController") as? RoomDetailedViewController
         
-        vc?.room = clasrooms[indexPath.row].name
+        vc?.room = clasrooms[indexPath.row].name!
         self.navigationController?.pushViewController(vc! , animated: true)
     }
     
@@ -95,8 +75,8 @@ class RoomsCollectionViewController: UICollectionViewController {
         print ("indexpath: \(indexPath.row)")
         print ("roomname: \(clasrooms[indexPath.row].name)")
         let vc = storyboard?.instantiateViewController(identifier: "RoomDetailedViewController") as? RoomDetailedViewController
-        
-        vc?.room = clasrooms[indexPath.row].name
+        vc?.room = clasrooms[indexPath.row].name!
+        vc?.id = clasrooms[indexPath.row].id!
         self.navigationController?.pushViewController(vc! , animated: true)
         return true
     }

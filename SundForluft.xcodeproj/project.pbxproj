@@ -16,7 +16,7 @@
 		E83971FE2370390600C7A6C8 /* EmployeeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83971FD2370390600C7A6C8 /* EmployeeDAO.swift */; };
 		E83972002370391700C7A6C8 /* StudentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83971FF2370391700C7A6C8 /* StudentDAO.swift */; };
 		E83972042370480200C7A6C8 /* CommentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83972032370480200C7A6C8 /* CommentDTO.swift */; };
-		E83B33E5237ED24D005A8789 /* AssetsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B33E4237ED24D005A8789 /* AssetsDTO.swift */; };
+		E83B33E9237EE3C7005A8789 /* AssetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B33E8237EE3C7005A8789 /* AssetDTO.swift */; };
 		E847B8AA2348BE9600672BC5 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847B8A92348BE9600672BC5 /* Comment.swift */; };
 		E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8530497233CD3CA00105CA7 /* AppDelegate.swift */; };
 		E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8530499233CD3CA00105CA7 /* SceneDelegate.swift */; };
@@ -76,7 +76,7 @@
 		E83971FD2370390600C7A6C8 /* EmployeeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDAO.swift; sourceTree = "<group>"; };
 		E83971FF2370391700C7A6C8 /* StudentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDAO.swift; sourceTree = "<group>"; };
 		E83972032370480200C7A6C8 /* CommentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDTO.swift; sourceTree = "<group>"; };
-		E83B33E4237ED24D005A8789 /* AssetsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsDTO.swift; sourceTree = "<group>"; };
+		E83B33E8237EE3C7005A8789 /* AssetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AssetDTO.swift; path = SundForluft/AssetDTO.swift; sourceTree = SOURCE_ROOT; };
 		E847B8A92348BE9600672BC5 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		E8530494233CD3CA00105CA7 /* SundForluft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SundForluft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8530497233CD3CA00105CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 				E80A466C2358A8DA00450F4A /* ppmDatapointDTO.swift */,
 				E8E7B6A12361AF4700DA31B7 /* ppmDatapointsDTO.swift */,
 				E83972032370480200C7A6C8 /* CommentDTO.swift */,
-				E83B33E4237ED24D005A8789 /* AssetsDTO.swift */,
+				E83B33E8237EE3C7005A8789 /* AssetDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -518,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E83B33E9237EE3C7005A8789 /* AssetDTO.swift in Sources */,
 				E85304A2233CD3CA00105CA7 /* SundForluft.xcdatamodeld in Sources */,
 				E83971FE2370390600C7A6C8 /* EmployeeDAO.swift in Sources */,
 				E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */,
@@ -530,7 +531,6 @@
 				E80A46702358AE3000450F4A /* ATTDAO.swift in Sources */,
 				E8986A77234FA410000CEB2F /* CustomRoomCollectionViewCell.swift in Sources */,
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
-				E83B33E5237ED24D005A8789 /* AssetsDTO.swift in Sources */,
 				E8E7B6A22361AF4700DA31B7 /* ppmDatapointsDTO.swift in Sources */,
 				E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */,
 				E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */,
