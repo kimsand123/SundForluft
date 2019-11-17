@@ -117,6 +117,7 @@ PODS:
   - nanopb/encode (0.3.9011)
   - Protobuf (3.10.0)
   - Result (4.1.0)
+  - SAConfettiView (0.1.8)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
@@ -126,6 +127,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - Moya
+  - SAConfettiView
   - SwiftyJSON
 
 SPEC REPOS:
@@ -152,6 +154,7 @@ SPEC REPOS:
     - nanopb
     - Protobuf
     - Result
+    - SAConfettiView
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -177,8 +180,9 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SAConfettiView: c87031a2280659261b730fce3669fb10e73636ee
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: a60f81f276184b9466ba490dc9b6d568b20f3bf5
+PODFILE CHECKSUM: d92181bb30b0d906a3ac010cfcd524877309a893
 
 COCOAPODS: 1.8.4
