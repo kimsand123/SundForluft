@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		008DAD660E11E45D2CF68A3A /* Pods_SundForluftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2E7C425A8AE1C222160C65 /* Pods_SundForluftTests.framework */; };
+		009E222B0FC8A3F879BB1996 /* Pods_SundForluft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABD9674AD9FE7058896F79B /* Pods_SundForluft.framework */; };
+		54F3808EF482D6ECDAF8701A /* Pods_SundForluft_SundForluftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04CEB3AB350E75CAE191937 /* Pods_SundForluft_SundForluftUITests.framework */; };
+		E80A466D2358A8DA00450F4A /* ppmDatapointDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A466C2358A8DA00450F4A /* ppmDatapointDTO.swift */; };
+		E80A46702358AE3000450F4A /* ATTDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A466F2358AE3000450F4A /* ATTDAO.swift */; };
+		E83971FC237031FD00C7A6C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83971FB237031FC00C7A6C8 /* GoogleService-Info.plist */; };
+		E83972042370480200C7A6C8 /* CommentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83972032370480200C7A6C8 /* CommentDTO.swift */; };
+		E83B33E9237EE3C7005A8789 /* AssetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B33E8237EE3C7005A8789 /* AssetDTO.swift */; };
+		E847B8AA2348BE9600672BC5 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847B8A92348BE9600672BC5 /* Comment.swift */; };
 		E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8530497233CD3CA00105CA7 /* AppDelegate.swift */; };
 		E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8530499233CD3CA00105CA7 /* SceneDelegate.swift */; };
 		E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E853049B233CD3CA00105CA7 /* ViewController.swift */; };
@@ -16,6 +25,19 @@
 		E85304A7233CD3CD00105CA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85304A5233CD3CD00105CA7 /* LaunchScreen.storyboard */; };
 		E85304B2233CD3CD00105CA7 /* SundForluftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85304B1233CD3CD00105CA7 /* SundForluftTests.swift */; };
 		E85304BD233CD3CD00105CA7 /* SundForluftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85304BC233CD3CD00105CA7 /* SundForluftUITests.swift */; };
+		E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */; };
+		E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */; };
+		E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7ACB233E0776003E3C28 /* AppState.swift */; };
+		E8986A6D234F480B000CEB2F /* TeacherCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */; };
+		E8986A71234FA1B4000CEB2F /* RoomsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A70234FA1B4000CEB2F /* RoomsCollectionViewController.swift */; };
+		E8986A75234FA381000CEB2F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A74234FA381000CEB2F /* Room.swift */; };
+		E8986A77234FA410000CEB2F /* CustomRoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A76234FA410000CEB2F /* CustomRoomCollectionViewCell.swift */; };
+		E899D17A2374636D00C1C9B4 /* CommentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899D1792374636D00C1C9B4 /* CommentDAO.swift */; };
+		E8D2638B235883C300E514EA /* RoomDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2638A235883C300E514EA /* RoomDetailedViewController.swift */; };
+		E8E7B6A0236194FB00DA31B7 /* BussinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E7B69F236194FB00DA31B7 /* BussinessLogic.swift */; };
+		E8E7B6A22361AF4700DA31B7 /* ppmDatapointsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E7B6A12361AF4700DA31B7 /* ppmDatapointsDTO.swift */; };
+		E8E7B6A423623DD800DA31B7 /* dataPointJSON.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E8E7B6A323623DD800DA31B7 /* dataPointJSON.rtf */; };
+		E8FEB5C3234B6A7E0079656B /* CustomCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEB5C2234B6A7E0079656B /* CustomCommentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +58,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0583294135F823D59DA3AB0B /* Pods-SundForluftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SundForluftTests.debug.xcconfig"; path = "Target Support Files/Pods-SundForluftTests/Pods-SundForluftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0AB69F186003B8256F2C469C /* Pods-SundForluftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SundForluftTests.release.xcconfig"; path = "Target Support Files/Pods-SundForluftTests/Pods-SundForluftTests.release.xcconfig"; sourceTree = "<group>"; };
+		5485A8F05B5C8389AD409A57 /* Pods-SundForluft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SundForluft.release.xcconfig"; path = "Target Support Files/Pods-SundForluft/Pods-SundForluft.release.xcconfig"; sourceTree = "<group>"; };
+		6B2E7C425A8AE1C222160C65 /* Pods_SundForluftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SundForluftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80F1063FF8BB1964652D05C0 /* Pods-SundForluft-SundForluftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SundForluft-SundForluftUITests.debug.xcconfig"; path = "Target Support Files/Pods-SundForluft-SundForluftUITests/Pods-SundForluft-SundForluftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B05A45EA6F4B148AD98034A9 /* Pods-SundForluft-SundForluftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SundForluft-SundForluftUITests.release.xcconfig"; path = "Target Support Files/Pods-SundForluft-SundForluftUITests/Pods-SundForluft-SundForluftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BABD9674AD9FE7058896F79B /* Pods_SundForluft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SundForluft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D04CEB3AB350E75CAE191937 /* Pods_SundForluft_SundForluftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SundForluft_SundForluftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA6A95AB76BD59A14B63EFB0 /* Pods-SundForluft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SundForluft.debug.xcconfig"; path = "Target Support Files/Pods-SundForluft/Pods-SundForluft.debug.xcconfig"; sourceTree = "<group>"; };
+		E80A466C2358A8DA00450F4A /* ppmDatapointDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ppmDatapointDTO.swift; sourceTree = "<group>"; };
+		E80A466F2358AE3000450F4A /* ATTDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTDAO.swift; sourceTree = "<group>"; };
+		E83971FB237031FC00C7A6C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E83972032370480200C7A6C8 /* CommentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDTO.swift; sourceTree = "<group>"; };
+		E83B33E8237EE3C7005A8789 /* AssetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AssetDTO.swift; path = SundForluft/AssetDTO.swift; sourceTree = SOURCE_ROOT; };
+		E847B8A92348BE9600672BC5 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		E8530494233CD3CA00105CA7 /* SundForluft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SundForluft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8530497233CD3CA00105CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8530499233CD3CA00105CA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +88,19 @@
 		E85304B8233CD3CD00105CA7 /* SundForluftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SundForluftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85304BC233CD3CD00105CA7 /* SundForluftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SundForluftUITests.swift; sourceTree = "<group>"; };
 		E85304BE233CD3CD00105CA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInFrontViewController.swift; sourceTree = "<group>"; };
+		E86C7ACB233E0776003E3C28 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherCommentTableViewController.swift; sourceTree = "<group>"; };
+		E8986A70234FA1B4000CEB2F /* RoomsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsCollectionViewController.swift; sourceTree = "<group>"; };
+		E8986A74234FA381000CEB2F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		E8986A76234FA410000CEB2F /* CustomRoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoomCollectionViewCell.swift; sourceTree = "<group>"; };
+		E899D1792374636D00C1C9B4 /* CommentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDAO.swift; sourceTree = "<group>"; };
+		E8D2638A235883C300E514EA /* RoomDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailedViewController.swift; sourceTree = "<group>"; };
+		E8E7B69F236194FB00DA31B7 /* BussinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BussinessLogic.swift; sourceTree = "<group>"; };
+		E8E7B6A12361AF4700DA31B7 /* ppmDatapointsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ppmDatapointsDTO.swift; sourceTree = "<group>"; };
+		E8E7B6A323623DD800DA31B7 /* dataPointJSON.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = dataPointJSON.rtf; sourceTree = "<group>"; };
+		E8FEB5C2234B6A7E0079656B /* CustomCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCommentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				009E222B0FC8A3F879BB1996 /* Pods_SundForluft.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				008DAD660E11E45D2CF68A3A /* Pods_SundForluftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +124,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F3808EF482D6ECDAF8701A /* Pods_SundForluft_SundForluftUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BF1A010B5C9E237DC0DE299 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA6A95AB76BD59A14B63EFB0 /* Pods-SundForluft.debug.xcconfig */,
+				5485A8F05B5C8389AD409A57 /* Pods-SundForluft.release.xcconfig */,
+				80F1063FF8BB1964652D05C0 /* Pods-SundForluft-SundForluftUITests.debug.xcconfig */,
+				B05A45EA6F4B148AD98034A9 /* Pods-SundForluft-SundForluftUITests.release.xcconfig */,
+				0583294135F823D59DA3AB0B /* Pods-SundForluftTests.debug.xcconfig */,
+				0AB69F186003B8256F2C469C /* Pods-SundForluftTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A5600FF9AF9E786BC62E0DFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BABD9674AD9FE7058896F79B /* Pods_SundForluft.framework */,
+				D04CEB3AB350E75CAE191937 /* Pods_SundForluft_SundForluftUITests.framework */,
+				6B2E7C425A8AE1C222160C65 /* Pods_SundForluftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E80A466B2358A8AA00450F4A /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				E80A466C2358A8DA00450F4A /* ppmDatapointDTO.swift */,
+				E8E7B6A12361AF4700DA31B7 /* ppmDatapointsDTO.swift */,
+				E83972032370480200C7A6C8 /* CommentDTO.swift */,
+				E83B33E8237EE3C7005A8789 /* AssetDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		E80A466E2358AE1000450F4A /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				E80A466F2358AE3000450F4A /* ATTDAO.swift */,
+				E899D1792374636D00C1C9B4 /* CommentDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
 		E853048B233CD3CA00105CA7 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +181,8 @@
 				E85304B0233CD3CD00105CA7 /* SundForluftTests */,
 				E85304BB233CD3CD00105CA7 /* SundForluftUITests */,
 				E8530495233CD3CA00105CA7 /* Products */,
+				0BF1A010B5C9E237DC0DE299 /* Pods */,
+				A5600FF9AF9E786BC62E0DFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +199,21 @@
 		E8530496233CD3CA00105CA7 /* SundForluft */ = {
 			isa = PBXGroup;
 			children = (
+				E8E7B69E236186F500DA31B7 /* BussinessLogic */,
+				E80A466E2358AE1000450F4A /* DAO */,
+				E80A466B2358A8AA00450F4A /* DTOs */,
+				E8986A6F234F7D28000CEB2F /* Objects */,
+				E8986A6E234F7CDB000CEB2F /* Views */,
 				E8530497233CD3CA00105CA7 /* AppDelegate.swift */,
 				E8530499233CD3CA00105CA7 /* SceneDelegate.swift */,
-				E853049B233CD3CA00105CA7 /* ViewController.swift */,
+				E86C7ACB233E0776003E3C28 /* AppState.swift */,
 				E853049D233CD3CA00105CA7 /* Main.storyboard */,
 				E85304A3233CD3CD00105CA7 /* Assets.xcassets */,
 				E85304A5233CD3CD00105CA7 /* LaunchScreen.storyboard */,
+				E83971FB237031FC00C7A6C8 /* GoogleService-Info.plist */,
 				E85304A8233CD3CD00105CA7 /* Info.plist */,
 				E85304A0233CD3CA00105CA7 /* SundForluft.xcdatamodeld */,
+				E8E7B6A323623DD800DA31B7 /* dataPointJSON.rtf */,
 			);
 			path = SundForluft;
 			sourceTree = "<group>";
@@ -131,6 +236,38 @@
 			path = SundForluftUITests;
 			sourceTree = "<group>";
 		};
+		E8986A6E234F7CDB000CEB2F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8D2638A235883C300E514EA /* RoomDetailedViewController.swift */,
+				E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */,
+				E8FEB5C2234B6A7E0079656B /* CustomCommentCell.swift */,
+				E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */,
+				E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */,
+				E853049B233CD3CA00105CA7 /* ViewController.swift */,
+				E8986A70234FA1B4000CEB2F /* RoomsCollectionViewController.swift */,
+				E8986A76234FA410000CEB2F /* CustomRoomCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E8986A6F234F7D28000CEB2F /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E847B8A92348BE9600672BC5 /* Comment.swift */,
+				E8986A74234FA381000CEB2F /* Room.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		E8E7B69E236186F500DA31B7 /* BussinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				E8E7B69F236194FB00DA31B7 /* BussinessLogic.swift */,
+			);
+			path = BussinessLogic;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +275,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E85304C1233CD3CD00105CA7 /* Build configuration list for PBXNativeTarget "SundForluft" */;
 			buildPhases = (
+				E764C9A5C7759B474D5D8FF6 /* [CP] Check Pods Manifest.lock */,
 				E8530490233CD3CA00105CA7 /* Sources */,
 				E8530491233CD3CA00105CA7 /* Frameworks */,
 				E8530492233CD3CA00105CA7 /* Resources */,
+				9132225063D1048518233391 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +294,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E85304C4233CD3CD00105CA7 /* Build configuration list for PBXNativeTarget "SundForluftTests" */;
 			buildPhases = (
+				728168300E793063ED49213C /* [CP] Check Pods Manifest.lock */,
 				E85304A9233CD3CD00105CA7 /* Sources */,
 				E85304AA233CD3CD00105CA7 /* Frameworks */,
 				E85304AB233CD3CD00105CA7 /* Resources */,
@@ -173,9 +313,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E85304C7233CD3CD00105CA7 /* Build configuration list for PBXNativeTarget "SundForluftUITests" */;
 			buildPhases = (
+				B13644049505542CF99B0348 /* [CP] Check Pods Manifest.lock */,
 				E85304B4233CD3CD00105CA7 /* Sources */,
 				E85304B5233CD3CD00105CA7 /* Frameworks */,
 				E85304B6233CD3CD00105CA7 /* Resources */,
+				8986B884A4D6EF5BF288156F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +378,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E85304A7233CD3CD00105CA7 /* LaunchScreen.storyboard in Resources */,
+				E8E7B6A423623DD800DA31B7 /* dataPointJSON.rtf in Resources */,
+				E83971FC237031FD00C7A6C8 /* GoogleService-Info.plist in Resources */,
 				E85304A4233CD3CD00105CA7 /* Assets.xcassets in Resources */,
 				E853049F233CD3CA00105CA7 /* Main.storyboard in Resources */,
 			);
@@ -257,15 +401,135 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		728168300E793063ED49213C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SundForluftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8986B884A4D6EF5BF288156F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SundForluft-SundForluftUITests/Pods-SundForluft-SundForluftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SundForluft-SundForluftUITests/Pods-SundForluft-SundForluftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SundForluft-SundForluftUITests/Pods-SundForluft-SundForluftUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9132225063D1048518233391 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SundForluft/Pods-SundForluft-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SundForluft/Pods-SundForluft-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SundForluft/Pods-SundForluft-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B13644049505542CF99B0348 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SundForluft-SundForluftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E764C9A5C7759B474D5D8FF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SundForluft-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E8530490233CD3CA00105CA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E83B33E9237EE3C7005A8789 /* AssetDTO.swift in Sources */,
 				E85304A2233CD3CA00105CA7 /* SundForluft.xcdatamodeld in Sources */,
+				E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */,
+				E8986A75234FA381000CEB2F /* Room.swift in Sources */,
+				E899D17A2374636D00C1C9B4 /* CommentDAO.swift in Sources */,
 				E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */,
+				E8986A71234FA1B4000CEB2F /* RoomsCollectionViewController.swift in Sources */,
+				E8986A6D234F480B000CEB2F /* TeacherCommentTableViewController.swift in Sources */,
+				E80A46702358AE3000450F4A /* ATTDAO.swift in Sources */,
+				E8986A77234FA410000CEB2F /* CustomRoomCollectionViewCell.swift in Sources */,
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
+				E8E7B6A22361AF4700DA31B7 /* ppmDatapointsDTO.swift in Sources */,
+				E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */,
+				E847B8AA2348BE9600672BC5 /* Comment.swift in Sources */,
+				E80A466D2358A8DA00450F4A /* ppmDatapointDTO.swift in Sources */,
+				E8D2638B235883C300E514EA /* RoomDetailedViewController.swift in Sources */,
+				E8E7B6A0236194FB00DA31B7 /* BussinessLogic.swift in Sources */,
+				E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */,
+				E83972042370480200C7A6C8 /* CommentDTO.swift in Sources */,
 				E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */,
+				E8FEB5C3234B6A7E0079656B /* CustomCommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,42 +700,47 @@
 		};
 		E85304C2233CD3CD00105CA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA6A95AB76BD59A14B63EFB0 /* Pods-SundForluft.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7WAN6CQBR3;
 				INFOPLIST_FILE = SundForluft/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KS.SundForluft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E85304C3233CD3CD00105CA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5485A8F05B5C8389AD409A57 /* Pods-SundForluft.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7WAN6CQBR3;
 				INFOPLIST_FILE = SundForluft/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KS.SundForluft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		E85304C5233CD3CD00105CA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0583294135F823D59DA3AB0B /* Pods-SundForluftTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +762,7 @@
 		};
 		E85304C6233CD3CD00105CA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AB69F186003B8256F2C469C /* Pods-SundForluftTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +784,7 @@
 		};
 		E85304C8233CD3CD00105CA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80F1063FF8BB1964652D05C0 /* Pods-SundForluft-SundForluftUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -533,6 +804,7 @@
 		};
 		E85304C9233CD3CD00105CA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B05A45EA6F4B148AD98034A9 /* Pods-SundForluft-SundForluftUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
