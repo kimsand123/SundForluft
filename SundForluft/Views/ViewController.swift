@@ -12,74 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ppmLabel: UILabel!
     @IBOutlet weak var ChallengeButton: UIButton!
+    let attDao = ATTDAO()
     
     @IBAction func loginButton(_ sender: Any) {
-//        var businessLogic=BusinessLogic()
-//        var okToLogin : Bool
-//        okToLogin = false
-        
-//        //Instantiate and initialize alert
-//        let alert = UIAlertController(title: "Log ind", message: "Indtast brugernavn og password", preferredStyle: UIAlertController.Style.alert )
-//
-//        //What should happen when you press færdig
-//        let save = UIAlertAction(title: "Færdig", style: .default) { (alertAction) in
-//            let usernameTextField = alert.textFields![0] as UITextField
-//            let passwordTextField = alert.textFields![1] as UITextField
-//
-//            while okToLogin == false {
-//                if usernameTextField.text != "" {
-//                    okToLogin = true
-//                } else {
-//                    usernameTextField.placeholder = "Du har ikke indtastet Brugernavn"
-//                    usernameTextField.textColor = .red
-//                    okToLogin = false
-//                }
-//
-//                if passwordTextField.text != "" {
-//                    okToLogin = true
-//
-//                } else {
-//                    okToLogin = false
-//                }
-//            }
-//
-//            if okToLogin == true {
-//                let userName=usernameTextField.text!
-//                let password=passwordTextField.text!
-//
-//                if businessLogic.validateEmployee(userName: usernameTextField.text!, password: passwordTextField.text!) == true {
-//
-//                    //Change to LoggedInFrontViewController
-//                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                    let loggedInFrontViewController = storyBoard.instantiateViewController(withIdentifier: "LoggedInFrontViewController") as! LoggedInFrontViewController
-//                    loggedInFrontViewController.modalPresentationStyle = .fullScreen
-//                    self.present(loggedInFrontViewController, animated: true, completion: nil)
-//                }
-//            }
-//        }
-//
-//        //brugernavn
-//        alert.addTextField { (usernameTextField) in
-//            usernameTextField.placeholder = "Brugernavn"
-//            usernameTextField.textColor = .black
-//        }
-//
-//        //password
-//        alert.addTextField { (passwordTextField) in
-//            passwordTextField.placeholder = "Password"
-//            passwordTextField.textColor = .black
-//            //passwordTextField.isSecureTextEntry = true
-//        }
-//
-//        alert.addAction(save)
-//
-//        //What should happen when pressing cancel
-//        let cancel = UIAlertAction(title: "Fortryd", style: .default) { (alertAction) in }
-//        alert.addAction(cancel)
-//
-//
-//        self.present(alert, animated:true, completion: nil)
-//
+
         //Change to LoggedInFrontViewController
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -113,10 +49,10 @@ class ViewController: UIViewController {
         ChallengeButton.layer.borderWidth = 2.0
         ChallengeButton.layer.borderColor = UIColor.blue.cgColor
         ChallengeButton.layer.cornerRadius = 10.0
-        print("calling API")
+        //print("calling API")
         
-        ATTDAO.shared.getCurrentppm(room: "thisRoom"){ (ppm) in
-            print ("PPM: \(ppm)")
+        attDao.getCurrentppm(){ (ppm) in
+            //print ("PPM: \(ppm)")
             
             DispatchQueue.main.async {
                 self.reloadData(ppm: ppm)
@@ -126,7 +62,7 @@ class ViewController: UIViewController {
     
     func reloadData(ppm: Double){
         ppmLabel.text = String(ppm) + " ppm"
-        print("done updating UI")
+        //print("done updating UI")
     }
 }
 

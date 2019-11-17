@@ -247,7 +247,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="os7-A8-Vg1">
-                                <rect key="frame" x="3" y="208" width="369" height="276"/>
+                                <rect key="frame" x="3" y="208" width="369.00000000000023" height="276"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Tryk for kommentar" backgroundImage="Blue">
@@ -393,61 +393,6 @@ kommentarer</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ubd-ah-myy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4508" y="355"/>
-        </scene>
-        <!--School Data Table View Controller-->
-        <scene sceneID="DVH-Zp-7aY">
-            <objects>
-                <tableViewController id="ces-F3-9Tt" customClass="SchoolDataTableViewController" customModule="SundForluft" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kSW-fj-a7h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Td-TX-nhF">
-                            <rect key="frame" x="0.0" y="99.666667938232422" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IdI-CZ-AeT">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IdI-CZ-AeT" id="lBk-zm-Gvx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ces-F3-9Tt" id="MPa-6M-RjW"/>
-                            <outlet property="delegate" destination="ces-F3-9Tt" id="xzc-fd-dsp"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="BwB-qs-jZd"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="exJ-pG-bvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1372" y="337"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xAc-M2-W9c">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NYt-Jb-cOi" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="kiz-oe-Xbq"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LjA-Es-PSX">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ces-F3-9Tt" kind="relationship" relationship="rootViewController" id="sPB-XS-2Z7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HxN-Fc-NbG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2340" y="337"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aHc-bm-His">

@@ -13,6 +13,7 @@ private let reuseIdentifier = "Cell"
 class RoomsCollectionViewController: UICollectionViewController {
     
     var clasrooms = [AssetDTO]()
+    var attDao = ATTDAO()
     
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -21,7 +22,7 @@ class RoomsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ATTDAO.shared.getDeviceAssets(completionHandler: { (assets) in
+        attDao.getDeviceAssets(completionHandler: { (assets) in
             DispatchQueue.main.async {
                 print("dataPoints: \(assets)")
                 self.clasrooms = assets.compactMap{$0}
@@ -29,15 +30,8 @@ class RoomsCollectionViewController: UICollectionViewController {
             }
         })
         
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
-        // Do any additional setup after loading the view.
     }
 
     

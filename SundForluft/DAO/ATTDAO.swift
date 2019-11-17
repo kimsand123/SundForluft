@@ -14,11 +14,11 @@ import SwiftyJSON
 class ATTDAO{
     
     private var businessLogic=BusinessLogic()
-    static let shared = ATTDAO()
+    //static let shared = ATTDAO()
     
     private var dat=Data()
     
-    private init(){
+    public init(){
         
     }
     
@@ -81,7 +81,7 @@ class ATTDAO{
     }
     
     //Getting the last ppm for a room. Frontpage ppmLabel
-    func getCurrentppm(room: String, completionHandler: @escaping (Double) -> Void ){
+    func getCurrentppm(completionHandler: @escaping (Double) -> Void ){
         // Define server URL
         let scriptUrl = "https://api.allthingstalk.io/"
         // Add parameters and endpoint

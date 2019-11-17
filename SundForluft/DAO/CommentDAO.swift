@@ -14,9 +14,9 @@ import Firebase
 
 class CommentDAO {
     
-    static let shared = CommentDAO()
+    //static let shared = CommentDAO()
     
-    private init(){
+    public init(){
         
     }
     

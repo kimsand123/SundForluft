@@ -10,8 +10,5 @@ import UIKit
 
 class CustomRoomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var roomLabel: UILabel!
-    
-    
 }

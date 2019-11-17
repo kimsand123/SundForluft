@@ -26,6 +26,7 @@ class RoomDetailedViewController: UIViewController {
     
     let graph = LineChartView()
     var businessLogic = BusinessLogic()
+    var attDao = ATTDAO()
     
     var room : String = ""
     var id : String = ""
@@ -37,7 +38,7 @@ class RoomDetailedViewController: UIViewController {
         let fromDate = businessLogic.getDateInISOFormat(date: businessLogic.gettingNewDate(date: Date(), daysFrom: -14))
         let toDate = businessLogic.getDateInISOFormat(date: Date())
         
-        ATTDAO.shared.getDataPointsForGraph(id: id, fromDate: fromDate, toDate: toDate){ (dataPoints) in
+        attDao.getDataPointsForGraph(id: id, fromDate: fromDate, toDate: toDate){ (dataPoints) in
             DispatchQueue.main.async {
                 print("dataPoints: \(dataPoints)")
                 self.populateGraph(ppmDataPoints: dataPoints)
@@ -46,9 +47,6 @@ class RoomDetailedViewController: UIViewController {
     }
     
     func populateGraph(ppmDataPoints : ppmDatapointsDTO) {
-        
-        //TODO need to put the dates on the x-axis
-        
         
         //fill the data into values in the format of
         //the viewmodel
