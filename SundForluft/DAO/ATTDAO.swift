@@ -7,9 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
-//This is defined as a singleton so to access its
-//funcitons you write ATTDAO.shared.<function>
 
 class ATTDAO{
     
@@ -51,19 +48,10 @@ class ATTDAO{
                 return
             }
             
-            // Print out response string and other result variables
-            //let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            //print ("responseString Data: \(responseString)")
-            
-            
             //Decoding JSON in data object. It is being read into an array.
             //It should be possible to make a generic solution.
             //want to move the decoding into BusinessLogic
             if let usableData = data {
-                //print ("UsableData: \(usableData)")
-//                let responseString = NSString(data: usableData, encoding: String.Encoding.utf8.rawValue)
-//                //print ("responseString UsableData: \(responseString)")
-                
                 let decoder = JSONDecoder()
                 do {
                     let dataPoints = try decoder.decode(ppmDatapointsDTO.self, from: usableData)
@@ -82,20 +70,14 @@ class ATTDAO{
     
     //Getting the last ppm for a room. Frontpage ppmLabel
     func getCurrentppm(completionHandler: @escaping (Double) -> Void ){
-        // Define server URL
         let scriptUrl = "https://api.allthingstalk.io/"
-        // Add parameters and endpoint
         let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/state/"
-        // Create NSURL Object
-        let myUrl = NSURL(string: urlWithParameters);
-        // Create URL Request
-        let request = NSMutableURLRequest(url:myUrl! as URL);
-        // Set request HTTP method.
+        let myUrl = NSURL(string: urlWithParameters)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         request.httpMethod = "GET"
-        // Add the authorization header and token
         request.addValue("Bearer 4GJSKorDcNh8W1VeVufmMNzJEhm3aw26Fsov2NJ", forHTTPHeaderField: "Authorization")
-        
-        // Excute Request and JSON conversion
+
+        //Make the request task and json to object conversion.
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -106,11 +88,6 @@ class ATTDAO{
                 print("error=\(String(describing: error))")
                 return
             }
-            
-            // Print out response string and other result variables
-            //let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            //print ("responseString: \(responseString)")
-            
             
             //Decode JSON in data object. It is being read into an array.
             //It should be possible to make a generic solution.
@@ -126,33 +103,25 @@ class ATTDAO{
                 } catch {
                     print (error.localizedDescription)
                 }
-                print("ppm: \(ppm)")
                 completionHandler(ppm)
             } else {
                 print("JSON ERROR")
             }
         }
-        //Start task
+        //execute the task
         task.resume()
     }
     
     func getDeviceAssets(completionHandler: @escaping ([AssetDTO]) -> Void ){
         
-        //https://api.allthingstalk.io/device/{id}/assets
-        // Define server URL
         let scriptUrl = "https://api.allthingstalk.io/"
-        // Add parameters and endpoint device id
         let urlWithParameters = scriptUrl + "device/6nGZdUDfxK8DR3XgqY7G9McY/assets/"
-        // Create NSURL Object
-        let myUrl = NSURL(string: urlWithParameters);
-        // Create URL Request
-        let request = NSMutableURLRequest(url:myUrl! as URL);
-        // Set request HTTP method.
+        let myUrl = NSURL(string: urlWithParameters)
+        let request = NSMutableURLRequest(url:myUrl! as URL)
         request.httpMethod = "GET"
-        // Add the authorization header and token
         request.addValue("Bearer 4GJSKorDcNh8W1VeVufmMNzJEhm3aw26Fsov2NJ", forHTTPHeaderField: "Authorization")
         
-        // Excute Request and JSON conversion
+        // create Request task and JSON conversion
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -163,20 +132,11 @@ class ATTDAO{
                 print("error=\(String(describing: error))")
                 return
             }
-            
-            // Print out response string and other result variables
-            //let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            //print ("responseString Data: \(responseString)")
-            
             //Decode JSON in data object. It is being read into an array.
             //It should be possible to make a generic solution.
             //want to move the decoding into BusinessLogic
             
             if let usableData = data {
-                //print ("UsableData: \(usableData)")
-//                let responseString = NSString(data: usableData, encoding: String.Encoding.utf8.rawValue)
-                //print ("responseString UsableData: \(responseString)")
-                
                 let decoder = JSONDecoder()
                 do {
                     let assets = try decoder.decode([AssetDTO].self, from: usableData)

@@ -13,8 +13,6 @@
 		E80A466D2358A8DA00450F4A /* ppmDatapointDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A466C2358A8DA00450F4A /* ppmDatapointDTO.swift */; };
 		E80A46702358AE3000450F4A /* ATTDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A466F2358AE3000450F4A /* ATTDAO.swift */; };
 		E83971FC237031FD00C7A6C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83971FB237031FC00C7A6C8 /* GoogleService-Info.plist */; };
-		E83971FE2370390600C7A6C8 /* EmployeeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83971FD2370390600C7A6C8 /* EmployeeDAO.swift */; };
-		E83972002370391700C7A6C8 /* StudentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83971FF2370391700C7A6C8 /* StudentDAO.swift */; };
 		E83972042370480200C7A6C8 /* CommentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83972032370480200C7A6C8 /* CommentDTO.swift */; };
 		E83B33E9237EE3C7005A8789 /* AssetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B33E8237EE3C7005A8789 /* AssetDTO.swift */; };
 		E847B8AA2348BE9600672BC5 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847B8A92348BE9600672BC5 /* Comment.swift */; };
@@ -27,7 +25,6 @@
 		E85304A7233CD3CD00105CA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85304A5233CD3CD00105CA7 /* LaunchScreen.storyboard */; };
 		E85304B2233CD3CD00105CA7 /* SundForluftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85304B1233CD3CD00105CA7 /* SundForluftTests.swift */; };
 		E85304BD233CD3CD00105CA7 /* SundForluftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85304BC233CD3CD00105CA7 /* SundForluftUITests.swift */; };
-		E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85304CC233CDC3B00105CA7 /* LoginViewController.swift */; };
 		E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */; };
 		E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */; };
 		E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7ACB233E0776003E3C28 /* AppState.swift */; };
@@ -73,8 +70,6 @@
 		E80A466C2358A8DA00450F4A /* ppmDatapointDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ppmDatapointDTO.swift; sourceTree = "<group>"; };
 		E80A466F2358AE3000450F4A /* ATTDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTDAO.swift; sourceTree = "<group>"; };
 		E83971FB237031FC00C7A6C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E83971FD2370390600C7A6C8 /* EmployeeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDAO.swift; sourceTree = "<group>"; };
-		E83971FF2370391700C7A6C8 /* StudentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDAO.swift; sourceTree = "<group>"; };
 		E83972032370480200C7A6C8 /* CommentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDTO.swift; sourceTree = "<group>"; };
 		E83B33E8237EE3C7005A8789 /* AssetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AssetDTO.swift; path = SundForluft/AssetDTO.swift; sourceTree = SOURCE_ROOT; };
 		E847B8A92348BE9600672BC5 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -93,7 +88,6 @@
 		E85304B8233CD3CD00105CA7 /* SundForluftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SundForluftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85304BC233CD3CD00105CA7 /* SundForluftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SundForluftUITests.swift; sourceTree = "<group>"; };
 		E85304BE233CD3CD00105CA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E85304CC233CDC3B00105CA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E86C7AC1233DF030003E3C28 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInFrontViewController.swift; sourceTree = "<group>"; };
 		E86C7ACB233E0776003E3C28 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -175,8 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				E80A466F2358AE3000450F4A /* ATTDAO.swift */,
-				E83971FD2370390600C7A6C8 /* EmployeeDAO.swift */,
-				E83971FF2370391700C7A6C8 /* StudentDAO.swift */,
 				E899D1792374636D00C1C9B4 /* CommentDAO.swift */,
 			);
 			path = DAO;
@@ -253,7 +245,6 @@
 				E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */,
 				E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */,
 				E853049B233CD3CA00105CA7 /* ViewController.swift */,
-				E85304CC233CDC3B00105CA7 /* LoginViewController.swift */,
 				E8986A70234FA1B4000CEB2F /* RoomsCollectionViewController.swift */,
 				E8986A76234FA410000CEB2F /* CustomRoomCollectionViewCell.swift */,
 			);
@@ -520,10 +511,8 @@
 			files = (
 				E83B33E9237EE3C7005A8789 /* AssetDTO.swift in Sources */,
 				E85304A2233CD3CA00105CA7 /* SundForluft.xcdatamodeld in Sources */,
-				E83971FE2370390600C7A6C8 /* EmployeeDAO.swift in Sources */,
 				E86C7ACC233E0776003E3C28 /* AppState.swift in Sources */,
 				E8986A75234FA381000CEB2F /* Room.swift in Sources */,
-				E83972002370391700C7A6C8 /* StudentDAO.swift in Sources */,
 				E899D17A2374636D00C1C9B4 /* CommentDAO.swift in Sources */,
 				E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */,
 				E8986A71234FA1B4000CEB2F /* RoomsCollectionViewController.swift in Sources */,
@@ -532,7 +521,6 @@
 				E8986A77234FA410000CEB2F /* CustomRoomCollectionViewCell.swift in Sources */,
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
 				E8E7B6A22361AF4700DA31B7 /* ppmDatapointsDTO.swift in Sources */,
-				E85304CD233CDC3B00105CA7 /* LoginViewController.swift in Sources */,
 				E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */,
 				E847B8AA2348BE9600672BC5 /* Comment.swift in Sources */,
 				E80A466D2358A8DA00450F4A /* ppmDatapointDTO.swift in Sources */,

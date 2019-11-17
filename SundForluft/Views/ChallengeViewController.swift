@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SAConfettiView
 
 class ChallengeViewController: UIViewController {
 
@@ -16,7 +17,13 @@ class ChallengeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let cv = SAConfettiView(frame: self.view.bounds)
+        cv.type = .Star
+        let rect = CGRect(x:Int(self.view.bounds.maxX * 0.1), y:Int(self.view.bounds.maxY * 0.1), width:Int(self.view.frame.size.width), height:Int(self.view.frame.size.height))
+        cv.frame = rect
+        self.view.addSubview(cv)
+        cv.startConfetti()
+        
         // Do any additional setup after loading the view.
     }
     

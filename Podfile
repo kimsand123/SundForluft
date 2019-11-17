@@ -7,9 +7,6 @@ target 'SundForluft' do
 
   # Pods for SundForluft
     pod 'Charts'
-    #pod 'Moya'
-    pod 'Alamofire'
-    pod 'SwiftyJSON'
     pod 'Firebase/Firestore'
     pod 'Firebase/Core'
     pod 'Firebase/Analytics'

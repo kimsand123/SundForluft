@@ -262,11 +262,11 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Teg-iZ-gTa" kind="presentation" modalPresentationStyle="fullScreen" id="sYU-RB-ztL"/>
+                                    <segue destination="Teg-iZ-gTa" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="sYU-RB-ztL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="os7-A8-Vg1">
-                                <rect key="frame" x="3" y="208" width="369" height="276"/>
+                                <rect key="frame" x="3" y="208" width="369.00000000000023" height="276"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Tryk for kommentar" backgroundImage="Blue">
@@ -286,7 +286,7 @@ kommentarer</string>
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4Vx-RJ-LnU" kind="presentation" modalPresentationStyle="fullScreen" id="6Oz-BA-PzT"/>
+                                    <segue destination="4Vx-RJ-LnU" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="6Oz-BA-PzT"/>
                                 </connections>
                             </button>
                         </subviews>

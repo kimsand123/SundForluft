@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (4.9.0)
   - BoringSSL-GRPC (0.0.3):
     - BoringSSL-GRPC/Implementation (= 0.0.3)
     - BoringSSL-GRPC/Interface (= 0.0.3)
@@ -105,34 +104,23 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
   - leveldb-library (1.22)
-  - Moya (13.0.1):
-    - Moya/Core (= 13.0.1)
-  - Moya/Core (13.0.1):
-    - Alamofire (~> 4.1)
-    - Result (~> 4.1)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - Protobuf (3.10.0)
-  - Result (4.1.0)
   - SAConfettiView (0.1.8)
-  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
-  - Alamofire
   - Charts
   - Firebase/Analytics
   - Firebase/Core
   - Firebase/Firestore
-  - Moya
   - SAConfettiView
-  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
-    - Alamofire
     - BoringSSL-GRPC
     - Charts
     - Firebase
@@ -150,15 +138,11 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - leveldb-library
-    - Moya
     - nanopb
     - Protobuf
-    - Result
     - SAConfettiView
-    - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
   Firebase: bc9cfc7a96c73268656d5aaab453ff1b4b530e0e
@@ -176,13 +160,10 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
-  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SAConfettiView: c87031a2280659261b730fce3669fb10e73636ee
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: d92181bb30b0d906a3ac010cfcd524877309a893
+PODFILE CHECKSUM: c1fc6637bf10f770e4059fc41fc9163e1edafabe
 
 COCOAPODS: 1.8.4
