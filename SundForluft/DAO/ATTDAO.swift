@@ -23,8 +23,7 @@ class ATTDAO{
     }
     
     func getDataPointsForGraph(id: String, fromDate:String, toDate:String ,completionHandler: @escaping (ppmDatapointsDTO) -> Void ){
-        var dataPoints=ppmDatapointsDTO()
-        
+    
         // Define server URL
         let scriptUrl = "https://api.allthingstalk.io/"
         // Add parameters and endpoints
@@ -53,17 +52,17 @@ class ATTDAO{
             }
             
             // Print out response string and other result variables
-            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print ("responseString Data: \(responseString)")
+            //let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            //print ("responseString Data: \(responseString)")
             
             
-            //Decode JSON in data object. It is being read into an array.
+            //Decoding JSON in data object. It is being read into an array.
             //It should be possible to make a generic solution.
             //want to move the decoding into BusinessLogic
             if let usableData = data {
                 //print ("UsableData: \(usableData)")
-                let responseString = NSString(data: usableData, encoding: String.Encoding.utf8.rawValue)
-                print ("responseString UsableData: \(responseString)")
+//                let responseString = NSString(data: usableData, encoding: String.Encoding.utf8.rawValue)
+//                //print ("responseString UsableData: \(responseString)")
                 
                 let decoder = JSONDecoder()
                 do {
@@ -109,15 +108,15 @@ class ATTDAO{
             }
             
             // Print out response string and other result variables
-            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print ("responseString: \(responseString)")
+            //let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            //print ("responseString: \(responseString)")
             
             
             //Decode JSON in data object. It is being read into an array.
             //It should be possible to make a generic solution.
             //want to move the decoding into BusinessLogic
             if let usableData = data {
-                print ("UsableData: \(usableData)")
+                //print ("UsableData: \(usableData)")
                 var ppm:Double=0.0
                 var dataPoints=ppmDatapointDTO(id: "",value: 0.0, at: "")
                 let decoder = JSONDecoder()
@@ -166,8 +165,8 @@ class ATTDAO{
             }
             
             // Print out response string and other result variables
-            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print ("responseString Data: \(responseString)")
+            //let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            //print ("responseString Data: \(responseString)")
             
             //Decode JSON in data object. It is being read into an array.
             //It should be possible to make a generic solution.
@@ -175,8 +174,8 @@ class ATTDAO{
             
             if let usableData = data {
                 //print ("UsableData: \(usableData)")
-                let responseString = NSString(data: usableData, encoding: String.Encoding.utf8.rawValue)
-                print ("responseString UsableData: \(responseString)")
+//                let responseString = NSString(data: usableData, encoding: String.Encoding.utf8.rawValue)
+                //print ("responseString UsableData: \(responseString)")
                 
                 let decoder = JSONDecoder()
                 do {

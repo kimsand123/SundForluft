@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var ChallengeButton: UIButton!
     
     @IBAction func loginButton(_ sender: Any) {
-        var businessLogic=BusinessLogic()
-        var okToLogin : Bool
-        okToLogin = false
+//        var businessLogic=BusinessLogic()
+//        var okToLogin : Bool
+//        okToLogin = false
         
 //        //Instantiate and initialize alert
 //        let alert = UIAlertController(title: "Log ind", message: "Indtast brugernavn og password", preferredStyle: UIAlertController.Style.alert )

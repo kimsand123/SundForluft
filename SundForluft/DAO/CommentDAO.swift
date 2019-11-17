@@ -43,8 +43,7 @@ class CommentDAO {
     
     func getComments(uniquePhoneID:String, completionHandler: @escaping ([CommentDTO]) -> Void ){
         var comments = [CommentDTO]()
-        var counter:Int=0
-        var businessLogic=BusinessLogic()
+        let businessLogic=BusinessLogic()
         let db = Firestore.firestore()
         let query = db.collection("Comment").whereField("uniquePhoneID", isEqualTo: uniquePhoneID).order(by: "date" , descending: false)
         

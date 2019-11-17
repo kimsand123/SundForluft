@@ -72,8 +72,8 @@ class RoomsCollectionViewController: UICollectionViewController {
     
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        print ("indexpath: \(indexPath.row)")
-        print ("roomname: \(clasrooms[indexPath.row].name)")
+//        print ("indexpath: \(indexPath.row)")
+//        print ("roomname: \(clasrooms[indexPath.row].name)")
         let vc = storyboard?.instantiateViewController(identifier: "RoomDetailedViewController") as? RoomDetailedViewController
         vc?.room = clasrooms[indexPath.row].name!
         vc?.id = clasrooms[indexPath.row].id!

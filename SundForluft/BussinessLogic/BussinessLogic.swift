@@ -109,7 +109,7 @@ class BusinessLogic{
         
         let hours = timeArray[0]
         let minutes = timeArray[1]
-        let seconds = timeArray[2]
+        //let seconds = timeArray[2]
         
         var dateResult = day + "-" + month + "-" + year
         dateResult = dateResult + "  kl. " + hours + ":" + minutes
