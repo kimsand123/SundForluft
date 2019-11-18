@@ -53,7 +53,6 @@ class CommentDAO {
             }
             if let docs = querySnapshot?.documents {
                 for docSnapshot in docs {
-                    
                     debugPrint(docSnapshot.get("uniquePhoneID")as! String)
                     let uniquePhoneID = docSnapshot.get("uniquePhoneID") as! String
                     let comment=(docSnapshot.get("comment") as! String)
