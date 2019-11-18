@@ -20,7 +20,6 @@ class RoomDetailedViewController: UIViewController {
         self.dismiss(animated: true, completion:    nil)
     }
     
-    
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var roomLabel: UILabel!
     
@@ -61,12 +60,6 @@ class RoomDetailedViewController: UIViewController {
         
         self.lineChartView.data = data
     }
-    
-    func getData (){
-        
-        
-    }
-    
 }
 
 
