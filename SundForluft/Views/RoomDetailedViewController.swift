@@ -61,6 +61,12 @@ class RoomDetailedViewController: UIViewController {
         
         self.lineChartView.data = data
     }
+    
+    func getData (){
+        
+        
+    }
+    
 }
 
 

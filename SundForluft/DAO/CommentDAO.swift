@@ -10,8 +10,6 @@ import Foundation
 import FirebaseFirestore
 import Firebase
 
-
-
 class CommentDAO {
     
     //static let shared = CommentDAO()
