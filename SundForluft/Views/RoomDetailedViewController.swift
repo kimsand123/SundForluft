@@ -8,8 +8,8 @@
 
 import UIKit
 
-//Am using the ILG chart from
-//https://iosexample.com/interactive-line-graph-ios-chart-library/
+//Am using Charts from
+
 import Charts
 
 
@@ -21,76 +21,45 @@ class RoomDetailedViewController: UIViewController {
     }
     
     @IBOutlet weak var lineChartView: LineChartView!
-    
     @IBOutlet weak var roomLabel: UILabel!
     
     let graph = LineChartView()
+    var businessLogic = BusinessLogic()
+    var attDao = ATTDAO()
     
     var room : String = ""
+    var id : String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var dataPoints:[ppmDatapointDTO]
         roomLabel.text = room
-        dataPoints = DAO.shared.getDataPointsForGraph(room: room)
-//        for data in ppmDataCluster {
-//            print ("ppm \(data.ppm)  date \(data.date) \n")
-//
-//        }
+        let fromDate = businessLogic.getDateInISOFormat(date: businessLogic.gettingNewDate(date: Date(), daysFrom: -14))
+        let toDate = businessLogic.getDateInISOFormat(date: Date())
         
-        populateGraph(ppmDataPoints: dataPoints)
-        
-        
-        
-        // Do any additional setup after loading the view.
+        attDao.getDataPointsForGraph(id: id, fromDate: fromDate, toDate: toDate){ (dataPoints) in
+            DispatchQueue.main.async {
+                print("dataPoints: \(dataPoints)")
+                self.populateGraph(ppmDataPoints: dataPoints)
+            }
+        }
     }
     
-    func populateGraph(ppmDataPoints : [ppmDatapointDTO]) {
-        var ppmData = [Double]()
-        var ppmDates  = [Date]()
+    func populateGraph(ppmDataPoints : ppmDatapointsDTO) {
         
-//        for i in 0..<ppmDataCluster.count-1 {
-//            ppmData.append(ppmDataCluster[i].ppm)
-//            //print ("i = \(i) ppmData = \(ppmData[i]) dataCluster = \(ppmDataCluster[i].ppm) ")
-//        }
-//
-//        let values = (0..<ppmDataCluster.count-1).map { (i) -> ChartDataEntry in
-//            let val = ppmDataCluster[i].ppm
-//             return ChartDataEntry(x: Double(i), y: val)
-//        }
+        //fill the data into values in the format of
+        //the viewmodel
+        let values = (0..<ppmDataPoints.data!.count-1).map { (i) -> ChartDataEntry in
+            let val = ppmDataPoints.data![i].data!
+            return ChartDataEntry(x: Double(i), y: val)
+        }
+
+        //create the different objects for the viewmodel
+        let set1 = LineChartDataSet(entries: values, label: "ppm Målinger")
+        let data = LineChartData(dataSet: set1)
         
-        
-//        let values = (0..<length).map { (i) -> ChartDataEntry in
-//            let val = Double(arc4random_uniform(UInt32(length))+3)
-//            return ChartDataEntry(x: Double(i), y: val)
-//        }
-//
-        //        for dataItem in ppmDataCluster {
-        //            ppmData.append(dataItem.ppm)
-        //            ppmDates.append(dataItem.date)
-        //            }
-        //
-        
-//        let set1 = LineChartDataSet(entries: values, label: "ppm Målinger")
-//        let data = LineChartData(dataSet: set1)
-//        
-//        self.lineChartView.data = data
-        
+        self.lineChartView.data = data
     }
-    
-    
 }
-
-
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destination.
- // Pass the selected object to the new view controller.
- }
- */
 
 

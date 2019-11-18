@@ -10,16 +10,15 @@ import Foundation
 import UIKit
 
 class Room {
-    var cloudImage: UIImage
-    var room: String
     
-    init?(cloudImage: UIImage, room: String){
-        guard !room.isEmpty else {
+    var name: String
+    
+    init?( name: String){
+        guard !name.isEmpty else {
             return nil
         }
         
-        self.cloudImage = cloudImage
-        self.room = room
+        self.name = name
         
     }
     

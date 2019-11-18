@@ -14,14 +14,16 @@
 import Foundation
 
 struct ppmDatapointDTO: Decodable {
-    var state:data
+    var id: String
+    var state: data
 
     struct data: Decodable {
         var value: Double
         var at: String
     }
     
-    init(value:Double, at:String) {
+    init( id:String, value:Double, at:String) {
+        self.id = id
         state = data(value: value, at: at)
     }
     
