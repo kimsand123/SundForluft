@@ -1,0 +1,57 @@
+/* Class = "UILabel"; text = "Label"; ObjectID = "1dh-Zz-o8P"; */
+"1dh-Zz-o8P.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Konkurrence"; ObjectID = "azZ-aa-Jhq"; */
+"azZ-aa-Jhq.normalTitle" = "Konkurrence";
+
+/* Class = "UILabel"; text = "0.0 ppm"; ObjectID = "bRG-Kb-unH"; */
+"bRG-Kb-unH.text" = "0.0 ppm";
+
+/* Class = "UIButton"; normalTitle = "Skole statistik"; ObjectID = "bWW-Va-Q55"; */
+"bWW-Va-Q55.normalTitle" = "Skole statistik";
+
+/* Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "E6a-R5-Zps"; */
+"E6a-R5-Zps.title" = "Tilbage";
+
+/* Class = "UIButton"; normalTitle = "Lærer \nkommentarer"; ObjectID = "E6u-B0-lAL"; */
+"E6u-B0-lAL.normalTitle" = "Lærer \nkommentarer";
+
+/* Class = "UIButton"; normalTitle = "Tilbage"; ObjectID = "FdV-Ow-D30"; */
+"FdV-Ow-D30.normalTitle" = "Tilbage";
+
+/* Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "Jay-16-EYc"; */
+"Jay-16-EYc.title" = "Tilbage";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "joz-xK-Zqf"; */
+"joz-xK-Zqf.text" = "Label";
+
+/* Class = "UILabel"; text = "Stort tillykke. Jeres klasse vandt ugens konkurrence "; ObjectID = "lQS-iW-yxU"; */
+"lQS-iW-yxU.text" = "Stort tillykke. Jeres klasse vandt ugens konkurrence ";
+
+/* Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "MSy-HG-FhZ"; */
+"MSy-HG-FhZ.title" = "Tilbage";
+
+/* Class = "UIButton"; normalTitle = "Tryk for kommentar"; ObjectID = "os7-A8-Vg1"; */
+"os7-A8-Vg1.normalTitle" = "Tryk for kommentar";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pUP-In-Xtl"; */
+"pUP-In-Xtl.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "qdi-6R-utH"; */
+"qdi-6R-utH.title" = "Tilbage";
+
+/* Class = "UIBarButtonItem"; title = "Skole"; ObjectID = "RDL-3p-0HP"; */
+"RDL-3p-0HP.title" = "Skole";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "th7-FN-02P"; */
+"th7-FN-02P.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "TS0-AL-4nU"; */
+"TS0-AL-4nU.title" = "Tilbage";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XDc-Z6-LBk"; */
+"XDc-Z6-LBk.text" = "Label";
+
+/* Class = "UILabel"; text = "ppm. Dato "; ObjectID = "zrB-sB-sax"; */
+"zrB-sB-sax.text" = "ppm. Dato ";
+

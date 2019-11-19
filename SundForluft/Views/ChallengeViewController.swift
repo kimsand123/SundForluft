@@ -10,7 +10,7 @@ import UIKit
 import SAConfettiView
 
 class ChallengeViewController: UIViewController {
-
+@IBOutlet weak var infoLabel: UILabel!
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -23,11 +23,14 @@ class ChallengeViewController: UIViewController {
         cv.frame = rect
         self.view.addSubview(cv)
         cv.startConfetti()
+        infoLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        infoLabel.numberOfLines = 0
         
         // Do any additional setup after loading the view.
     }
     
-
+    
+    
     /*
     // MARK: - Navigation
 

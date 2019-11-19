@@ -1,0 +1,60 @@
+/* Class = "UILabel"; text = "Label"; ObjectID = "1dh-Zz-o8P"; */
+"1dh-Zz-o8P.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Konkurrence"; ObjectID = "azZ-aa-Jhq"; */
+"azZ-aa-Jhq.normalTitle" = "Competition";
+
+/* Class = "UILabel"; text = "0.0 ppm"; ObjectID = "bRG-Kb-unH"; */
+"bRG-Kb-unH.text" = "0.0 ppm";
+
+/* Class = "UIButton"; normalTitle = "Skole statistik"; ObjectID = "bWW-Va-Q55"; */
+"bWW-Va-Q55.normalTitle" = "School Statistic";
+
+/* Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "E6a-R5-Zps"; */
+"E6a-R5-Zps.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Lærer \nkommentarer"; ObjectID = "E6u-B0-lAL"; */
+"E6u-B0-lAL.normalTitle" = "Teacher \ncommentary";
+
+/* Class = "UIButton"; normalTitle = "Tilbage"; ObjectID = "FdV-Ow-D30"; */
+"FdV-Ow-D30.normalTitle" = "Back";
+
+/* Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "Jay-16-EYc"; */
+"Jay-16-EYc.title" = "Back";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "joz-xK-Zqf"; */
+"joz-xK-Zqf.text" = "Label";
+
+/* Class = "UILabel"; text = "Vidste du at man bliver sløv og træt af for meget Co2. I dag må i have haft en rigtig go dag."; ObjectID = "K2I-yh-zxe"; */
+"K2I-yh-zxe.text" = "Did you know that you become really blunt if you get too much Co2. You must have had a great day today.";
+
+/* Class = "UILabel"; text = "Stort tillykke. Jeres klasse vandt ugens konkurrence "; ObjectID = "lQS-iW-yxU"; */
+"lQS-iW-yxU.text" = "Congratulations. Your class won the big competetion ";
+
+/* Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "MSy-HG-FhZ"; */
+"MSy-HG-FhZ.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Tryk for kommentar"; ObjectID = "os7-A8-Vg1"; */
+"os7-A8-Vg1.normalTitle" = "Press for commentary";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pUP-In-Xtl"; */
+"pUP-In-Xtl.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "qdi-6R-utH"; */
+"qdi-6R-utH.title" = "Back";
+
+/* Class = "UIBarButtonItem"; title = "Skole"; ObjectID = "RDL-3p-0HP"; */
+"RDL-3p-0HP.title" = "School";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "th7-FN-02P"; */
+"th7-FN-02P.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "TS0-AL-4nU"; */
+"TS0-AL-4nU.title" = "Back";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XDc-Z6-LBk"; */
+"XDc-Z6-LBk.text" = "Label";
+
+/* Class = "UILabel"; text = "ppm. Dato "; ObjectID = "zrB-sB-sax"; */
+"zrB-sB-sax.text" = "ppm. Date ";
+

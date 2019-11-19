@@ -10,7 +10,7 @@ import UIKit
 
 class TeacherCommentTableViewController: UITableViewController {
     
-    var businessLogic:BusinessLogic?=nil
+    var businessLogic=BusinessLogic()
     var compactedComments=[CommentDTO]()
     var commentDao = CommentDAO()
 

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="SundForluft/Base.lproj/Main.storyboard" source-language="en" target-language="da" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.0" build-num="11A420a"/>
+    </header>
+    <body>
+      <trans-unit id="1dh-Zz-o8P.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "1dh-Zz-o8P";</note>
+      </trans-unit>
+      <trans-unit id="E6a-R5-Zps.title" xml:space="preserve">
+        <source>Tilbage</source>
+        <target>Tilbage</target>
+        <note>Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "E6a-R5-Zps";</note>
+      </trans-unit>
+      <trans-unit id="E6u-B0-lAL.normalTitle" xml:space="preserve">
+        <source>Lærer 
+kommentarer</source>
+        <target>Lærer 
+kommentarer</target>
+        <note>Class = "UIButton"; normalTitle = "Lærer \nkommentarer"; ObjectID = "E6u-B0-lAL";</note>
+      </trans-unit>
+      <trans-unit id="FdV-Ow-D30.normalTitle" xml:space="preserve">
+        <source>Tilbage</source>
+        <target>Tilbage</target>
+        <note>Class = "UIButton"; normalTitle = "Tilbage"; ObjectID = "FdV-Ow-D30";</note>
+      </trans-unit>
+      <trans-unit id="Jay-16-EYc.title" xml:space="preserve">
+        <source>Tilbage</source>
+        <target>Tilbage</target>
+        <note>Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "Jay-16-EYc";</note>
+      </trans-unit>
+      <trans-unit id="K2I-yh-zxe.text" xml:space="preserve">
+        <source>Vidste du at man bliver sløv og træt af for meget Co2. I dag må i have haft en rigtig go dag.</source>
+        <note>Class = "UILabel"; text = "Vidste du at man bliver sløv og træt af for meget Co2. I dag må i have haft en rigtig go dag."; ObjectID = "K2I-yh-zxe";</note>
+      </trans-unit>
+      <trans-unit id="MSy-HG-FhZ.title" xml:space="preserve">
+        <source>Tilbage</source>
+        <target>Tilbage</target>
+        <note>Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "MSy-HG-FhZ";</note>
+      </trans-unit>
+      <trans-unit id="RDL-3p-0HP.title" xml:space="preserve">
+        <source>Skole</source>
+        <target>Skole</target>
+        <note>Class = "UIBarButtonItem"; title = "Skole"; ObjectID = "RDL-3p-0HP";</note>
+      </trans-unit>
+      <trans-unit id="TS0-AL-4nU.title" xml:space="preserve">
+        <source>Tilbage</source>
+        <target>Tilbage</target>
+        <note>Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "TS0-AL-4nU";</note>
+      </trans-unit>
+      <trans-unit id="XDc-Z6-LBk.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "XDc-Z6-LBk";</note>
+      </trans-unit>
+      <trans-unit id="azZ-aa-Jhq.normalTitle" xml:space="preserve">
+        <source>Konkurrence</source>
+        <target>Konkurrence</target>
+        <note>Class = "UIButton"; normalTitle = "Konkurrence"; ObjectID = "azZ-aa-Jhq";</note>
+      </trans-unit>
+      <trans-unit id="bRG-Kb-unH.text" xml:space="preserve">
+        <source>0.0 ppm</source>
+        <target>0.0 ppm</target>
+        <note>Class = "UILabel"; text = "0.0 ppm"; ObjectID = "bRG-Kb-unH";</note>
+      </trans-unit>
+      <trans-unit id="bWW-Va-Q55.normalTitle" xml:space="preserve">
+        <source>Skole statistik</source>
+        <target>Skole statistik</target>
+        <note>Class = "UIButton"; normalTitle = "Skole statistik"; ObjectID = "bWW-Va-Q55";</note>
+      </trans-unit>
+      <trans-unit id="joz-xK-Zqf.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "joz-xK-Zqf";</note>
+      </trans-unit>
+      <trans-unit id="lQS-iW-yxU.text" xml:space="preserve">
+        <source>Stort tillykke. Jeres klasse vandt ugens konkurrence </source>
+        <target>Stort tillykke. Jeres klasse vandt ugens konkurrence </target>
+        <note>Class = "UILabel"; text = "Stort tillykke. Jeres klasse vandt ugens konkurrence "; ObjectID = "lQS-iW-yxU";</note>
+      </trans-unit>
+      <trans-unit id="os7-A8-Vg1.normalTitle" xml:space="preserve">
+        <source>Tryk for kommentar</source>
+        <target>Tryk for kommentar</target>
+        <note>Class = "UIButton"; normalTitle = "Tryk for kommentar"; ObjectID = "os7-A8-Vg1";</note>
+      </trans-unit>
+      <trans-unit id="pUP-In-Xtl.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "pUP-In-Xtl";</note>
+      </trans-unit>
+      <trans-unit id="qdi-6R-utH.title" xml:space="preserve">
+        <source>Tilbage</source>
+        <target>Tilbage</target>
+        <note>Class = "UIBarButtonItem"; title = "Tilbage"; ObjectID = "qdi-6R-utH";</note>
+      </trans-unit>
+      <trans-unit id="th7-FN-02P.text" xml:space="preserve">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "th7-FN-02P";</note>
+      </trans-unit>
+      <trans-unit id="zrB-sB-sax.text" xml:space="preserve">
+        <source>ppm. Dato </source>
+        <target>ppm. Dato </target>
+        <note>Class = "UILabel"; text = "ppm. Dato "; ObjectID = "zrB-sB-sax";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SundForluft/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="da">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.0" build-num="11A420a"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>SundForluft</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SundForluft/en.lproj/Localizable.strings" datatype="plaintext" source-language="en" target-language="da">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.0" build-num="11A420a"/>
+    </header>
+    <body>
+      <trans-unit id="Fortryd" xml:space="preserve">
+        <source>Fortryd</source>
+        <note>the cancel text in the commentary alert</note>
+      </trans-unit>
+      <trans-unit id="Færdig" xml:space="preserve">
+        <source>Færdig</source>
+        <note>The done button in the commentary popup</note>
+      </trans-unit>
+      <trans-unit id="Indtast kommentar" xml:space="preserve">
+        <source>Indtast kommentar</source>
+        <note>Lead text in the commentary entry box</note>
+      </trans-unit>
+      <trans-unit id="Kommentar" xml:space="preserve">
+        <source>Kommentar</source>
+        <note>title on the comment entry alert</note>
+      </trans-unit>
+      <trans-unit id="Lærer kommentarer" xml:space="preserve">
+        <source>Lærer kommentarer</source>
+        <note>Text for the teacher commentaries button</note>
+      </trans-unit>
+      <trans-unit id="Skole statistik" xml:space="preserve">
+        <source>Skole statistik</source>
+        <note>text for the school statistics button</note>
+      </trans-unit>
+      <trans-unit id="Tilbage" xml:space="preserve">
+        <source>Tilbage</source>
+        <note>the backbutton text</note>
+      </trans-unit>
+      <trans-unit id="Tryk for kommentar" xml:space="preserve">
+        <source>Tryk for kommentar</source>
+        <note>the press for commentary button</note>
+      </trans-unit>
+      <trans-unit id="ppm Målinger" xml:space="preserve">
+        <source>ppm Målinger</source>
+        <note>Label on the ppm chart in the detailed viewcontroller</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

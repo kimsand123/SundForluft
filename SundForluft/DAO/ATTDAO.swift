@@ -40,7 +40,7 @@ class ATTDAO{
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
-            print ("Com-task started")
+            //print ("Com-task started")
             // Check for error
             if error != nil
             {
@@ -81,7 +81,7 @@ class ATTDAO{
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
-            print ("Com-task started")
+            //print ("Com-task started")
             // Check for error
             if error != nil
             {
@@ -125,7 +125,7 @@ class ATTDAO{
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
-            print ("Com-task started")
+            //print ("Com-task started")
             // Check for error
             if error != nil
             {

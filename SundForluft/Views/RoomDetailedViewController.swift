@@ -20,7 +20,6 @@ class RoomDetailedViewController: UIViewController {
         self.dismiss(animated: true, completion:    nil)
     }
     
-    
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var roomLabel: UILabel!
     
@@ -56,7 +55,9 @@ class RoomDetailedViewController: UIViewController {
         }
 
         //create the different objects for the viewmodel
-        let set1 = LineChartDataSet(entries: values, label: "ppm Målinger")
+        let chartLabel = NSLocalizedString("ppm Målinger", comment:"Label on the ppm chart in the detailed viewcontroller")
+        
+        let set1 = LineChartDataSet(entries: values, label: chartLabel)
         let data = LineChartData(dataSet: set1)
         
         self.lineChartView.data = data

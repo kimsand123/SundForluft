@@ -12,10 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ppmLabel: UILabel!
     @IBOutlet weak var ChallengeButton: UIButton!
-    let attDao = ATTDAO()
+    @IBOutlet weak var messageLabel: UILabel!
     
     @IBAction func loginButton(_ sender: Any) {
-
+        
         //Change to LoggedInFrontViewController
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -26,8 +26,6 @@ class ViewController: UIViewController {
         
     }
     
-    @IBOutlet weak var messageLabel: UILabel!
-    
     @IBAction func challengeButton(_
         sender: Any) {
         
@@ -37,6 +35,8 @@ class ViewController: UIViewController {
         challengeViewController.modalPresentationStyle = .fullScreen
         self.present(challengeViewController, animated: true, completion: nil)
     }
+    
+    let attDao = ATTDAO()
     
     
     override func viewDidLoad() {
@@ -55,14 +55,9 @@ class ViewController: UIViewController {
             //print ("PPM: \(ppm)")
             
             DispatchQueue.main.async {
-                self.reloadData(ppm: ppm)
+                self.ppmLabel.text = String(ppm) + " ppm"
             }
         }
-    }
-    
-    func reloadData(ppm: Double){
-        ppmLabel.text = String(ppm) + " ppm"
-        //print("done updating UI")
     }
 }
 
