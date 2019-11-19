@@ -16,6 +16,7 @@ class CustomCommentCell: UITableViewCell {
     @IBOutlet weak var commentLabel: UILabel!
     
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
