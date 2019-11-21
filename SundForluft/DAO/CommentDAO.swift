@@ -10,8 +10,6 @@ import Foundation
 import FirebaseFirestore
 import Firebase
 
-
-
 class CommentDAO {
     
     //static let shared = CommentDAO()
@@ -34,9 +32,9 @@ class CommentDAO {
             "ppm": comment.ppm
         ]) { err in
             if let err = err {
-                print("Error writing document: \(err)")
+                //print("Error writing document: \(err)")
             } else {
-                print("Document successfully written!")
+                //print("Document successfully written!")
             }
         }
     }

@@ -1,0 +1,27 @@
+/* the cancel text in the commentary alert */
+"Fortryd" = "Cancel";
+
+/* The done button in the commentary popup */
+"Færdig" = "Done";
+
+/* Lead text in the commentary entry box */
+"Indtast kommentar" = "Enter commentary";
+
+/* title on the comment entry alert */
+"Kommentar" = "Commentary";
+
+/* Text for the teacher commentaries button */
+"Lærer kommentarer" = "Teacher commentaries";
+
+/* Label on the ppm chart in the detailed viewcontroller */
+"ppm Målinger" = "ppm Measurements";
+
+/* text for the school statistics button */
+"Skole statistik" = "School statistic";
+
+/* the backbutton text */
+"Tilbage" = "Back";
+
+/* the press for commentary button */
+"Tryk for kommentar" = "Press to comment";
+
