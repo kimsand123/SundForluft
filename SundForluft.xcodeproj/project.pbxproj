@@ -15,7 +15,6 @@
 		E83971FC237031FD00C7A6C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83971FB237031FC00C7A6C8 /* GoogleService-Info.plist */; };
 		E83972042370480200C7A6C8 /* CommentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83972032370480200C7A6C8 /* CommentDTO.swift */; };
 		E83B33E9237EE3C7005A8789 /* AssetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B33E8237EE3C7005A8789 /* AssetDTO.swift */; };
-		E847B8AA2348BE9600672BC5 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847B8A92348BE9600672BC5 /* Comment.swift */; };
 		E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8530497233CD3CA00105CA7 /* AppDelegate.swift */; };
 		E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8530499233CD3CA00105CA7 /* SceneDelegate.swift */; };
 		E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E853049B233CD3CA00105CA7 /* ViewController.swift */; };
@@ -72,7 +71,6 @@
 		E83971FB237031FC00C7A6C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E83972032370480200C7A6C8 /* CommentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDTO.swift; sourceTree = "<group>"; };
 		E83B33E8237EE3C7005A8789 /* AssetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AssetDTO.swift; path = SundForluft/AssetDTO.swift; sourceTree = SOURCE_ROOT; };
-		E847B8A92348BE9600672BC5 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		E8530494233CD3CA00105CA7 /* SundForluft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SundForluft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8530497233CD3CA00105CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8530499233CD3CA00105CA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -258,7 +256,6 @@
 		E8986A6F234F7D28000CEB2F /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				E847B8A92348BE9600672BC5 /* Comment.swift */,
 				E8986A74234FA381000CEB2F /* Room.swift */,
 			);
 			path = Objects;
@@ -528,7 +525,6 @@
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
 				E8E7B6A22361AF4700DA31B7 /* ppmDatapointsDTO.swift in Sources */,
 				E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */,
-				E847B8AA2348BE9600672BC5 /* Comment.swift in Sources */,
 				E80A466D2358A8DA00450F4A /* ppmDatapointDTO.swift in Sources */,
 				E8D2638B235883C300E514EA /* RoomDetailedViewController.swift in Sources */,
 				E8E7B6A0236194FB00DA31B7 /* BussinessLogic.swift in Sources */,
