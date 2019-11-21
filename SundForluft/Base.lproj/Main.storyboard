@@ -56,7 +56,7 @@
                     <navigationItem key="navigationItem" id="mYS-5s-Up2">
                         <barButtonItem key="rightBarButtonItem" title="Skole" id="RDL-3p-0HP">
                             <connections>
-                                <segue destination="2Wp-GG-VKI" kind="presentation" modalPresentationStyle="fullScreen" id="qUi-tb-6fa"/>
+                                <segue destination="2Wp-GG-VKI" kind="presentation" modalPresentationStyle="fullScreen" id="uzB-Ur-5GT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -267,7 +267,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="os7-A8-Vg1">
-                                <rect key="frame" x="3" y="208" width="369" height="276"/>
+                                <rect key="frame" x="3" y="208" width="369.00000000000023" height="276"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Tryk for kommentar" backgroundImage="Blue">

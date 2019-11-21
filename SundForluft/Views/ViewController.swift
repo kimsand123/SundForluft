@@ -14,18 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var ChallengeButton: UIButton!
     @IBOutlet weak var messageLabel: UILabel!
     
-    @IBAction func loginButton(_ sender: Any) {
-        
-        //Change to LoggedInFrontViewController
-        
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let loggedInFrontViewController = storyBoard.instantiateViewController(withIdentifier: "LoggedInFrontViewController") as! LoggedInFrontViewController
-        loggedInFrontViewController.modalPresentationStyle = .fullScreen
-        self.present(loggedInFrontViewController, animated: true, completion: nil)
-        
-        
-    }
-    
     @IBAction func challengeButton(_
         sender: Any) {
         
