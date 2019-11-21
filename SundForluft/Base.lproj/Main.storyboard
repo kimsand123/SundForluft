@@ -139,26 +139,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joz-xK-Zqf">
-                                <rect key="frame" x="3" y="118" width="369" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="3" y="188" width="369" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Km6-eK-ehL" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="3" y="169" width="369" height="309"/>
+                                <rect key="frame" x="3" y="286.33333333333331" width="375" height="275.99999999999994"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Km6-eK-ehL" firstAttribute="leading" secondItem="2lq-N9-ozx" secondAttribute="leading" constant="3" id="CkR-AU-2Mk"/>
-                            <constraint firstItem="2lq-N9-ozx" firstAttribute="bottom" secondItem="Km6-eK-ehL" secondAttribute="bottom" constant="300" id="Dzz-TZ-WUl"/>
-                            <constraint firstItem="Km6-eK-ehL" firstAttribute="leading" secondItem="2lq-N9-ozx" secondAttribute="leading" constant="3" id="EcU-t6-ooC"/>
-                            <constraint firstItem="2lq-N9-ozx" firstAttribute="trailing" secondItem="Km6-eK-ehL" secondAttribute="trailing" constant="3" id="QIf-Ft-Ihs"/>
+                            <constraint firstItem="Km6-eK-ehL" firstAttribute="height" secondItem="2lq-N9-ozx" secondAttribute="height" multiplier="0.4" id="4LW-Vf-wQ0"/>
+                            <constraint firstItem="Km6-eK-ehL" firstAttribute="width" secondItem="2lq-N9-ozx" secondAttribute="width" id="8qd-bs-DaY"/>
+                            <constraint firstItem="Km6-eK-ehL" firstAttribute="centerX" secondItem="2lq-N9-ozx" secondAttribute="centerX" constant="3" id="IwR-iZ-seh"/>
                             <constraint firstItem="joz-xK-Zqf" firstAttribute="centerX" secondItem="2lq-N9-ozx" secondAttribute="centerX" id="boi-hW-ffK"/>
-                            <constraint firstItem="joz-xK-Zqf" firstAttribute="top" secondItem="2lq-N9-ozx" secondAttribute="top" constant="30" id="iKR-fz-5fC"/>
-                            <constraint firstItem="Km6-eK-ehL" firstAttribute="top" secondItem="joz-xK-Zqf" secondAttribute="bottom" constant="30" id="mhD-51-i7Y"/>
-                            <constraint firstItem="2lq-N9-ozx" firstAttribute="trailing" secondItem="joz-xK-Zqf" secondAttribute="trailing" constant="3" id="uJu-Lp-0Ll"/>
+                            <constraint firstItem="joz-xK-Zqf" firstAttribute="top" secondItem="2lq-N9-ozx" secondAttribute="top" constant="100" id="iKR-fz-5fC"/>
+                            <constraint firstItem="Km6-eK-ehL" firstAttribute="top" secondItem="joz-xK-Zqf" secondAttribute="bottom" constant="60" id="mhD-51-i7Y"/>
+                            <constraint firstItem="joz-xK-Zqf" firstAttribute="trailing" secondItem="2lq-N9-ozx" secondAttribute="trailing" constant="-3" id="uJu-Lp-0Ll"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2lq-N9-ozx"/>
                     </view>
@@ -268,7 +267,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="os7-A8-Vg1">
-                                <rect key="frame" x="3" y="208" width="369" height="276"/>
+                                <rect key="frame" x="3" y="208" width="369.00000000000023" height="276"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Tryk for kommentar" backgroundImage="Blue">
