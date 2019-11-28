@@ -26,5 +26,4 @@ struct ppmDatapointDTO: Decodable {
         self.id = id
         state = data(value: value, at: at)
     }
-    
 }
