@@ -26,17 +26,17 @@ class CommentDAO {
         settings.isPersistenceEnabled=false
         
         db.collection("Comment").document().setData([
-            "uniquePhoneID": comment.uniquePhoneID,
-            "comment": comment.comment!,
-            "date": comment.date,
-            "ppm": comment.ppm
-          ]) //{ err in
-//            if let err = err {
-//                //print("Error writing document: \(err)")
-//            } else {
-//                //print("Document successfully written!")
-//            }
-//        }
+            "uniquePhoneID": comment.uniquePhoneID as Any,
+            "comment": comment.comment as Any,
+            "date": comment.date as Any,
+            "ppm": comment.ppm as Any
+        ]) { err in
+                    if let err = err {
+                        //print("Error writing document: \(err)")
+                    } else {
+                        //print("Document successfully written!")
+                    }
+                }
     }
     
     func getComments(uniquePhoneID:String, completionHandler: @escaping ([CommentDTO]) -> Void ){
@@ -51,12 +51,29 @@ class CommentDAO {
             }
             if let docs = querySnapshot?.documents {
                 for docSnapshot in docs {
-                    debugPrint(docSnapshot.get("uniquePhoneID")as! String)
-                    let uniquePhoneID = docSnapshot.get("uniquePhoneID") as! String
-                    let comment=(docSnapshot.get("comment") as! String)
-                    let date=businessLogic.formatDateFromISO(isoDate: docSnapshot.get("date") as! String)
-                    let ppm=docSnapshot.get("ppm") as! Double
-                    let commentDTO = CommentDTO(uniquePhoneID: uniquePhoneID, comment: comment, date: date, ppm: ppm)
+                    
+                    
+                    
+                    var commentDTO = CommentDTO()
+                    //                    commentDTO?.comment = docSnapshot.get("comment") as? String
+                    //                    commentDTO?.uniquePhoneID = docSnapshot.get("uniquePhoneID") as! String?
+                    //                    commentDTO?.date = docSnapshot.get("date") as! String?
+                    //                    commentDTO?.ppm = docSnapshot.get("ppm") as! Double?
+                    //
+                    if let uniquePhoneID = docSnapshot.get("uniquePhoneID") as? String? {
+                        commentDTO.uniquePhoneID = uniquePhoneID
+                    }
+                    if let comment = docSnapshot.get("comment") as! String? {
+                        commentDTO.comment = comment
+                    }
+                    if let date = docSnapshot.get("date") as! String? {
+                        let isoDate = businessLogic.formatDateFromISO(isoDate: date)
+                        commentDTO.date = isoDate
+                    }
+                    if let ppm = docSnapshot.get("ppm") as! Double? {
+                        commentDTO.ppm = ppm
+                        
+                    }
                     comments.append(commentDTO)
                 }
                 completionHandler(comments)

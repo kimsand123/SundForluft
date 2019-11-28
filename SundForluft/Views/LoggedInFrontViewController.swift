@@ -41,8 +41,12 @@ class LoggedInFrontViewController: UIViewController {
             if commentaryTextField.text != "" {
                 let businessLogic = BusinessLogic()
                 let ppm:Double=0.0
-                var commentary = CommentDTO(uniquePhoneID: UIDevice.current.identifierForVendor!.uuidString, comment: commentaryTextField.text!, date: businessLogic.getDateInISOFormat(date: Date()), ppm: ppm)
+                var commentary = CommentDTO()
                 
+                commentary.uniquePhoneID = UIDevice.current.identifierForVendor!.uuidString
+                commentary.comment = commentaryTextField.text
+                commentary.date = businessLogic.getDateInISOFormat(date: Date())
+                commentary.ppm = ppm
                 
                 attDao.getCurrentppm(){ (ppm) in
                     //print ("comment PPM: \(ppm)")

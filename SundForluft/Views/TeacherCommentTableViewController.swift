@@ -51,7 +51,9 @@ class TeacherCommentTableViewController: UITableViewController {
         df.timeStyle = .short
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCommentCell", for: indexPath) as! CustomCommentCell
-        cell.ppmLabel?.text = String(compactedComments[indexPath.row].ppm)
+        if let ppm = compactedComments[indexPath.row].ppm {
+            cell.ppmLabel?.text = String(ppm)
+        }
         cell.dateLabel?.text = compactedComments[indexPath.row].date
         cell.commentLabel?.text = compactedComments[indexPath.row].comment
         return cell

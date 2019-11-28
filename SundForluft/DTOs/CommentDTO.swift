@@ -10,17 +10,10 @@ import Foundation
 
 
 struct CommentDTO: Decodable {
-    var uniquePhoneID: String
+    var uniquePhoneID: String?
     var comment: String?
-    var date: String
-    var ppm: Double
+    var date: String?
+    var ppm: Double?
     
-    
-    init(uniquePhoneID:String, comment:String, date:String, ppm:Double) {
-        self.uniquePhoneID = uniquePhoneID
-        self.comment = comment
-        self.date = date
-        self.ppm = ppm
-    }
 }
 
