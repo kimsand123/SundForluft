@@ -26,7 +26,6 @@ class TeacherCommentTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     func fillComments() {
-        
         commentDao.getComments(uniquePhoneID: UIDevice.current.identifierForVendor!.uuidString){ (comments) in
             DispatchQueue.main.async {
                 self.compactedComments = comments.compactMap {$0}
@@ -34,6 +33,7 @@ class TeacherCommentTableViewController: UITableViewController {
             }
         }
     }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -51,7 +51,9 @@ class TeacherCommentTableViewController: UITableViewController {
         df.timeStyle = .short
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCommentCell", for: indexPath) as! CustomCommentCell
-        cell.ppmLabel?.text = String(compactedComments[indexPath.row].ppm)
+        if let ppm = compactedComments[indexPath.row].ppm {
+            cell.ppmLabel?.text = String(ppm)
+        }
         cell.dateLabel?.text = compactedComments[indexPath.row].date
         cell.commentLabel?.text = compactedComments[indexPath.row].comment
         return cell

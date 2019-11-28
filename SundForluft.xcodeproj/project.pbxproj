@@ -15,7 +15,6 @@
 		E83971FC237031FD00C7A6C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83971FB237031FC00C7A6C8 /* GoogleService-Info.plist */; };
 		E83972042370480200C7A6C8 /* CommentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83972032370480200C7A6C8 /* CommentDTO.swift */; };
 		E83B33E9237EE3C7005A8789 /* AssetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B33E8237EE3C7005A8789 /* AssetDTO.swift */; };
-		E847B8AA2348BE9600672BC5 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847B8A92348BE9600672BC5 /* Comment.swift */; };
 		E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8530497233CD3CA00105CA7 /* AppDelegate.swift */; };
 		E853049A233CD3CA00105CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8530499233CD3CA00105CA7 /* SceneDelegate.swift */; };
 		E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E853049B233CD3CA00105CA7 /* ViewController.swift */; };
@@ -29,7 +28,6 @@
 		E86C7AC4233DF0F2003E3C28 /* LoggedInFrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */; };
 		E8986A6D234F480B000CEB2F /* TeacherCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */; };
 		E8986A71234FA1B4000CEB2F /* RoomsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A70234FA1B4000CEB2F /* RoomsCollectionViewController.swift */; };
-		E8986A75234FA381000CEB2F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A74234FA381000CEB2F /* Room.swift */; };
 		E8986A77234FA410000CEB2F /* CustomRoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8986A76234FA410000CEB2F /* CustomRoomCollectionViewCell.swift */; };
 		E899D17A2374636D00C1C9B4 /* CommentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899D1792374636D00C1C9B4 /* CommentDAO.swift */; };
 		E8D2638B235883C300E514EA /* RoomDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2638A235883C300E514EA /* RoomDetailedViewController.swift */; };
@@ -72,7 +70,6 @@
 		E83971FB237031FC00C7A6C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E83972032370480200C7A6C8 /* CommentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDTO.swift; sourceTree = "<group>"; };
 		E83B33E8237EE3C7005A8789 /* AssetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AssetDTO.swift; path = SundForluft/AssetDTO.swift; sourceTree = SOURCE_ROOT; };
-		E847B8A92348BE9600672BC5 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		E8530494233CD3CA00105CA7 /* SundForluft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SundForluft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8530497233CD3CA00105CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8530499233CD3CA00105CA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +89,6 @@
 		E86C7AC3233DF0F2003E3C28 /* LoggedInFrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInFrontViewController.swift; sourceTree = "<group>"; };
 		E8986A6C234F480B000CEB2F /* TeacherCommentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherCommentTableViewController.swift; sourceTree = "<group>"; };
 		E8986A70234FA1B4000CEB2F /* RoomsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsCollectionViewController.swift; sourceTree = "<group>"; };
-		E8986A74234FA381000CEB2F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		E8986A76234FA410000CEB2F /* CustomRoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoomCollectionViewCell.swift; sourceTree = "<group>"; };
 		E899D1792374636D00C1C9B4 /* CommentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDAO.swift; sourceTree = "<group>"; };
 		E8D2638A235883C300E514EA /* RoomDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailedViewController.swift; sourceTree = "<group>"; };
@@ -206,7 +202,6 @@
 				E8E7B69E236186F500DA31B7 /* BussinessLogic */,
 				E80A466E2358AE1000450F4A /* DAO */,
 				E80A466B2358A8AA00450F4A /* DTOs */,
-				E8986A6F234F7D28000CEB2F /* Objects */,
 				E8986A6E234F7CDB000CEB2F /* Views */,
 				E8530497233CD3CA00105CA7 /* AppDelegate.swift */,
 				E8530499233CD3CA00105CA7 /* SceneDelegate.swift */,
@@ -253,15 +248,6 @@
 				E8986A76234FA410000CEB2F /* CustomRoomCollectionViewCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		E8986A6F234F7D28000CEB2F /* Objects */ = {
-			isa = PBXGroup;
-			children = (
-				E847B8A92348BE9600672BC5 /* Comment.swift */,
-				E8986A74234FA381000CEB2F /* Room.swift */,
-			);
-			path = Objects;
 			sourceTree = "<group>";
 		};
 		E8E7B69E236186F500DA31B7 /* BussinessLogic */ = {
@@ -518,7 +504,6 @@
 			files = (
 				E83B33E9237EE3C7005A8789 /* AssetDTO.swift in Sources */,
 				E85304A2233CD3CA00105CA7 /* SundForluft.xcdatamodeld in Sources */,
-				E8986A75234FA381000CEB2F /* Room.swift in Sources */,
 				E899D17A2374636D00C1C9B4 /* CommentDAO.swift in Sources */,
 				E853049C233CD3CA00105CA7 /* ViewController.swift in Sources */,
 				E8986A71234FA1B4000CEB2F /* RoomsCollectionViewController.swift in Sources */,
@@ -528,7 +513,6 @@
 				E8530498233CD3CA00105CA7 /* AppDelegate.swift in Sources */,
 				E8E7B6A22361AF4700DA31B7 /* ppmDatapointsDTO.swift in Sources */,
 				E86C7AC2233DF030003E3C28 /* ChallengeViewController.swift in Sources */,
-				E847B8AA2348BE9600672BC5 /* Comment.swift in Sources */,
 				E80A466D2358A8DA00450F4A /* ppmDatapointDTO.swift in Sources */,
 				E8D2638B235883C300E514EA /* RoomDetailedViewController.swift in Sources */,
 				E8E7B6A0236194FB00DA31B7 /* BussinessLogic.swift in Sources */,

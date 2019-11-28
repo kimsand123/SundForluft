@@ -14,11 +14,6 @@ struct ppmDatapointsDTO: Decodable {
 
     struct dataPoints: Decodable {
         var at: String?
-        var data: Double?
-        
-    }
-    
-    init?() {
-        return nil
+        var data: Double?        
     }
 }
