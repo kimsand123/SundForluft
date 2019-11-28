@@ -60,7 +60,12 @@ class RoomsCollectionViewController: UICollectionViewController {
         print("selected \rooms[indexPath.row]")
         let vc = storyboard?.instantiateViewController(identifier: "RoomDetailedViewController") as? RoomDetailedViewController
         
-        vc?.room = clasrooms[indexPath.row].name!
+        if let name = clasrooms[indexPath.row].name {
+            vc?.room = name
+            self.navigationController?.pushViewController(vc! , animated: true)
+        }
+        
+        vc?.room = clasrooms[indexPath.row].name ?? ""
         self.navigationController?.pushViewController(vc! , animated: true)
     }
     
@@ -69,8 +74,13 @@ class RoomsCollectionViewController: UICollectionViewController {
 //        print ("indexpath: \(indexPath.row)")
 //        print ("roomname: \(clasrooms[indexPath.row].name)")
         let vc = storyboard?.instantiateViewController(identifier: "RoomDetailedViewController") as? RoomDetailedViewController
-        vc?.room = clasrooms[indexPath.row].name!
-        vc?.id = clasrooms[indexPath.row].id!
+        if let name = clasrooms[indexPath.row].name {
+            vc?.room = name
+        }
+        if let id = clasrooms[indexPath.row].id {
+            vc?.id = id
+        }
+      
         self.navigationController?.pushViewController(vc! , animated: true)
         return true
     }
