@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     @IBAction func challengeButton(_
         sender: Any) {
         
-        //Change to LoggedInFrontViewController
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let challengeViewController = storyBoard.instantiateViewController(withIdentifier: "ChallengeViewController") as! ChallengeViewController
         challengeViewController.modalPresentationStyle = .fullScreen
@@ -29,7 +28,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.setHidesBackButton(true, animated:true);
+       
         // Do any additional setup after loading the view.
         
         ChallengeButton.titleLabel?.textAlignment = .center

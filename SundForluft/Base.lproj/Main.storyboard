@@ -240,7 +240,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="n45-7q-bdd" kind="presentation" modalPresentationStyle="fullScreen" id="zX5-qM-VNZ"/>
+                        <segue destination="n45-7q-bdd" kind="show" id="zX5-qM-VNZ"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8z-8t-GM5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
