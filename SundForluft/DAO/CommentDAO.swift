@@ -30,13 +30,13 @@ class CommentDAO {
             "comment": comment.comment!,
             "date": comment.date,
             "ppm": comment.ppm
-        ]) { err in
-            if let err = err {
-                //print("Error writing document: \(err)")
-            } else {
-                //print("Document successfully written!")
-            }
-        }
+          ]) //{ err in
+//            if let err = err {
+//                //print("Error writing document: \(err)")
+//            } else {
+//                //print("Document successfully written!")
+//            }
+//        }
     }
     
     func getComments(uniquePhoneID:String, completionHandler: @escaping ([CommentDTO]) -> Void ){

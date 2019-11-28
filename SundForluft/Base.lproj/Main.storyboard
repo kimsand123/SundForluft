@@ -27,8 +27,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="challengeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="07A-w7-vGG"/>
-                                    <segue destination="AFq-Dj-FOS" kind="presentation" modalPresentationStyle="fullScreen" id="DoG-oQ-0Ue"/>
+                                    <segue destination="Ve0-jH-EXW" kind="presentation" identifier="toChallenge" modalPresentationStyle="fullScreen" id="p8d-PF-hdg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 ppm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRG-Kb-unH">
@@ -56,7 +55,7 @@
                     <navigationItem key="navigationItem" id="mYS-5s-Up2">
                         <barButtonItem key="rightBarButtonItem" title="Skole" id="RDL-3p-0HP">
                             <connections>
-                                <segue destination="2Wp-GG-VKI" kind="presentation" modalPresentationStyle="fullScreen" id="uzB-Ur-5GT"/>
+                                <segue destination="2Wp-GG-VKI" kind="presentation" identifier="toLoggedInController" modalPresentationStyle="fullScreen" id="uzB-Ur-5GT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -68,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055.2" y="336.94581280788179"/>
+            <point key="canvasLocation" x="1302" y="337"/>
         </scene>
         <!--Challenge View Controller-->
         <scene sceneID="Fp6-Es-KG0">
@@ -78,15 +77,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdV-Ow-D30">
-                                <rect key="frame" x="14" y="44" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Tilbage"/>
-                                <connections>
-                                    <action selector="backButton:" destination="vvL-BZ-Nom" eventType="touchUpInside" id="hdB-qp-MKC"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stort tillykke. Jeres klasse vandt ugens konkurrence " textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQS-iW-yxU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stort tillykke. Jeres klasse vandt ugens konkurrence " textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQS-iW-yxU">
                                 <rect key="frame" x="0.0" y="428.66666666666669" width="375" height="69"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -120,7 +111,11 @@
                         <viewLayoutGuide key="safeArea" id="I05-B3-mbM"/>
                     </view>
                     <navigationItem key="navigationItem" id="Go4-Td-MV8">
-                        <barButtonItem key="leftBarButtonItem" title="Tilbage" id="qdi-6R-utH"/>
+                        <barButtonItem key="leftBarButtonItem" title="Tilbage" id="qdi-6R-utH">
+                            <connections>
+                                <action selector="backButton:" destination="vvL-BZ-Nom" id="eps-iw-owU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="infoLabel" destination="K2I-yh-zxe" id="CWk-vc-eJp"/>
@@ -128,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6l-dv-bYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1919" y="1337"/>
+            <point key="canvasLocation" x="2113" y="1083"/>
         </scene>
         <!--Room Detailed View Controller-->
         <scene sceneID="AL7-5I-VI2">
@@ -175,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KO9-kO-zhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6362" y="-450"/>
+            <point key="canvasLocation" x="6119" y="-450"/>
         </scene>
         <!--Rooms Collection View Controller-->
         <scene sceneID="b1U-9A-XvM">
@@ -240,12 +235,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="n45-7q-bdd" kind="presentation" modalPresentationStyle="fullScreen" id="zX5-qM-VNZ"/>
+                        <segue destination="n45-7q-bdd" kind="presentation" identifier="toDetailedRoomController" modalPresentationStyle="fullScreen" id="zX5-qM-VNZ"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8z-8t-GM5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4588" y="-450"/>
+            <point key="canvasLocation" x="4508" y="-450"/>
         </scene>
         <!--Logged In Front View Controller-->
         <scene sceneID="0hT-cG-xEx">
@@ -267,7 +262,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="os7-A8-Vg1">
-                                <rect key="frame" x="3" y="208" width="369.00000000000023" height="276"/>
+                                <rect key="frame" x="3" y="208" width="369" height="276"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Tryk for kommentar" backgroundImage="Blue">
@@ -414,7 +409,7 @@ kommentarer</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ubd-ah-myy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4508" y="355"/>
+            <point key="canvasLocation" x="4508" y="337"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aHc-bm-His">
@@ -433,7 +428,7 @@ kommentarer</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yn4-fU-LPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3708" y="355"/>
+            <point key="canvasLocation" x="3708" y="337"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KHT-3G-bk9">
@@ -471,7 +466,7 @@ kommentarer</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqR-JL-UaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5473" y="-450"/>
+            <point key="canvasLocation" x="5322" y="-450"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5GM-hY-aPF">
@@ -489,26 +484,7 @@ kommentarer</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kat-xN-4NX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.8" y="336.94581280788179"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wmg-Ev-UqG">
-            <objects>
-                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="AFq-Dj-FOS" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Oo7-Te-RRx"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A2C-IC-a5A">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vvL-BZ-Nom" kind="relationship" relationship="rootViewController" id="0Dy-tp-Yrt"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PVE-hV-KO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1055" y="1337"/>
+            <point key="canvasLocation" x="426" y="337"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OhN-R0-O0j">
@@ -527,7 +503,25 @@ kommentarer</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35U-TZ-gfW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2001" y="337"/>
+            <point key="canvasLocation" x="2113" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HZW-va-YDc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ve0-jH-EXW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uOb-vz-vgq">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vvL-BZ-Nom" kind="relationship" relationship="rootViewController" id="Zmd-Oe-JzE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TE5-2H-RKD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1302" y="1083"/>
         </scene>
     </scenes>
     <resources>

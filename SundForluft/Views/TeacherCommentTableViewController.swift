@@ -26,7 +26,6 @@ class TeacherCommentTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     func fillComments() {
-        
         commentDao.getComments(uniquePhoneID: UIDevice.current.identifierForVendor!.uuidString){ (comments) in
             DispatchQueue.main.async {
                 self.compactedComments = comments.compactMap {$0}
@@ -34,6 +33,7 @@ class TeacherCommentTableViewController: UITableViewController {
             }
         }
     }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
