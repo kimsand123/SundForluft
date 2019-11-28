@@ -95,11 +95,12 @@ class ATTDAO{
             if let usableData = data {
                 //print ("UsableData: \(usableData)")
                 var ppm:Double=0.0
-                var dataPoints=ppmDatapointDTO(id: "",value: 0.0, at: "")
+                var dataPoints = ppmDatapointDTO()
                 let decoder = JSONDecoder()
                 do {
                     dataPoints = try decoder.decode(ppmDatapointDTO.self, from: usableData)
-                    ppm = dataPoints.state.value
+                    guard let unwrappedppm = dataPoints.state.value else{return}
+                    ppm = unwrappedppm
                 } catch {
                     print (error.localizedDescription)
                 }
