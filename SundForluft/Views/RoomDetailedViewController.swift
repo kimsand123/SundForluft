@@ -9,10 +9,12 @@
 import UIKit
 
 //Am using Charts from
+//https://github.com/danielgindi/Charts
+//Inspiration drawn from
+//https://www.iosapptemplates.com/blog/swift-programming/ios-charts-swift
+//
 
 import Charts
-
-
 
 class RoomDetailedViewController: UIViewController {
     
