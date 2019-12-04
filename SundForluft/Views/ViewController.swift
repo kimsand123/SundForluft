@@ -28,11 +28,8 @@ class ViewController: UIViewController {
         ChallengeButton.layer.borderWidth = 2.0
         ChallengeButton.layer.borderColor = UIColor.blue.cgColor
         ChallengeButton.layer.cornerRadius = 10.0
-        //print("calling API")
         
         attDao.getCurrentppm(){ (ppm) in
-            //print ("PPM: \(ppm)")
-            
             DispatchQueue.main.async {
                 self.ppmLabel.text = String(ppm) + " ppm"
             }

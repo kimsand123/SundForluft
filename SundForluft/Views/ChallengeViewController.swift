@@ -17,28 +17,20 @@ class ChallengeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //https://github.com/sudeepag/SAConfettiView
         let cv = SAConfettiView(frame: self.view.bounds)
         cv.type = .Star
         let rect = CGRect(x:Int(self.view.bounds.maxX * 0.1), y:Int(self.view.bounds.maxY * 0.1), width:Int(self.view.frame.size.width), height:Int(self.view.frame.size.height))
         cv.frame = rect
+        
+        //add the confettiview as a subview to
         self.view.addSubview(cv)
         cv.startConfetti()
+        
+        //getting a lot of test, multiple lines, to fit inside the infolabel
         infoLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         infoLabel.numberOfLines = 0
         
         // Do any additional setup after loading the view.
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -12,20 +12,17 @@ class BusinessLogic{
     
     init(){}
     
+    //Create a specific dateformatting from a Date object.
     func DateToString (date:Date)-> String{
         var dateString:String
-        
         dateString = date.toString(dateFormat: "dd-MM")
-        
         return dateString
     }
     
     // from https://stackoverflow.com/questions/48867030/swift-iso8601-format-to-date
+    // Create ISO date from a Date object
     func getDateInISOFormat(date:Date)->String{
-        
         let dateFormatter = ISO8601DateFormatter()
-        
-        
         dateFormatter.formatOptions = [
             .withYear,
             .withMonth,
@@ -39,19 +36,20 @@ class BusinessLogic{
     
     func formatDateFromISO(isoDate:String)->String  {
         
+        //Split the isoDate into its date part and its timepart
         let yearArray = isoDate.components(separatedBy: CharacterSet(charactersIn: "TZ"))
-        
-        
         let year = getSubstring(string: yearArray[0], fromIndex: 0, toIndex: 3)!
         let month = getSubstring(string: yearArray[0],fromIndex: 4,toIndex: 5)!
         let day = getSubstring(string: yearArray[0], fromIndex: 6, toIndex: 7)!
         
+        //Split the timepart of a Date into its value components
         let timeArray = yearArray[1].components(separatedBy: ":")
         
         let hours = timeArray[0]
         let minutes = timeArray[1]
         //let seconds = timeArray[2]
         
+        //Format the date as desired.
         var dateResult = day + "-" + month + "-" + year
         dateResult = dateResult + "  kl. " + hours + ":" + minutes
         return dateResult
@@ -69,6 +67,7 @@ class BusinessLogic{
         }
     }
     
+    //Getting a date that is days away from a Date object
     func gettingNewDate(date:Date, daysFrom:Int) -> Date{
         let currentDate = date
         var dateCmpt = DateComponents()
@@ -77,7 +76,10 @@ class BusinessLogic{
         return resultDate!
     }
     
+    //Format a date string into a search format.
     func formatDateForSearch(date:String) -> String {
+        //seperate the date into its components of the date part and the time part and
+        //return the date in the desired format
         let yearArray = date.components(separatedBy: CharacterSet(charactersIn: "TZ"))
     
         let year = getSubstring(string: yearArray[0], fromIndex: 0, toIndex: 3)!

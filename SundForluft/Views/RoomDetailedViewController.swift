@@ -19,7 +19,6 @@ class RoomDetailedViewController: UIViewController {
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion:    nil)
     }
-    
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var roomLabel: UILabel!
     
@@ -30,10 +29,10 @@ class RoomDetailedViewController: UIViewController {
     var room : String = ""
     var id : String = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         roomLabel.text = room
+        
         let fromDate = businessLogic.getDateInISOFormat(date: businessLogic.gettingNewDate(date: Date(), daysFrom: -14))
         let toDate = businessLogic.getDateInISOFormat(date: Date())
         

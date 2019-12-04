@@ -43,23 +43,22 @@ class CommentDAO {
         var comments = [CommentDTO]()
         let businessLogic=BusinessLogic()
         let db = Firestore.firestore()
+        
+        //Define the FireStore query
         let query = db.collection("Comment").whereField("uniquePhoneID", isEqualTo: uniquePhoneID).order(by: "date" , descending: false)
         
+        //run the query and save the result in querySnapshot.
         query.getDocuments { (querySnapshot, err) in
             guard err == nil else {
                 return
             }
+            
+            //For every key value pair in every document, unwrap the variable and append the document
+            // to the comments array.
             if let docs = querySnapshot?.documents {
                 for docSnapshot in docs {
-                    
-                    
-                    
                     var commentDTO = CommentDTO()
-                    //                    commentDTO?.comment = docSnapshot.get("comment") as? String
-                    //                    commentDTO?.uniquePhoneID = docSnapshot.get("uniquePhoneID") as! String?
-                    //                    commentDTO?.date = docSnapshot.get("date") as! String?
-                    //                    commentDTO?.ppm = docSnapshot.get("ppm") as! Double?
-                    //
+
                     if let uniquePhoneID = docSnapshot.get("uniquePhoneID") as? String? {
                         commentDTO.uniquePhoneID = uniquePhoneID
                     }

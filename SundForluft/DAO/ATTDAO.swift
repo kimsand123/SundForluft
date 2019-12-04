@@ -70,9 +70,8 @@ class ATTDAO{
     
     //Getting the last ppm for a room. Frontpage ppmLabel
     func getCurrentppm(completionHandler: @escaping (Double) -> Void ){
-        let scriptUrl = "https://api.allthingstalk.io/"
-        let urlWithParameters = scriptUrl + "asset/ZAYH4hpm6vhMGvCKEcHhNqA8/state/"
-        let myUrl = NSURL(string: urlWithParameters)
+        let apiUrl = "https://api.allthingstalk.io/asset/ZAYH4hpm6vhMGvCKEcHhNqA8/state/"
+        let myUrl = NSURL(string: apiUrl)
         let request = NSMutableURLRequest(url:myUrl! as URL)
         request.httpMethod = "GET"
         request.addValue("Bearer 4GJSKorDcNh8W1VeVufmMNzJEhm3aw26Fsov2NJ", forHTTPHeaderField: "Authorization")
@@ -115,9 +114,8 @@ class ATTDAO{
     
     func getDeviceAssets(completionHandler: @escaping ([AssetDTO]) -> Void ){
         
-        let scriptUrl = "https://api.allthingstalk.io/"
-        let urlWithParameters = scriptUrl + "device/6nGZdUDfxK8DR3XgqY7G9McY/assets/"
-        let myUrl = NSURL(string: urlWithParameters)
+        let apiUrl = "https://api.allthingstalk.io/device/6nGZdUDfxK8DR3XgqY7G9McY/assets/"
+        let myUrl = NSURL(string: apiUrl)
         let request = NSMutableURLRequest(url:myUrl! as URL)
         request.httpMethod = "GET"
         request.addValue("Bearer 4GJSKorDcNh8W1VeVufmMNzJEhm3aw26Fsov2NJ", forHTTPHeaderField: "Authorization")
