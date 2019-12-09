@@ -56,20 +56,6 @@ class RoomsCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    func collectionView(_collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath){
-        print("selected \rooms[indexPath.row]")
-        let vc = storyboard?.instantiateViewController(identifier: "RoomDetailedViewController") as? RoomDetailedViewController
-        
-        if let name = clasrooms[indexPath.row].name {
-            vc?.room = name
-            self.navigationController?.pushViewController(vc! , animated: true)
-        }
-        
-        vc?.room = clasrooms[indexPath.row].name ?? ""
-        self.navigationController?.pushViewController(vc! , animated: true)
-    }
-    
-    
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         let vc = storyboard?.instantiateViewController(identifier: "RoomDetailedViewController") as? RoomDetailedViewController
         if let name = clasrooms[indexPath.row].name {
