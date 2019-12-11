@@ -35,9 +35,11 @@ class RoomDetailedViewController: UIViewController {
         super.viewDidLoad()
         roomLabel.text = room
         
+        //Get data from the last 14 days
         let fromDate = businessLogic.getDateInISOFormat(date: businessLogic.gettingNewDate(date: Date(), daysFrom: -14))
         let toDate = businessLogic.getDateInISOFormat(date: Date())
         
+        //Getting data for the graph, sending a closure with the return parameter datapoints to be executed when the data is fetched. Let the mainQueue update the UI with the collected data
         attDao.getDataPointsForGraph(id: id, fromDate: fromDate, toDate: toDate){ (dataPoints) in
             DispatchQueue.main.async {
                 print("dataPoints: \(dataPoints)")
@@ -48,19 +50,19 @@ class RoomDetailedViewController: UIViewController {
     
     func populateGraph(ppmDataPoints : ppmDatapointsDTO) {
         
-        //fill the data into values in the format of
-        //the viewmodel
+        //fill the data into the values object
         let values = (0..<ppmDataPoints.data!.count-1).map { (i) -> ChartDataEntry in
             let val = ppmDataPoints.data![i].data!
             return ChartDataEntry(x: Double(i), y: val)
         }
 
-        //create the different objects for the viewmodel
+        //create the different objects for the chart
         let chartLabel = NSLocalizedString("ppm Målinger", comment:"Label on the ppm chart in the detailed viewcontroller")
         
         let set1 = LineChartDataSet(entries: values, label: chartLabel)
         let data = LineChartData(dataSet: set1)
         
+        //present the chart
         self.lineChartView.data = data
     }
 }

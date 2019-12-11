@@ -28,7 +28,7 @@ class ATTDAO{
         
         // Create NSURL Object
         let myUrl = NSURL(string: urlWithParameters);
-        // Create URL Request
+        // Create MutableURLRequest so that i can change the HTTPmethod, add headers, set that data is in JSON
         let request = NSMutableURLRequest(url:myUrl! as URL);
         // Set request HTTP method.
         request.httpMethod = "GET"
@@ -36,7 +36,7 @@ class ATTDAO{
         request.addValue("Bearer 4GJSKorDcNh8W1VeVufmMNzJEhm3aw26Fsov2NJ", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        // Excute Request and JSON conversion
+        // create a task that does the request and JSON conversion, using the singleton shared method
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -82,6 +82,7 @@ class ATTDAO{
             
             //print ("Com-task started")
             // Check for error
+            
             if error != nil
             {
                 print("error=\(String(describing: error))")

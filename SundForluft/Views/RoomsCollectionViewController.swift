@@ -50,7 +50,7 @@ class RoomsCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        // Configure the cell
+        // Configure the CollectionView Reusable cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomRoomCollectionViewCell", for: indexPath) as! CustomRoomCollectionViewCell
         cell.roomLabel.text = clasrooms[indexPath.row].name
         return cell
